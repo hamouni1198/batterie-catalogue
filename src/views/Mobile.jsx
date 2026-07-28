@@ -5,7 +5,7 @@ import Catalogue from '../components/Catalogue.jsx'
 import { useCatalogue } from '../hooks/useCatalogue.js'
 import { usePrefersReducedMotion } from '../hooks/useMediaQuery.js'
 import config from '../config.js'
-import fondMobile from '../assets/fond-mobile.png'
+import fondMobile from '../assets/fond-mobile.webp'
 
 // Vue 2a — Mobile. Fond plein écran, cercle centré ; au clic sur un engin,
 // une feuille de batteries remonte du bas (animation sheetUp).

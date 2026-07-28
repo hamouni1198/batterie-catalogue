@@ -5,7 +5,7 @@ import Catalogue from '../components/Catalogue.jsx'
 import { useCatalogue } from '../hooks/useCatalogue.js'
 import { usePrefersReducedMotion } from '../hooks/useMediaQuery.js'
 import config from '../config.js'
-import fondOrdi from '../assets/fond-ordi.png'
+import fondOrdi from '../assets/fond-ordi.webp'
 
 // Vue 2b — Desktop. Cercle à gauche, catalogue dans un panneau fixe à droite
 // (état vide tant qu'aucun engin n'est choisi).
