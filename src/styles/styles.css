@@ -84,6 +84,12 @@ input::placeholder {
   height: 100%;
   object-fit: cover;
 }
+/* Mobile : ancrer le fond en haut. Le slogan est incrusté dans l'image ;
+   sans ça, sur un écran plus court que le format 430×900, le `cover` recadre
+   au centre et le slogan remonte sous la barre du haut (chevauchement). */
+.screen--mobile .screen__bg {
+  object-position: top center;
+}
 .screen__veil {
   position: absolute;
   inset: 0;
