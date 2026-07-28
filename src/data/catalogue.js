@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// Catalogue des batteries — Battery Agadir
+// Catalogue des batteries — Battery Dynamic
 // ---------------------------------------------------------------------------
 // 9 engins × 3–5 batteries (32 références). Schéma d'une batterie :
 //   { id, brand, model, ah, v, cca, dim, price, fits }

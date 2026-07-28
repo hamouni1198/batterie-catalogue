@@ -1,5 +1,5 @@
 import VehicleIcon from './icons/VehicleIcon.jsx'
-import logo from '../assets/logo.jpg'
+import BrandLockup from './BrandLockup.jsx'
 
 // Positions des 9 boutons autour du cercle (angle = −90° + i×40°, rayon 42 %),
 // exprimées en % du conteneur. Même grille pour mobile et desktop.
@@ -76,7 +76,7 @@ export default function VehicleWheel({
       </div>
 
       <div className="wheel__center">
-        <img className="wheel__logo" src={logo} alt="Battery Agadir" />
+        <BrandLockup variant={variant} />
       </div>
 
       {hasSelection && <div className="wheel__sel-pill">{selectedVehicle.name}</div>}

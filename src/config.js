@@ -1,10 +1,10 @@
 // ---------------------------------------------------------------------------
-// Configuration boutique — Battery Agadir
+// Configuration boutique — Battery Dynamic
 // ---------------------------------------------------------------------------
 // ⚠️ VALEURS À VALIDER AVEC LE CLIENT AVANT MISE EN LIGNE.
-// Le numéro WhatsApp ci-dessous est un PLACEHOLDER (voir handoff § Fidelity).
-// Les prix des batteries sont eux aussi des placeholders : ils vivent dans
-// `src/data/catalogue.js` (un prix par référence).
+// Le numéro WhatsApp et le lien Instagram ci-dessous sont des PLACEHOLDERS
+// (voir handoff § Fidelity). Les prix des batteries sont eux aussi des
+// placeholders : ils vivent dans `src/data/catalogue.js` (un prix par référence).
 // ---------------------------------------------------------------------------
 
 export const config = {
@@ -13,7 +13,7 @@ export const config = {
   whatsappNumber: '212600000000',
 
   // Première ligne du message WhatsApp pré-rempli.
-  whatsappGreeting: 'Bonjour Battery Agadir,',
+  whatsappGreeting: 'Bonjour Battery Dynamic,',
 
   // Afficher les prix (false → « Prix sur demande » partout).
   showPrices: true,
@@ -24,13 +24,14 @@ export const config = {
 
   // Informations magasin (barre d'infos + liens).
   shop: {
-    name: 'Battery Agadir',
-    tagline: 'spécialiste de la batterie',
-    taglineDesktop: '38 ans · spécialiste de la batterie',
+    name: 'Battery Dynamic',
+    tagline: 'vente en gros & détail',
+    taglineDesktop: 'Vente en gros & détail · Agadir',
     hours: 'Lun – Sam · 8h30 – 20h',
     address: 'Bd Hassan II, Agadir · pose sur place',
-    instagramUrl: 'https://www.instagram.com/batterie_agadir/',
-    mapsUrl: 'https://www.google.com/maps/search/battery+agadir',
+    // PLACEHOLDER — compte Instagram à confirmer avec le client.
+    instagramUrl: 'https://www.instagram.com/battery_dynamic/',
+    mapsUrl: 'https://www.google.com/maps/search/battery+dynamic+agadir',
   },
 }
 

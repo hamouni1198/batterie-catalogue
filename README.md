@@ -1,10 +1,10 @@
-# Battery Agadir — Catalogue-jeu interactif
+# Battery Dynamic — Catalogue-jeu interactif
 
-Catalogue de batteries pour le magasin **Battery Agadir** (Agadir, Maroc).
-Une page unique : une photo du magasin en fond, le logo au centre d'un cercle,
-et tous les engins autour. Au clic sur un engin, le cercle tourne pour l'amener
-sous le repère et la liste des **batteries compatibles** apparaît (fiche
-technique, prix, bouton WhatsApp pré-rempli).
+Catalogue de batteries pour le magasin **Battery Dynamic** (Agadir, Maroc —
+vente en gros & détail). Une page unique : un visuel rouge/noir en fond, le logo
+au centre d'un cercle, et tous les engins autour. Au clic sur un engin, le cercle
+tourne pour l'amener sous le repère et la liste des **batteries compatibles**
+apparaît (fiche technique, prix, bouton WhatsApp pré-rempli).
 
 Implémentation **React + Vite** des designs **2a (mobile)** et **2b (desktop)**
 du handoff (`design_handoff_catalogue_batteries/`), reproduits en haute
@@ -27,7 +27,8 @@ npm run preview  # prévisualiser le build
 - `whatsappGreeting` — 1re ligne du message WhatsApp.
 - `showPrices` — `false` → affiche « Prix sur demande » partout.
 - `spinIdle` — rotation d'attente du cercle (coupée si `prefers-reduced-motion`).
-- `shop` — horaires, adresse, liens Instagram / Google Maps.
+- `shop` — nom, baselines, horaires, adresse, liens Instagram / Google Maps
+  (le lien Instagram `battery_dynamic` est un **placeholder** à confirmer).
 
 ### `src/data/catalogue.js` — batteries
 Les 9 engins et leurs batteries (32 références). **Les prix sont des
@@ -43,7 +44,8 @@ batterie à décharge lente (la ligne CCA est alors omise du message WhatsApp).
    Ajouter un champ `photo` aux batteries et l'afficher dans
    `components/BatteryCard.jsx`.
 4. Vrais visuels haute résolution du magasin (`src/assets/fond-mobile.png`,
-   `fond-ordi.png`) et idéalement un logo PNG transparent (`logo.jpg`).
+   `fond-ordi.png`). Le logo est un **lockup SVG** vectoriel
+   (`components/BrandLockup.jsx`) — pas d'image à fournir.
 
 ## Structure
 
@@ -57,6 +59,7 @@ src/
 │  └─ Desktop.jsx         # design 2b — panneau catalogue fixe à droite
 ├─ components/
 │  ├─ VehicleWheel.jsx    # cercle rotatif (halo, anneau, contre-rotation)
+│  ├─ BrandLockup.jsx     # logo Battery Dynamic (batterie SVG + wordmark)
 │  ├─ Catalogue.jsx       # en-tête + recherche + filtres + grille (partagé)
 │  ├─ BatteryCard.jsx     # carte produit + CTA WhatsApp
 │  ├─ TopBar.jsx  InfoBar.jsx
@@ -71,9 +74,9 @@ src/
 ```
 
 ## Notes de design
-- Typos : **Barlow Condensed** (titres, prix, wordmark) + **Archivo** (reste),
+- Typos : **Archivo Black** (titres, prix, wordmark) + **Archivo** (reste),
   via Google Fonts (`index.html`).
-- Accent jaune `#f5d000`, thème sombre `#050b1a`.
+- Accent rouge `#e11b22`, thème noir `#0a0a0c`, prix en jaune `#ffd400`.
 - Animations : rotation d'attente `orbit` (46s mobile / 60s desktop) +
   contre-rotation des icônes, halo pulsé, `sheetUp` à l'ouverture (mobile).
   Toutes coupées si `prefers-reduced-motion: reduce`.
