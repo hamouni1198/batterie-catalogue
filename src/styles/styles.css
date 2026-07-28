@@ -541,6 +541,34 @@ input::placeholder {
   border-radius: 30px 30px 0 0;
   box-shadow: 0 -24px 60px rgba(0, 0, 0, 0.6);
   animation: sheetUp 0.5s cubic-bezier(0.2, 0.9, 0.2, 1) both;
+  transition: height 0.32s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+/* Pendant le glissement : suivi instantané (pas de transition). */
+.sheet--dragging {
+  transition: none;
+}
+/* Poignée de glissement (drag-to-expand / drag-to-close). */
+.sheet__handle {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 0 3px;
+  cursor: grab;
+  touch-action: none;
+}
+.sheet__handle span {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  transition: background 0.2s ease;
+}
+.sheet--dragging .sheet__handle {
+  cursor: grabbing;
+}
+.sheet__handle:hover span {
+  background: rgba(255, 255, 255, 0.45);
 }
 
 .panel {
@@ -603,7 +631,7 @@ input::placeholder {
   gap: 12px;
 }
 .sheet .cat__header {
-  padding: 16px 18px 12px;
+  padding: 8px 18px 12px;
 }
 .panel .cat__header {
   padding: 26px 26px 14px;
@@ -1212,7 +1240,8 @@ input::placeholder {
   }
   .wheel__ring,
   .engine__stack,
-  .engine__pill {
+  .engine__pill,
+  .sheet {
     transition: none !important;
   }
 }
