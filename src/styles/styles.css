@@ -737,23 +737,22 @@ input::placeholder {
   flex: 1;
   min-height: 0;
   overflow: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
 }
 .sheet .cat__grid {
   padding: 6px 18px calc(24px + env(safe-area-inset-bottom));
-  gap: 12px;
+  gap: 10px;
 }
 .panel .cat__grid {
   padding: 8px 26px 28px;
-  gap: 14px;
+  gap: 10px;
 }
 
-/* ---- Carte produit ----------------------------------------------------- */
+/* ---- Carte produit (ligne compacte) ------------------------------------ */
 .card {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.11);
   transition: background 0.2s ease;
@@ -762,32 +761,71 @@ input::placeholder {
   background: rgba(255, 255, 255, 0.07);
 }
 .card--mobile {
-  gap: 7px;
+  gap: 11px;
   padding: 10px;
-  border-radius: 18px;
+  border-radius: 16px;
 }
 .card--desktop {
-  gap: 8px;
-  padding: 12px;
-  border-radius: 20px;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 18px;
 }
-.card__photo {
-  position: relative;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
+
+/* Badge capacité (repère visuel à la place de la photo) */
+.card__badge {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(225, 27, 34, 0.14);
+  border: 1px solid rgba(225, 27, 34, 0.5);
 }
-.card--mobile .card__photo {
-  height: 92px;
-  border-radius: 12px;
+.card--mobile .card__badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 13px;
 }
-.card--desktop .card__photo {
-  height: 112px;
-  border-radius: 14px;
+.card--desktop .card__badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 15px;
+}
+.card__badge b {
+  font-family: 'Archivo Black', system-ui, sans-serif;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+.card--mobile .card__badge b {
+  font-size: 19px;
+}
+.card--desktop .card__badge b {
+  font-size: 22px;
+}
+.card__badge i {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--accent);
+}
+.card--mobile .card__badge i {
+  font-size: 10px;
+}
+.card--desktop .card__badge i {
+  font-size: 11px;
+}
+
+.card__mid {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 .card__brand {
   font-weight: 600;
   font-size: 10px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--accent);
 }
@@ -795,9 +833,10 @@ input::placeholder {
   font-weight: 700;
   line-height: 1.2;
   color: #fff;
+  overflow-wrap: anywhere;
 }
 .card--mobile .card__model {
-  font-size: 15px;
+  font-size: 14px;
 }
 .card--desktop .card__model {
   font-size: 16px;
@@ -823,39 +862,46 @@ input::placeholder {
 }
 .card__dim {
   font-weight: 400;
-  line-height: 1.4;
-  color: var(--text-4);
-}
-.card--mobile .card__dim {
   font-size: 10px;
+  line-height: 1.3;
+  color: var(--text-4);
 }
 .card--desktop .card__dim {
   font-size: 11px;
+}
+
+.card__right {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
 }
 .card__price {
   font-family: 'Archivo Black', system-ui, sans-serif;
   font-weight: 900;
   letter-spacing: 0;
   color: var(--price);
+  white-space: nowrap;
 }
 .card--mobile .card__price {
-  font-size: 16px;
+  font-size: 17px;
 }
 .card--desktop .card__price {
-  font-size: 18px;
+  font-size: 20px;
 }
 .card__cta {
-  margin-top: auto;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  gap: 6px;
   border: 0;
   background: var(--wa);
   color: var(--wa-text);
   font-family: 'Archivo', system-ui, sans-serif;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
   cursor: pointer;
   transition: background 0.2s ease;
 }
@@ -863,15 +909,13 @@ input::placeholder {
   background: #1fbe5b;
 }
 .card--mobile .card__cta {
-  gap: 6px;
-  padding: 10px 0;
-  border-radius: 12px;
+  padding: 8px 12px;
+  border-radius: 11px;
   font-size: 12px;
 }
 .card--desktop .card__cta {
-  gap: 7px;
-  padding: 11px 0;
-  border-radius: 13px;
+  padding: 9px 14px;
+  border-radius: 12px;
   font-size: 13px;
 }
 
