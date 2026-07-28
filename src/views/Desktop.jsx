@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import TopBar from '../components/TopBar.jsx'
 import InfoBar from '../components/InfoBar.jsx'
 import VehicleWheel from '../components/VehicleWheel.jsx'
 import Catalogue from '../components/Catalogue.jsx'
+import BatteryFinder from '../components/BatteryFinder.jsx'
 import { useCatalogue } from '../hooks/useCatalogue.js'
 import { usePrefersReducedMotion } from '../hooks/useMediaQuery.js'
 import config from '../config.js'
@@ -13,6 +15,7 @@ export default function Desktop() {
   const cat = useCatalogue(config.showPrices)
   const reducedMotion = usePrefersReducedMotion()
   const spinning = config.spinIdle && !cat.hasSelection && !reducedMotion
+  const [finderOpen, setFinderOpen] = useState(false)
 
   return (
     <div className="screen screen--desktop">
@@ -49,9 +52,24 @@ export default function Desktop() {
               solaire : la liste des batteries compatibles s'affiche ici avec la fiche technique, le
               prix et l'envoi direct sur WhatsApp.
             </p>
+            <button type="button" className="finder-cta" onClick={() => setFinderOpen(true)}>
+              <span className="finder-cta__icon" aria-hidden="true">✦</span>
+              Aide-moi à choisir ma batterie
+            </button>
           </div>
         )}
       </aside>
+
+      {finderOpen && (
+        <BatteryFinder
+          vehicles={cat.vehicles}
+          onPick={(key, pf) => {
+            cat.selectWithFilter(key, pf)
+            setFinderOpen(false)
+          }}
+          onClose={() => setFinderOpen(false)}
+        />
+      )}
     </div>
   )
 }

@@ -24,11 +24,21 @@ npm run preview  # prévisualiser le build
 ### `src/config.js` — boutique
 - `whatsappNumber` — **placeholder** `212600000000`. Remplacer par le vrai
   numéro (format international, sans `+` ni espaces).
+- `phoneNumber` — **placeholder**, utilisé par le bouton « Appeler » (`tel:`).
 - `whatsappGreeting` — 1re ligne du message WhatsApp.
 - `showPrices` — `false` → affiche « Prix sur demande » partout.
 - `spinIdle` — rotation d'attente du cercle (coupée si `prefers-reduced-motion`).
-- `shop` — nom, baselines, horaires, adresse, liens Instagram / Google Maps
-  (le lien Instagram `battery_dynamic` est un **placeholder** à confirmer).
+- `siteUrl` — **placeholder** `battery-dynamic.vercel.app`. ⚠️ à remplacer par
+  le vrai domaine, **et aussi dans `index.html`** (balises Open Graph + JSON-LD).
+- `shop` — nom, baselines, horaires, adresse, liens Instagram / Google Maps,
+  `openingHours` (badge « Ouvert / Fermé », fuseau Agadir) et `geo` (JSON-LD).
+  Le lien Instagram `battery_dynamic` et la géo sont des **placeholders**.
+
+### SEO / partage (`index.html`)
+Balises **Open Graph / Twitter** (aperçu au partage) + **JSON-LD
+`AutoPartsStore`** (Google Search/Maps) + image `public/og-image.png`.
+⚠️ Mettre à jour l'URL du site (`battery-dynamic.vercel.app`), le téléphone,
+l'adresse et la géo une fois le vrai domaine et les vraies infos connus.
 
 ### `src/data/catalogue.js` — batteries
 Les 9 engins et leurs batteries (32 références). **Les prix sont des

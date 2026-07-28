@@ -2,15 +2,17 @@
 // Configuration boutique — Battery Dynamic
 // ---------------------------------------------------------------------------
 // ⚠️ VALEURS À VALIDER AVEC LE CLIENT AVANT MISE EN LIGNE.
-// Le numéro WhatsApp et le lien Instagram ci-dessous sont des PLACEHOLDERS
-// (voir handoff § Fidelity). Les prix des batteries sont eux aussi des
-// placeholders : ils vivent dans `src/data/catalogue.js` (un prix par référence).
+// Le numéro WhatsApp, le téléphone et le lien Instagram ci-dessous sont des
+// PLACEHOLDERS. Les prix des batteries sont dans `src/data/catalogue.js`.
 // ---------------------------------------------------------------------------
 
 export const config = {
   // Numéro WhatsApp au format international, sans « + » ni espaces.
-  // PLACEHOLDER — remplacer par le vrai numéro de la boutique (ex. 2126XXXXXXXX).
+  // PLACEHOLDER — remplacer par le vrai numéro (ex. 2126XXXXXXXX).
   whatsappNumber: '212600000000',
+
+  // Numéro d'appel (bouton « Appeler »). PLACEHOLDER.
+  phoneNumber: '+212600000000',
 
   // Première ligne du message WhatsApp pré-rempli.
   whatsappGreeting: 'Bonjour Battery Dynamic,',
@@ -22,7 +24,11 @@ export const config = {
   // (Coupée automatiquement si l'utilisateur a `prefers-reduced-motion`.)
   spinIdle: true,
 
-  // Informations magasin (barre d'infos + liens).
+  // URL publique du site (pour les balises SEO / Open Graph / JSON-LD).
+  // PLACEHOLDER — remplacer par ton vrai domaine une fois déployé.
+  siteUrl: 'https://battery-dynamic.vercel.app',
+
+  // Informations magasin.
   shop: {
     name: 'Battery Dynamic',
     tagline: 'vente en gros & détail',
@@ -32,6 +38,19 @@ export const config = {
     // PLACEHOLDER — compte Instagram à confirmer avec le client.
     instagramUrl: 'https://www.instagram.com/battery_dynamic/',
     mapsUrl: 'https://www.google.com/maps/search/battery+dynamic+agadir',
+
+    // Horaires structurés (pour le badge « Ouvert maintenant »). Jours :
+    // 0 = dimanche … 6 = samedi. Heures au format 24h "HH:MM".
+    // Calculé dans le fuseau du magasin (Agadir).
+    openingHours: {
+      days: [1, 2, 3, 4, 5, 6], // Lun → Sam
+      open: '08:30',
+      close: '20:00',
+      timeZone: 'Africa/Casablanca',
+    },
+
+    // Coordonnées géo (JSON-LD). PLACEHOLDER — centre d'Agadir.
+    geo: { lat: 30.4202, lng: -9.5982 },
   },
 }
 

@@ -71,6 +71,13 @@ export function useCatalogue(showPrices = true) {
     setPriceFilter('all')
   }
 
+  // Sélectionne un engin ET applique un filtre prix (utilisé par l'assistant).
+  function selectWithFilter(key, pf = 'all') {
+    setSelected(key)
+    setQuery('')
+    setPriceFilter(pf)
+  }
+
   function close() {
     setSelected(null)
     setQuery('')
@@ -96,6 +103,7 @@ export function useCatalogue(showPrices = true) {
     chips,
     // actions
     select,
+    selectWithFilter,
     close,
   }
 }

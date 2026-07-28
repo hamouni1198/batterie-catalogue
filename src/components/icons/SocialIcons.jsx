@@ -37,6 +37,24 @@ export function MapPinIcon({ size = 18 }) {
   )
 }
 
+export function PhoneIcon({ size = 18 }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M4.5 5.5c0 7.2 6.8 14 14 14 .8 0 1.5-.7 1.5-1.5v-2.3c0-.6-.4-1.1-1-1.3l-2.7-.8c-.5-.2-1.1 0-1.4.4l-.7.9a11 11 0 01-4.8-4.8l.9-.7c.4-.3.6-.9.4-1.4l-.8-2.7c-.2-.6-.7-1-1.3-1H6c-.8 0-1.5.7-1.5 1.5z" />
+    </svg>
+  )
+}
+
 export function WhatsappIcon({ size = 14 }) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true">

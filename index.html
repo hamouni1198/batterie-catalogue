@@ -5,11 +5,75 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#0a0a0c" />
+
+    <!-- ⚠️ Remplacer https://battery-dynamic.vercel.app par le vrai domaine
+         (ici et dans le JSON-LD plus bas) une fois le site déployé. -->
+    <title>Battery Dynamic — Catalogue de batteries à Agadir</title>
     <meta
       name="description"
-      content="Battery Dynamic — vente en gros & détail à Agadir. Choisis ton engin et découvre les batteries compatibles : voiture, moto, camion, bateau, quad, tracteur, camping-car, groupe électrogène, solaire."
+      content="Battery Dynamic à Agadir — vente en gros & détail. Choisis ton engin (voiture, moto, camion, bateau, quad, tracteur, groupe, solaire) et découvre les batteries compatibles : fiche technique, prix et commande directe sur WhatsApp."
     />
-    <title>Battery Dynamic — Catalogue batteries</title>
+    <link rel="canonical" href="https://battery-dynamic.vercel.app/" />
+
+    <!-- Open Graph (WhatsApp, Facebook, Instagram…) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Battery Dynamic" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="https://battery-dynamic.vercel.app/" />
+    <meta property="og:title" content="Battery Dynamic — Catalogue de batteries à Agadir" />
+    <meta
+      property="og:description"
+      content="Choisis ton engin, trouve ta batterie compatible et commande sur WhatsApp. Vente en gros & détail à Agadir."
+    />
+    <meta property="og:image" content="https://battery-dynamic.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Battery Dynamic — vente en gros & détail, Agadir" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Battery Dynamic — Catalogue de batteries à Agadir" />
+    <meta
+      name="twitter:description"
+      content="Choisis ton engin, trouve ta batterie compatible et commande sur WhatsApp."
+    />
+    <meta name="twitter:image" content="https://battery-dynamic.vercel.app/og-image.png" />
+
+    <!-- SEO local : Google Search / Maps (⚠️ téléphone, adresse et géo à confirmer) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AutoPartsStore",
+        "name": "Battery Dynamic",
+        "description": "Vente en gros & détail de batteries à Agadir : voiture, moto, camion, bateau, quad, tracteur, camping-car, groupe électrogène et solaire.",
+        "url": "https://battery-dynamic.vercel.app/",
+        "image": "https://battery-dynamic.vercel.app/og-image.png",
+        "telephone": "+212600000000",
+        "priceRange": "$$",
+        "currenciesAccepted": "MAD",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Bd Hassan II",
+          "addressLocality": "Agadir",
+          "addressCountry": "MA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 30.4202,
+          "longitude": -9.5982
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:30",
+            "closes": "20:00"
+          }
+        ],
+        "sameAs": ["https://www.instagram.com/battery_dynamic/"]
+      }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
