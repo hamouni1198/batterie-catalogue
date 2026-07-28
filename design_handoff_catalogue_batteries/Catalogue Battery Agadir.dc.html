@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#0a0f1c;-webkit-font-smoothing:antialiased}
+  a{color:#f5d000;text-decoration:none}
+  a:hover{color:#ffffff}
+  input::placeholder{color:#7f8ea9}
+  @keyframes orbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+  @keyframes orbitRev{from{transform:rotate(0deg)}to{transform:rotate(-360deg)}}
+  @keyframes sheetUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+  @keyframes halo{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.85;transform:scale(1.06)}}
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<section style="display:flex;flex-direction:column;gap:26px;padding:52px 48px 30px;font-family:'Archivo',system-ui,sans-serif;color:#fff;background:radial-gradient(1200px 700px at 20% 0%,#132347 0%,#0a0f1c 60%)">
+  <div style="display:flex;flex-direction:column;gap:8px;max-width:760px">
+    <span style="font:600 11px 'Archivo';letter-spacing:.24em;text-transform:uppercase;color:#f5d000">Tour 2 — version simple</span>
+    <h2 style="margin:0;font:700 34px/1 'Barlow Condensed';letter-spacing:.06em;text-transform:uppercase">Cercle centré, texte dans le visuel</h2>
+    <p style="margin:0;font:400 14px/1.6 'Archivo';color:#a9b6ce;text-wrap:pretty">Même principe que <a href="#1a">1a</a>, épuré : plus aucun titre en HTML — le slogan et la pub font partie de l'image de fond que vous créez. Le cercle est centré verticalement, les batteries arrivent toujours du bas. <a href="#2b">2b</a> est la même page en version ordinateur : cercle à gauche, catalogue dans un panneau à droite.</p>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+<div id="2a" style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font:700 12px 'Archivo';letter-spacing:.12em;background:#f5d000;color:#0a0f1c;padding:5px 9px;border-radius:6px">2A</span>
+        <span style="font:700 20px 'Barlow Condensed';letter-spacing:.1em;text-transform:uppercase">Version simple · cercle centré</span>
+      </div>
+
+      <div style="position:relative;width:430px;height:900px;border-radius:44px;overflow:hidden;background:#050b1a;border:1px solid rgba(255,255,255,.09);box-shadow:0 44px 90px rgba(0,0,0,.55)">
+        <div style="position:absolute;inset:0"><image-slot id="ag-bg-c" shape="rect" fit="cover" src="./fond-mobile.png" placeholder="Visuel du magasin AVEC le texte de la pub"></image-slot></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,8,20,.26) 0%,rgba(3,8,20,.42) 38%,rgba(4,10,26,.82) 76%,#050b1a 100%);pointer-events:none"></div>
+
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;padding:24px 20px 0">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+            <div style="display:flex;flex-direction:column;gap:3px">
+              <span style="font:700 18px 'Barlow Condensed';letter-spacing:.18em;text-transform:uppercase;color:#fff">Battery Agadir</span>
+              <span style="font:500 10px 'Archivo';letter-spacing:.2em;text-transform:uppercase;color:#f5d000">spécialiste de la batterie</span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <a href="https://www.instagram.com/batterie_agadir/" target="_blank" rel="noopener" style="width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1"></circle></svg>
+              </a>
+              <a href="https://www.google.com/maps/search/battery+agadir" target="_blank" rel="noopener" style="width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 21c4.5-5.2 7-8.4 7-11a7 7 0 10-14 0c0 2.6 2.5 5.8 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
+              </a>
+            </div>
+          </div>
+
+          
+
+          <div style="position:relative;width:330px;height:330px;margin:auto">
+            <div style="position:absolute;inset:26px;border-radius:50%;background:radial-gradient(circle,rgba(245,208,0,.14),transparent 68%);animation:halo 4.5s ease-in-out infinite;pointer-events:none"></div>
+            <div style="position:absolute;left:50%;top:-30px;width:0;height:0;margin-left:-9px;border-left:9px solid transparent;border-right:9px solid transparent;border-top:15px solid #f5d000;z-index:4"></div>
+
+            <div style="position:absolute;inset:0;animation:orbit 46s linear infinite;animation-play-state:{{spinC}}">
+              <div style="position:absolute;inset:0;transform:{{ringTfC}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                <div style="position:absolute;inset:16px;border-radius:50%;border:1px dashed rgba(245,208,0,.34)"></div>
+
+                <button onClick="{{pickC.voiture}}" style="position:absolute;left:50%;top:8%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinC}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfC}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13l1.8-4.6A2 2 0 017.7 7h8.6a2 2 0 011.9 1.4L20 13v4h-2.5M6.5 17H4v-4m2.5 4a2 2 0 104 0 2 2 0 10-4 0m7 0a2 2 0 104 0 2 2 0 10-4 0M4 13h16"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Voiture</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickC.moto}}" style="position:absolute;left:77%;top:17.8%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinC}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfC}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 18.5a3 3 0 100-6 3 3 0 000 6m13 0a3 3 0 100-6 3 3 0 000 6M5.5 15h5.2l3-6h2.6l-1.9-2.6M9.4 9h4.3"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Moto</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickC.camion}}" style="position:absolute;left:91.4%;top:42.7%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinC}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfC}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5h11v9h-11zM13.5 9.5h3.6l2.9 3v3h-6.5M5.5 16.5a2 2 0 104 0 2 2 0 10-4 0m8.5 0a2 2 0 104 0 2 2 0 10-4 0"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Camion</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickC.bateau}}" style="position:absolute;left:86.4%;top:71%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinC}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfC}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 15h17l-2.4 4.5H5.9zM7 15V6.5l9.5 4.2L10 13M10 6.5V3.5"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Bateau</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickC.quad}}" style="position:absolute;left:64.4%;top:89.5%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinC}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfC}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.6a2 2 0 104 0 2 2 0 10-4 0m12 0a2 2 0 104 0 2 2 0 10-4 0M4 17.6a2 2 0 104 0 2 2 0 10-4 0m12 0a2 2 0 104 0 2 2 0 10-4 0M8.4 9.6h7.2M8.4 17.6h7.2M9.4 11.9h5.2l-.5 3.4H9.9zM10.6 11.9V8.2h2.8v3.7M9.4 6.6h5.2"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Quad</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickC.tracteur}}" style="position:absolute;left:35.6%;top:89.5%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinC}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfC}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5a4 4 0 100-8 4 4 0 000 8m11.5 0a2.5 2.5 0 100-5 2.5 2.5 0 000 5M10.5 14h4M9.5 12V7h4.6l1.9 5M14.1 7h3.4"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Tracteur</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickC.camping}}" style="position:absolute;left:13.6%;top:71%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinC}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfC}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5h14v9h-14zM16.5 9.5h3l2 2.6v3.4h-5M6.5 16.5a2 2 0 104 0 2 2 0 10-4 0m7 0a2 2 0 104 0 2 2 0 10-4 0M5.5 9h4.5v3.2H5.5z"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Camping-car</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickC.groupe}}" style="position:absolute;left:8.6%;top:42.7%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinC}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfC}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 9.8h12.5v8.7H3.5zM16 12.6h3.5v5.9H16M6.2 9.8V6.6h4.3v3.2M10.2 11.8l-2.5 3.5h2.2l-.5 2.3 2.7-3.6h-2.2z"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Groupe</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickC.solaire}}" style="position:absolute;left:23%;top:17.8%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinC}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfC}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.5h13.5l2.2-8.5H6.2zM9 6v8.5M13 6v8.5M5.2 10.2h13M2.5 18.5h16"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Solaire</span>
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:134px;height:134px;border-radius:50%;background:radial-gradient(circle at 50% 28%,#14418f,#061631);border:2px solid rgba(245,208,0,.55);box-shadow:0 0 0 10px rgba(245,208,0,.06),0 18px 40px rgba(0,0,0,.55);display:grid;place-items:center;z-index:3">
+              <img src="./logo.jpg" alt="Battery Agadir" style="width:106px;height:106px;border-radius:50%;object-fit:cover">
+            </div>
+
+            <sc-if value="{{hasSelC}}" hint-placeholder-val="{{true}}">
+              <div style="position:absolute;left:50%;bottom:-4px;transform:translateX(-50%);z-index:5;background:#f5d000;color:#08121f;font:700 12px 'Archivo';letter-spacing:.14em;text-transform:uppercase;padding:7px 15px;border-radius:999px;white-space:nowrap;box-shadow:0 10px 24px rgba(0,0,0,.4)">{{selNameC}}</div>
+            </sc-if>
+          </div>
+
+          <sc-if value="{{noSelC}}" hint-placeholder-val="{{true}}">
+            <div style="margin-bottom:22px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:20px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12)">
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font:700 12px 'Archivo';letter-spacing:.1em;text-transform:uppercase;color:#fff">Lun – Sam · 8h30 – 20h</span>
+                <span style="font:400 12px 'Archivo';color:#a9b6ce">Bd Hassan II, Agadir · pose sur place</span>
+              </div>
+              <a href="https://www.google.com/maps/search/battery+agadir" target="_blank" rel="noopener" style="flex:none;font:700 11px 'Archivo';letter-spacing:.1em;text-transform:uppercase;padding:9px 12px;border-radius:11px;background:rgba(245,208,0,.14);border:1px solid rgba(245,208,0,.4)">Itinéraire</a>
+            </div>
+          </sc-if>
+        </div>
+
+        <sc-if value="{{hasSelC}}" hint-placeholder-val="{{true}}">
+          <div style="position:absolute;left:0;right:0;bottom:0;height:568px;z-index:6;display:flex;flex-direction:column;background:linear-gradient(180deg,#0b1a34,#060d1e 60%);border-top:2px solid #f5d000;border-radius:30px 30px 0 0;box-shadow:0 -24px 60px rgba(0,0,0,.6);animation:sheetUp .5s cubic-bezier(.2,.9,.2,1) both">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:16px 18px 12px">
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font:700 24px 'Barlow Condensed';letter-spacing:.08em;text-transform:uppercase;color:#fff">{{titleC}}</span>
+                <span style="font:400 11px 'Archivo';color:#8fa0bd">{{countC}}</span>
+              </div>
+              <button onClick="{{closeC}}" style="flex:none;width:36px;height:36px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;font:400 20px 'Archivo';line-height:1;cursor:pointer;display:grid;place-items:center">×</button>
+            </div>
+
+            <div style="padding:0 18px 10px;display:flex;flex-direction:column;gap:9px">
+              <input value="{{qC}}" onInput="{{onQC}}" placeholder="Marque, modèle ou véhicule…" style="width:100%;padding:11px 14px;border-radius:13px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#fff;font:400 13px 'Archivo';outline:none">
+              <div style="display:flex;gap:7px;flex-wrap:wrap">
+                <sc-for list="{{chipsC}}" as="c" hint-placeholder-count="4">
+                  <button onClick="{{c.on}}" style="padding:7px 11px;border-radius:999px;cursor:pointer;font:600 11px 'Archivo';letter-spacing:.06em;background:{{c.bg}};color:{{c.fg}};border:1px solid {{c.bd}}">{{c.label}}</button>
+                </sc-for>
+              </div>
+            </div>
+
+            <div style="flex:1;min-height:0;overflow:auto;padding:6px 18px 24px;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start">
+              <sc-for list="{{listC}}" as="b" hint-placeholder-count="4">
+                <div style="display:flex;flex-direction:column;gap:7px;padding:10px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.11)">
+                  <div style="position:relative;height:92px;border-radius:12px;overflow:hidden;background:rgba(255,255,255,.05)">
+                    <image-slot id="{{b.slotC}}" shape="rect" fit="cover" placeholder="Photo batterie"></image-slot>
+                  </div>
+                  <span style="font:600 10px 'Archivo';letter-spacing:.18em;text-transform:uppercase;color:#f5d000">{{b.brand}}</span>
+                  <span style="font:700 15px/1.2 'Archivo';color:#fff">{{b.model}}</span>
+                  <div style="display:flex;flex-wrap:wrap;gap:5px">
+                    <span style="font:600 10px 'Archivo';color:#cdd8ea;background:rgba(255,255,255,.08);border-radius:6px;padding:3px 6px">{{b.ahText}}</span>
+                    <span style="font:600 10px 'Archivo';color:#cdd8ea;background:rgba(255,255,255,.08);border-radius:6px;padding:3px 6px">{{b.vText}}</span>
+                    <span style="font:600 10px 'Archivo';color:#cdd8ea;background:rgba(255,255,255,.08);border-radius:6px;padding:3px 6px">{{b.ccaText}}</span>
+                  </div>
+                  <span style="font:400 10px/1.4 'Archivo';color:#7f8ea9">{{b.dim}}</span>
+                  <span style="font:700 21px 'Barlow Condensed';letter-spacing:.02em;color:#f5d000">{{b.priceText}}</span>
+                  <button onClick="{{b.wa}}" style="margin-top:auto;display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:10px 0;border:0;border-radius:12px;background:#25d366;color:#042a13;font:700 12px 'Archivo';letter-spacing:.04em;cursor:pointer">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1a12 12 0 01-5.9-5c-.4-.7-.6-1.4-.6-2 0-.6.3-1.2.6-1.5.3-.3.5-.4.8-.4h.5c.2 0 .4 0 .5.4l.8 1.8c.1.2 0 .4-.1.5l-.4.5c-.1.2-.2.3 0 .6a8 8 0 003.5 3c.3.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l1.8.9c.3.1.3.3.3.5s0 .6-.1.9z"></path></svg>
+                    Commander
+                  </button>
+                </div>
+              </sc-for>
+            </div>
+
+            <sc-if value="{{emptyC}}" hint-placeholder-val="{{false}}">
+              <div style="padding:0 18px 26px;font:400 13px/1.6 'Archivo';color:#8fa0bd">Aucune batterie ne correspond. Essaie un autre filtre de prix ou envoie-nous le modèle du véhicule sur WhatsApp.</div>
+            </sc-if>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+
+    <div id="2b" style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font:700 12px 'Archivo';letter-spacing:.12em;background:#f5d000;color:#0a0f1c;padding:5px 9px;border-radius:6px">2B</span>
+        <span style="font:700 20px 'Barlow Condensed';letter-spacing:.1em;text-transform:uppercase">Version ordinateur · 1440 × 860</span>
+      </div>
+
+      <div style="position:relative;width:1440px;height:860px;border-radius:20px;overflow:hidden;background:#050b1a;border:1px solid rgba(255,255,255,.09);box-shadow:0 44px 90px rgba(0,0,0,.55)">
+        <div style="position:absolute;inset:0"><image-slot id="ag-bg-d" shape="rect" fit="cover" src="./fond-ordi.png" placeholder="Visuel du magasin AVEC le texte de la pub"></image-slot></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(3,8,20,.62) 0%,rgba(3,8,20,.3) 45%,rgba(3,8,20,.72) 100%);pointer-events:none"></div>
+
+        <div style="position:absolute;left:0;top:0;bottom:0;width:920px;display:flex;flex-direction:column;padding:28px 32px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+            <div style="display:flex;flex-direction:column;gap:3px">
+              <span style="font:700 22px 'Barlow Condensed';letter-spacing:.2em;text-transform:uppercase;color:#fff">Battery Agadir</span>
+              <span style="font:500 11px 'Archivo';letter-spacing:.22em;text-transform:uppercase;color:#f5d000">38 ans · spécialiste de la batterie</span>
+            </div>
+            <div style="display:flex;gap:9px">
+              <a href="https://www.instagram.com/batterie_agadir/" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1"></circle></svg></a>
+              <a href="https://www.google.com/maps/search/battery+agadir" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 21c4.5-5.2 7-8.4 7-11a7 7 0 10-14 0c0 2.6 2.5 5.8 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg></a>
+            </div>
+          </div>
+
+          <div style="position:relative;width:470px;height:470px;margin:auto">
+            <div style="position:absolute;inset:40px;border-radius:50%;background:radial-gradient(circle,rgba(245,208,0,.13),transparent 68%);animation:halo 4.5s ease-in-out infinite;pointer-events:none"></div>
+            <div style="position:absolute;left:50%;top:-32px;width:0;height:0;margin-left:-11px;border-left:11px solid transparent;border-right:11px solid transparent;border-top:17px solid #f5d000;z-index:4"></div>
+
+            <div style="position:absolute;inset:0;animation:orbit 60s linear infinite;animation-play-state:{{spinD}}">
+              <div style="position:absolute;inset:0;transform:{{ringTfD}};transition:transform 1s cubic-bezier(.2,.85,.15,1)">
+                <div style="position:absolute;inset:26px;border-radius:50%;border:1px dashed rgba(245,208,0,.32)"></div>
+                <button onClick="{{pickD.voiture}}" style="position:absolute;left:50%;top:8%;width:104px;height:104px;margin:-52px 0 0 -52px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 60s linear infinite;animation-play-state:{{spinD}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:8px;transform:{{iconTfD}};transition:transform 1s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:68px;height:68px;border-radius:23px;background:rgba(8,16,34,.72);border:1px solid rgba(255,255,255,.18);color:#f5d000;box-shadow:0 10px 26px rgba(0,0,0,.35)">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13l1.8-4.6A2 2 0 017.7 7h8.6a2 2 0 011.9 1.4L20 13v4h-2.5M6.5 17H4v-4m2.5 4a2 2 0 104 0 2 2 0 10-4 0m7 0a2 2 0 104 0 2 2 0 10-4 0M4 13h16"></path></svg>
+                      </span>
+                      <span style="font:600 11px 'Archivo';letter-spacing:.12em;text-transform:uppercase;color:#d3dcec;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.8)">Voiture</span>
+                    </span>
+                  </span>
+                </button>
+                <button onClick="{{pickD.moto}}" style="position:absolute;left:77%;top:17.8%;width:104px;height:104px;margin:-52px 0 0 -52px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 60s linear infinite;animation-play-state:{{spinD}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:8px;transform:{{iconTfD}};transition:transform 1s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:68px;height:68px;border-radius:23px;background:rgba(8,16,34,.72);border:1px solid rgba(255,255,255,.18);color:#f5d000;box-shadow:0 10px 26px rgba(0,0,0,.35)">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 18.5a3 3 0 100-6 3 3 0 000 6m13 0a3 3 0 100-6 3 3 0 000 6M5.5 15h5.2l3-6h2.6l-1.9-2.6M9.4 9h4.3"></path></svg>
+                      </span>
+                      <span style="font:600 11px 'Archivo';letter-spacing:.12em;text-transform:uppercase;color:#d3dcec;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.8)">Moto / Scooter</span>
+                    </span>
+                  </span>
+                </button>
+                <button onClick="{{pickD.camion}}" style="position:absolute;left:91.4%;top:42.7%;width:104px;height:104px;margin:-52px 0 0 -52px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 60s linear infinite;animation-play-state:{{spinD}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:8px;transform:{{iconTfD}};transition:transform 1s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:68px;height:68px;border-radius:23px;background:rgba(8,16,34,.72);border:1px solid rgba(255,255,255,.18);color:#f5d000;box-shadow:0 10px 26px rgba(0,0,0,.35)">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5h11v9h-11zM13.5 9.5h3.6l2.9 3v3h-6.5M5.5 16.5a2 2 0 104 0 2 2 0 10-4 0m8.5 0a2 2 0 104 0 2 2 0 10-4 0"></path></svg>
+                      </span>
+                      <span style="font:600 11px 'Archivo';letter-spacing:.12em;text-transform:uppercase;color:#d3dcec;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.8)">Camion</span>
+                    </span>
+                  </span>
+                </button>
+                <button onClick="{{pickD.bateau}}" style="position:absolute;left:86.4%;top:71%;width:104px;height:104px;margin:-52px 0 0 -52px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 60s linear infinite;animation-play-state:{{spinD}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:8px;transform:{{iconTfD}};transition:transform 1s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:68px;height:68px;border-radius:23px;background:rgba(8,16,34,.72);border:1px solid rgba(255,255,255,.18);color:#f5d000;box-shadow:0 10px 26px rgba(0,0,0,.35)">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 15h17l-2.4 4.5H5.9zM7 15V6.5l9.5 4.2L10 13M10 6.5V3.5"></path></svg>
+                      </span>
+                      <span style="font:600 11px 'Archivo';letter-spacing:.12em;text-transform:uppercase;color:#d3dcec;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.8)">Bateau / Jet-ski</span>
+                    </span>
+                  </span>
+                </button>
+                <button onClick="{{pickD.quad}}" style="position:absolute;left:64.4%;top:89.5%;width:104px;height:104px;margin:-52px 0 0 -52px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 60s linear infinite;animation-play-state:{{spinD}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:8px;transform:{{iconTfD}};transition:transform 1s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:68px;height:68px;border-radius:23px;background:rgba(8,16,34,.72);border:1px solid rgba(255,255,255,.18);color:#f5d000;box-shadow:0 10px 26px rgba(0,0,0,.35)">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.6a2 2 0 104 0 2 2 0 10-4 0m12 0a2 2 0 104 0 2 2 0 10-4 0M4 17.6a2 2 0 104 0 2 2 0 10-4 0m12 0a2 2 0 104 0 2 2 0 10-4 0M8.4 9.6h7.2M8.4 17.6h7.2M9.4 11.9h5.2l-.5 3.4H9.9zM10.6 11.9V8.2h2.8v3.7M9.4 6.6h5.2"></path></svg>
+                      </span>
+                      <span style="font:600 11px 'Archivo';letter-spacing:.12em;text-transform:uppercase;color:#d3dcec;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.8)">Quad / Buggy</span>
+                    </span>
+                  </span>
+                </button>
+                <button onClick="{{pickD.tracteur}}" style="position:absolute;left:35.6%;top:89.5%;width:104px;height:104px;margin:-52px 0 0 -52px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 60s linear infinite;animation-play-state:{{spinD}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:8px;transform:{{iconTfD}};transition:transform 1s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:68px;height:68px;border-radius:23px;background:rgba(8,16,34,.72);border:1px solid rgba(255,255,255,.18);color:#f5d000;box-shadow:0 10px 26px rgba(0,0,0,.35)">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5a4 4 0 100-8 4 4 0 000 8m11.5 0a2.5 2.5 0 100-5 2.5 2.5 0 000 5M10.5 14h4M9.5 12V7h4.6l1.9 5M14.1 7h3.4"></path></svg>
+                      </span>
+                      <span style="font:600 11px 'Archivo';letter-spacing:.12em;text-transform:uppercase;color:#d3dcec;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.8)">Tracteur</span>
+                    </span>
+                  </span>
+                </button>
+                <button onClick="{{pickD.camping}}" style="position:absolute;left:13.6%;top:71%;width:104px;height:104px;margin:-52px 0 0 -52px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 60s linear infinite;animation-play-state:{{spinD}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:8px;transform:{{iconTfD}};transition:transform 1s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:68px;height:68px;border-radius:23px;background:rgba(8,16,34,.72);border:1px solid rgba(255,255,255,.18);color:#f5d000;box-shadow:0 10px 26px rgba(0,0,0,.35)">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5h14v9h-14zM16.5 9.5h3l2 2.6v3.4h-5M6.5 16.5a2 2 0 104 0 2 2 0 10-4 0m7 0a2 2 0 104 0 2 2 0 10-4 0M5.5 9h4.5v3.2H5.5z"></path></svg>
+                      </span>
+                      <span style="font:600 11px 'Archivo';letter-spacing:.12em;text-transform:uppercase;color:#d3dcec;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.8)">Camping-car</span>
+                    </span>
+                  </span>
+                </button>
+                <button onClick="{{pickD.groupe}}" style="position:absolute;left:8.6%;top:42.7%;width:104px;height:104px;margin:-52px 0 0 -52px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 60s linear infinite;animation-play-state:{{spinD}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:8px;transform:{{iconTfD}};transition:transform 1s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:68px;height:68px;border-radius:23px;background:rgba(8,16,34,.72);border:1px solid rgba(255,255,255,.18);color:#f5d000;box-shadow:0 10px 26px rgba(0,0,0,.35)">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 9.8h12.5v8.7H3.5zM16 12.6h3.5v5.9H16M6.2 9.8V6.6h4.3v3.2M10.2 11.8l-2.5 3.5h2.2l-.5 2.3 2.7-3.6h-2.2z"></path></svg>
+                      </span>
+                      <span style="font:600 11px 'Archivo';letter-spacing:.12em;text-transform:uppercase;color:#d3dcec;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.8)">Groupe électrogène</span>
+                    </span>
+                  </span>
+                </button>
+                <button onClick="{{pickD.solaire}}" style="position:absolute;left:23%;top:17.8%;width:104px;height:104px;margin:-52px 0 0 -52px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 60s linear infinite;animation-play-state:{{spinD}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:8px;transform:{{iconTfD}};transition:transform 1s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:68px;height:68px;border-radius:23px;background:rgba(8,16,34,.72);border:1px solid rgba(255,255,255,.18);color:#f5d000;box-shadow:0 10px 26px rgba(0,0,0,.35)">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.5h13.5l2.2-8.5H6.2zM9 6v8.5M13 6v8.5M5.2 10.2h13M2.5 18.5h16"></path></svg>
+                      </span>
+                      <span style="font:600 11px 'Archivo';letter-spacing:.12em;text-transform:uppercase;color:#d3dcec;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.8)">Solaire / Onduleur</span>
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:196px;height:196px;border-radius:50%;background:radial-gradient(circle at 50% 28%,#14418f,#061631);border:2px solid rgba(245,208,0,.55);box-shadow:0 0 0 14px rgba(245,208,0,.06),0 22px 50px rgba(0,0,0,.55);display:grid;place-items:center;z-index:3">
+              <img src="./logo.jpg" alt="Battery Agadir" style="width:160px;height:160px;border-radius:50%;object-fit:cover">
+            </div>
+
+            <sc-if value="{{hasSelD}}" hint-placeholder-val="{{true}}">
+              <div style="position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);z-index:5;background:#f5d000;color:#08121f;font:700 14px 'Archivo';letter-spacing:.16em;text-transform:uppercase;padding:9px 20px;border-radius:999px;white-space:nowrap;box-shadow:0 12px 28px rgba(0,0,0,.45)">{{selNameD}}</div>
+            </sc-if>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:22px;padding:16px 22px;border-radius:20px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);width:max-content">
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <span style="font:700 13px 'Archivo';letter-spacing:.1em;text-transform:uppercase;color:#fff">Lun – Sam · 8h30 – 20h</span>
+              <span style="font:400 13px 'Archivo';color:#a9b6ce">Bd Hassan II, Agadir · pose sur place</span>
+            </div>
+            <a href="https://www.google.com/maps/search/battery+agadir" target="_blank" rel="noopener" style="font:700 12px 'Archivo';letter-spacing:.1em;text-transform:uppercase;padding:11px 15px;border-radius:12px;background:rgba(245,208,0,.14);border:1px solid rgba(245,208,0,.4)">Itinéraire</a>
+          </div>
+        </div>
+
+        <div style="position:absolute;right:0;top:0;bottom:0;width:520px;display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(9,20,42,.94),rgba(5,11,26,.96));border-left:2px solid #f5d000;box-shadow:-24px 0 60px rgba(0,0,0,.5)">
+          <sc-if value="{{noSelD}}" hint-placeholder-val="{{true}}">
+            <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:0 40px">
+              <span style="font:600 12px 'Archivo';letter-spacing:.24em;text-transform:uppercase;color:#f5d000">Catalogue</span>
+              <span style="font:700 40px/1 'Barlow Condensed';letter-spacing:.04em;text-transform:uppercase;color:#fff">Clique sur ton engin</span>
+              <p style="margin:0;font:400 15px/1.7 'Archivo';color:#a9b6ce;text-wrap:pretty">Voiture, moto, camion, bateau, quad, tracteur, camping-car, groupe électrogène ou solaire : la liste des batteries compatibles s'affiche ici avec la fiche technique, le prix et l'envoi direct sur WhatsApp.</p>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{hasSelD}}" hint-placeholder-val="{{false}}">
+            <div style="flex:1;min-height:0;display:flex;flex-direction:column">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:26px 26px 14px">
+                <div style="display:flex;flex-direction:column;gap:6px">
+                  <span style="font:700 30px 'Barlow Condensed';letter-spacing:.08em;text-transform:uppercase;color:#fff">{{titleD}}</span>
+                  <span style="font:400 12px 'Archivo';color:#8fa0bd">{{countD}}</span>
+                </div>
+                <button onClick="{{closeD}}" style="flex:none;width:40px;height:40px;border-radius:13px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;font:400 22px 'Archivo';line-height:1;cursor:pointer;display:grid;place-items:center">×</button>
+              </div>
+
+              <div style="padding:0 26px 12px;display:flex;flex-direction:column;gap:10px">
+                <input value="{{qD}}" onInput="{{onQD}}" placeholder="Marque, modèle ou véhicule…" style="width:100%;padding:12px 15px;border-radius:13px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#fff;font:400 14px 'Archivo';outline:none">
+                <div style="display:flex;gap:8px;flex-wrap:wrap">
+                  <sc-for list="{{chipsD}}" as="c" hint-placeholder-count="4">
+                    <button onClick="{{c.on}}" style="padding:8px 13px;border-radius:999px;cursor:pointer;font:600 12px 'Archivo';letter-spacing:.06em;background:{{c.bg}};color:{{c.fg}};border:1px solid {{c.bd}}">{{c.label}}</button>
+                  </sc-for>
+                </div>
+              </div>
+
+              <div style="flex:1;min-height:0;overflow:auto;padding:8px 26px 28px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start">
+                <sc-for list="{{listD}}" as="b" hint-placeholder-count="4">
+                  <div style="display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.11)">
+                    <div style="position:relative;height:112px;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.05)">
+                      <image-slot id="{{b.slotD}}" shape="rect" fit="cover" placeholder="Photo batterie"></image-slot>
+                    </div>
+                    <span style="font:600 10px 'Archivo';letter-spacing:.18em;text-transform:uppercase;color:#f5d000">{{b.brand}}</span>
+                    <span style="font:700 16px/1.2 'Archivo';color:#fff">{{b.model}}</span>
+                    <div style="display:flex;flex-wrap:wrap;gap:5px">
+                      <span style="font:600 11px 'Archivo';color:#cdd8ea;background:rgba(255,255,255,.08);border-radius:6px;padding:4px 7px">{{b.ahText}}</span>
+                      <span style="font:600 11px 'Archivo';color:#cdd8ea;background:rgba(255,255,255,.08);border-radius:6px;padding:4px 7px">{{b.vText}}</span>
+                      <span style="font:600 11px 'Archivo';color:#cdd8ea;background:rgba(255,255,255,.08);border-radius:6px;padding:4px 7px">{{b.ccaText}}</span>
+                    </div>
+                    <span style="font:400 11px/1.4 'Archivo';color:#7f8ea9">{{b.dim}}</span>
+                    <span style="font:700 24px 'Barlow Condensed';letter-spacing:.02em;color:#f5d000">{{b.priceText}}</span>
+                    <button onClick="{{b.wa}}" style="margin-top:auto;display:flex;align-items:center;justify-content:center;gap:7px;width:100%;padding:11px 0;border:0;border-radius:13px;background:#25d366;color:#042a13;font:700 13px 'Archivo';letter-spacing:.04em;cursor:pointer"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1a12 12 0 01-5.9-5c-.4-.7-.6-1.4-.6-2 0-.6.3-1.2.6-1.5.3-.3.5-.4.8-.4h.5c.2 0 .4 0 .5.4l.8 1.8c.1.2 0 .4-.1.5l-.4.5c-.1.2-.2.3 0 .6a8 8 0 003.5 3c.3.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l1.8.9c.3.1.3.3.3.5s0 .6-.1.9z"></path></svg> Commander</button>
+                  </div>
+                </sc-for>
+              </div>
+
+              <sc-if value="{{emptyD}}" hint-placeholder-val="{{false}}">
+                <div style="padding:0 26px 30px;font:400 14px/1.6 'Archivo';color:#8fa0bd">Aucune batterie ne correspond. Change le filtre de prix ou envoie-nous le modèle du véhicule sur WhatsApp.</div>
+              </sc-if>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:26px;padding:52px 48px 90px;font-family:'Archivo',system-ui,sans-serif;color:#fff;background:radial-gradient(1200px 700px at 20% 0%,#132347 0%,#0a0f1c 60%)">
+  <div style="display:flex;flex-direction:column;gap:8px;max-width:760px">
+    <span style="font:600 11px 'Archivo';letter-spacing:.24em;text-transform:uppercase;color:#f5d000">Tour 1 — 2 pistes</span>
+    <h2 style="margin:0;font:700 34px/1 'Barlow Condensed';letter-spacing:.06em;text-transform:uppercase">Catalogue-jeu Battery Agadir</h2>
+    <p style="margin:0;font:400 14px/1.6 'Archivo';color:#a9b6ce;text-wrap:pretty">Une seule page mobile : photo du magasin en fond, logo au centre d'un cercle, tous les engins autour. On touche un engin, le cercle tourne et les batteries compatibles arrivent avec fiche technique, prix et bouton WhatsApp. <a href="#1a">1a</a> = fond photo sombre + fiches en grille. <a href="#1b">1b</a> = cadran clair + liste détaillée.</p>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+
+    <div id="1a" style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font:700 12px 'Archivo';letter-spacing:.12em;background:#f5d000;color:#0a0f1c;padding:5px 9px;border-radius:6px">1A</span>
+        <span style="font:700 20px 'Barlow Condensed';letter-spacing:.1em;text-transform:uppercase">Orbite d'énergie · grille</span>
+      </div>
+
+      <div style="position:relative;width:430px;height:900px;border-radius:44px;overflow:hidden;background:#050b1a;border:1px solid rgba(255,255,255,.09);box-shadow:0 44px 90px rgba(0,0,0,.55)">
+        <div style="position:absolute;inset:0"><image-slot id="ag-bg-a" shape="rect" fit="cover" placeholder="Photo du magasin (fond)"></image-slot></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,8,20,.55) 0%,rgba(3,8,20,.8) 34%,rgba(4,10,26,.95) 62%,#050b1a 100%);pointer-events:none"></div>
+
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;padding:24px 20px 0">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+            <div style="display:flex;flex-direction:column;gap:3px">
+              <span style="font:700 18px 'Barlow Condensed';letter-spacing:.18em;text-transform:uppercase;color:#fff">Battery Agadir</span>
+              <span style="font:500 10px 'Archivo';letter-spacing:.2em;text-transform:uppercase;color:#f5d000">spécialiste de la batterie</span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <a href="https://www.instagram.com/batterie_agadir/" target="_blank" rel="noopener" style="width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1"></circle></svg>
+              </a>
+              <a href="https://www.google.com/maps/search/battery+agadir" target="_blank" rel="noopener" style="width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 21c4.5-5.2 7-8.4 7-11a7 7 0 10-14 0c0 2.6 2.5 5.8 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
+              </a>
+            </div>
+          </div>
+
+          <div style="margin-top:24px;display:flex;flex-direction:column;gap:9px">
+            <span style="font:600 11px 'Archivo';letter-spacing:.22em;text-transform:uppercase;color:#f5d000">38 ans d'expérience · Agadir</span>
+            <h1 style="margin:0;font:700 44px/.92 'Barlow Condensed';letter-spacing:.02em;text-transform:uppercase;color:#fff">Choisis<br>ton engin</h1>
+            <p style="margin:0;max-width:262px;font:400 13px/1.55 'Archivo';color:#a9b6ce;text-wrap:pretty">Touche une icône : toutes les batteries compatibles s'affichent avec la fiche technique et le prix.</p>
+          </div>
+
+          <div style="position:relative;width:330px;height:330px;margin:34px auto 0">
+            <div style="position:absolute;inset:26px;border-radius:50%;background:radial-gradient(circle,rgba(245,208,0,.14),transparent 68%);animation:halo 4.5s ease-in-out infinite;pointer-events:none"></div>
+            <div style="position:absolute;left:50%;top:-30px;width:0;height:0;margin-left:-9px;border-left:9px solid transparent;border-right:9px solid transparent;border-top:15px solid #f5d000;z-index:4"></div>
+
+            <div style="position:absolute;inset:0;animation:orbit 46s linear infinite;animation-play-state:{{spinA}}">
+              <div style="position:absolute;inset:0;transform:{{ringTfA}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                <div style="position:absolute;inset:16px;border-radius:50%;border:1px dashed rgba(245,208,0,.34)"></div>
+
+                <button onClick="{{pickA.voiture}}" style="position:absolute;left:50%;top:8%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinA}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfA}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13l1.8-4.6A2 2 0 017.7 7h8.6a2 2 0 011.9 1.4L20 13v4h-2.5M6.5 17H4v-4m2.5 4a2 2 0 104 0 2 2 0 10-4 0m7 0a2 2 0 104 0 2 2 0 10-4 0M4 13h16"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Voiture</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickA.moto}}" style="position:absolute;left:77%;top:17.8%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinA}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfA}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 18.5a3 3 0 100-6 3 3 0 000 6m13 0a3 3 0 100-6 3 3 0 000 6M5.5 15h5.2l3-6h2.6l-1.9-2.6M9.4 9h4.3"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Moto</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickA.camion}}" style="position:absolute;left:91.4%;top:42.7%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinA}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfA}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5h11v9h-11zM13.5 9.5h3.6l2.9 3v3h-6.5M5.5 16.5a2 2 0 104 0 2 2 0 10-4 0m8.5 0a2 2 0 104 0 2 2 0 10-4 0"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Camion</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickA.bateau}}" style="position:absolute;left:86.4%;top:71%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinA}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfA}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 15h17l-2.4 4.5H5.9zM7 15V6.5l9.5 4.2L10 13M10 6.5V3.5"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Bateau</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickA.quad}}" style="position:absolute;left:64.4%;top:89.5%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinA}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfA}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.6a2 2 0 104 0 2 2 0 10-4 0m12 0a2 2 0 104 0 2 2 0 10-4 0M4 17.6a2 2 0 104 0 2 2 0 10-4 0m12 0a2 2 0 104 0 2 2 0 10-4 0M8.4 9.6h7.2M8.4 17.6h7.2M9.4 11.9h5.2l-.5 3.4H9.9zM10.6 11.9V8.2h2.8v3.7M9.4 6.6h5.2"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Quad</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickA.tracteur}}" style="position:absolute;left:35.6%;top:89.5%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinA}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfA}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5a4 4 0 100-8 4 4 0 000 8m11.5 0a2.5 2.5 0 100-5 2.5 2.5 0 000 5M10.5 14h4M9.5 12V7h4.6l1.9 5M14.1 7h3.4"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Tracteur</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickA.camping}}" style="position:absolute;left:13.6%;top:71%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinA}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfA}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5h14v9h-14zM16.5 9.5h3l2 2.6v3.4h-5M6.5 16.5a2 2 0 104 0 2 2 0 10-4 0m7 0a2 2 0 104 0 2 2 0 10-4 0M5.5 9h4.5v3.2H5.5z"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Camping-car</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickA.groupe}}" style="position:absolute;left:8.6%;top:42.7%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinA}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfA}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 9.8h12.5v8.7H3.5zM16 12.6h3.5v5.9H16M6.2 9.8V6.6h4.3v3.2M10.2 11.8l-2.5 3.5h2.2l-.5 2.3 2.7-3.6h-2.2z"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Groupe</span>
+                    </span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickA.solaire}}" style="position:absolute;left:23%;top:17.8%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:grid;place-items:center;width:100%;height:100%;animation:orbitRev 46s linear infinite;animation-play-state:{{spinA}}">
+                    <span style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:{{iconTfA}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                      <span style="display:grid;place-items:center;width:50px;height:50px;border-radius:17px;background:rgba(8,16,34,.74);border:1px solid rgba(255,255,255,.16);color:#f5d000"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.5h13.5l2.2-8.5H6.2zM9 6v8.5M13 6v8.5M5.2 10.2h13M2.5 18.5h16"></path></svg></span><span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#c9d4e6;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.75)">Solaire</span>
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:134px;height:134px;border-radius:50%;background:radial-gradient(circle at 50% 28%,#14418f,#061631);border:2px solid rgba(245,208,0,.55);box-shadow:0 0 0 10px rgba(245,208,0,.06),0 18px 40px rgba(0,0,0,.55);display:grid;place-items:center;z-index:3">
+              <img src="./logo.jpg" alt="Battery Agadir" style="width:106px;height:106px;border-radius:50%;object-fit:cover">
+            </div>
+
+            <sc-if value="{{hasSelA}}" hint-placeholder-val="{{true}}">
+              <div style="position:absolute;left:50%;bottom:-4px;transform:translateX(-50%);z-index:5;background:#f5d000;color:#08121f;font:700 12px 'Archivo';letter-spacing:.14em;text-transform:uppercase;padding:7px 15px;border-radius:999px;white-space:nowrap;box-shadow:0 10px 24px rgba(0,0,0,.4)">{{selNameA}}</div>
+            </sc-if>
+          </div>
+
+          <sc-if value="{{noSelA}}" hint-placeholder-val="{{true}}">
+            <div style="margin-top:auto;margin-bottom:22px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:20px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12)">
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font:700 12px 'Archivo';letter-spacing:.1em;text-transform:uppercase;color:#fff">Lun – Sam · 8h30 – 20h</span>
+                <span style="font:400 12px 'Archivo';color:#a9b6ce">Bd Hassan II, Agadir · pose sur place</span>
+              </div>
+              <a href="https://www.google.com/maps/search/battery+agadir" target="_blank" rel="noopener" style="flex:none;font:700 11px 'Archivo';letter-spacing:.1em;text-transform:uppercase;padding:9px 12px;border-radius:11px;background:rgba(245,208,0,.14);border:1px solid rgba(245,208,0,.4)">Itinéraire</a>
+            </div>
+          </sc-if>
+        </div>
+
+        <sc-if value="{{hasSelA}}" hint-placeholder-val="{{true}}">
+          <div style="position:absolute;left:0;right:0;bottom:0;height:568px;z-index:6;display:flex;flex-direction:column;background:linear-gradient(180deg,#0b1a34,#060d1e 60%);border-top:2px solid #f5d000;border-radius:30px 30px 0 0;box-shadow:0 -24px 60px rgba(0,0,0,.6);animation:sheetUp .5s cubic-bezier(.2,.9,.2,1) both">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:16px 18px 12px">
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font:700 24px 'Barlow Condensed';letter-spacing:.08em;text-transform:uppercase;color:#fff">{{titleA}}</span>
+                <span style="font:400 11px 'Archivo';color:#8fa0bd">{{countA}}</span>
+              </div>
+              <button onClick="{{closeA}}" style="flex:none;width:36px;height:36px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;font:400 20px 'Archivo';line-height:1;cursor:pointer;display:grid;place-items:center">×</button>
+            </div>
+
+            <div style="padding:0 18px 10px;display:flex;flex-direction:column;gap:9px">
+              <input value="{{qA}}" onInput="{{onQA}}" placeholder="Marque, modèle ou véhicule…" style="width:100%;padding:11px 14px;border-radius:13px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#fff;font:400 13px 'Archivo';outline:none">
+              <div style="display:flex;gap:7px;flex-wrap:wrap">
+                <sc-for list="{{chipsA}}" as="c" hint-placeholder-count="4">
+                  <button onClick="{{c.on}}" style="padding:7px 11px;border-radius:999px;cursor:pointer;font:600 11px 'Archivo';letter-spacing:.06em;background:{{c.bg}};color:{{c.fg}};border:1px solid {{c.bd}}">{{c.label}}</button>
+                </sc-for>
+              </div>
+            </div>
+
+            <div style="flex:1;min-height:0;overflow:auto;padding:6px 18px 24px;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start">
+              <sc-for list="{{listA}}" as="b" hint-placeholder-count="4">
+                <div style="display:flex;flex-direction:column;gap:7px;padding:10px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.11)">
+                  <div style="position:relative;height:92px;border-radius:12px;overflow:hidden;background:rgba(255,255,255,.05)">
+                    <image-slot id="{{b.slotA}}" shape="rect" fit="cover" placeholder="Photo batterie"></image-slot>
+                  </div>
+                  <span style="font:600 10px 'Archivo';letter-spacing:.18em;text-transform:uppercase;color:#f5d000">{{b.brand}}</span>
+                  <span style="font:700 15px/1.2 'Archivo';color:#fff">{{b.model}}</span>
+                  <div style="display:flex;flex-wrap:wrap;gap:5px">
+                    <span style="font:600 10px 'Archivo';color:#cdd8ea;background:rgba(255,255,255,.08);border-radius:6px;padding:3px 6px">{{b.ahText}}</span>
+                    <span style="font:600 10px 'Archivo';color:#cdd8ea;background:rgba(255,255,255,.08);border-radius:6px;padding:3px 6px">{{b.vText}}</span>
+                    <span style="font:600 10px 'Archivo';color:#cdd8ea;background:rgba(255,255,255,.08);border-radius:6px;padding:3px 6px">{{b.ccaText}}</span>
+                  </div>
+                  <span style="font:400 10px/1.4 'Archivo';color:#7f8ea9">{{b.dim}}</span>
+                  <span style="font:700 21px 'Barlow Condensed';letter-spacing:.02em;color:#f5d000">{{b.priceText}}</span>
+                  <button onClick="{{b.wa}}" style="margin-top:auto;display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:10px 0;border:0;border-radius:12px;background:#25d366;color:#042a13;font:700 12px 'Archivo';letter-spacing:.04em;cursor:pointer">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1a12 12 0 01-5.9-5c-.4-.7-.6-1.4-.6-2 0-.6.3-1.2.6-1.5.3-.3.5-.4.8-.4h.5c.2 0 .4 0 .5.4l.8 1.8c.1.2 0 .4-.1.5l-.4.5c-.1.2-.2.3 0 .6a8 8 0 003.5 3c.3.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l1.8.9c.3.1.3.3.3.5s0 .6-.1.9z"></path></svg>
+                    Commander
+                  </button>
+                </div>
+              </sc-for>
+            </div>
+
+            <sc-if value="{{emptyA}}" hint-placeholder-val="{{false}}">
+              <div style="padding:0 18px 26px;font:400 13px/1.6 'Archivo';color:#8fa0bd">Aucune batterie ne correspond. Essaie un autre filtre de prix ou envoie-nous le modèle du véhicule sur WhatsApp.</div>
+            </sc-if>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+
+    <div id="1b" style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font:700 12px 'Archivo';letter-spacing:.12em;background:#f5d000;color:#0a0f1c;padding:5px 9px;border-radius:6px">1B</span>
+        <span style="font:700 20px 'Barlow Condensed';letter-spacing:.1em;text-transform:uppercase">Cadran clair · liste</span>
+      </div>
+
+      <div style="position:relative;width:430px;height:900px;border-radius:44px;overflow:hidden;background:#f4f1ea;border:1px solid rgba(255,255,255,.09);box-shadow:0 44px 90px rgba(0,0,0,.55);display:flex;flex-direction:column">
+        <div style="position:relative;height:236px;flex:none">
+          <div style="position:absolute;inset:0"><image-slot id="ag-bg-b" shape="rect" fit="cover" placeholder="Photo du magasin (bandeau)"></image-slot></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,18,44,.72),rgba(6,18,44,.5));pointer-events:none"></div>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:24px 22px 34px">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+              <div style="display:flex;flex-direction:column;gap:3px">
+                <span style="font:700 18px 'Barlow Condensed';letter-spacing:.18em;text-transform:uppercase;color:#fff">Battery Agadir</span>
+                <span style="font:500 10px 'Archivo';letter-spacing:.2em;text-transform:uppercase;color:#f5d000">38 ans · spécialiste de la batterie</span>
+              </div>
+              <div style="display:flex;gap:8px">
+                <a href="https://www.instagram.com/batterie_agadir/" target="_blank" rel="noopener" style="width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);color:#fff">
+                  <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1"></circle></svg>
+                </a>
+                <a href="https://www.google.com/maps/search/battery+agadir" target="_blank" rel="noopener" style="width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);color:#fff">
+                  <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 21c4.5-5.2 7-8.4 7-11a7 7 0 10-14 0c0 2.6 2.5 5.8 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
+                </a>
+              </div>
+            </div>
+            <h1 style="margin:0;font:700 34px/.95 'Barlow Condensed';letter-spacing:.03em;text-transform:uppercase;color:#fff">Tourne le cadran,<br>trouve ta batterie</h1>
+          </div>
+        </div>
+
+        <div style="position:relative;margin-top:-26px;padding:0 16px;flex:none">
+          <div style="position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;padding:16px 14px 18px;border-radius:30px;background:#fff;box-shadow:0 22px 44px rgba(10,20,40,.16)">
+            <div style="position:relative;width:266px;height:266px">
+              <div style="position:absolute;left:50%;top:-24px;width:0;height:0;margin-left:-8px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:13px solid #0f2a63;z-index:4"></div>
+              <div style="position:absolute;inset:0;transform:{{ringTfB}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                <div style="position:absolute;inset:20px;border-radius:50%;border:1px solid #dcd5c6"></div>
+
+                <button onClick="{{pickB.voiture}}" style="position:absolute;left:50%;top:8%;width:66px;height:66px;margin:-33px 0 0 -33px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:flex;flex-direction:column;align-items:center;gap:3px;transform:{{iconTfB}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                    <span style="display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:#f4f1ea;border:1px solid #e2dbcb;color:#0f2a63">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13l1.8-4.6A2 2 0 017.7 7h8.6a2 2 0 011.9 1.4L20 13v4h-2.5M6.5 17H4v-4m2.5 4a2 2 0 104 0 2 2 0 10-4 0m7 0a2 2 0 104 0 2 2 0 10-4 0M4 13h16"></path></svg>
+                    </span>
+                    <span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#5d6a80">Voiture</span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickB.moto}}" style="position:absolute;left:77%;top:17.8%;width:66px;height:66px;margin:-33px 0 0 -33px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:flex;flex-direction:column;align-items:center;gap:3px;transform:{{iconTfB}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                    <span style="display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:#f4f1ea;border:1px solid #e2dbcb;color:#0f2a63">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 18.5a3 3 0 100-6 3 3 0 000 6m13 0a3 3 0 100-6 3 3 0 000 6M5.5 15h5.2l3-6h2.6l-1.9-2.6M9.4 9h4.3"></path></svg>
+                    </span>
+                    <span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#5d6a80">Moto</span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickB.camion}}" style="position:absolute;left:91.4%;top:42.7%;width:66px;height:66px;margin:-33px 0 0 -33px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:flex;flex-direction:column;align-items:center;gap:3px;transform:{{iconTfB}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                    <span style="display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:#f4f1ea;border:1px solid #e2dbcb;color:#0f2a63">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5h11v9h-11zM13.5 9.5h3.6l2.9 3v3h-6.5M5.5 16.5a2 2 0 104 0 2 2 0 10-4 0m8.5 0a2 2 0 104 0 2 2 0 10-4 0"></path></svg>
+                    </span>
+                    <span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#5d6a80">Camion</span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickB.bateau}}" style="position:absolute;left:86.4%;top:71%;width:66px;height:66px;margin:-33px 0 0 -33px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:flex;flex-direction:column;align-items:center;gap:3px;transform:{{iconTfB}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                    <span style="display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:#f4f1ea;border:1px solid #e2dbcb;color:#0f2a63">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 15h17l-2.4 4.5H5.9zM7 15V6.5l9.5 4.2L10 13M10 6.5V3.5"></path></svg>
+                    </span>
+                    <span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#5d6a80">Bateau</span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickB.quad}}" style="position:absolute;left:64.4%;top:89.5%;width:66px;height:66px;margin:-33px 0 0 -33px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:flex;flex-direction:column;align-items:center;gap:3px;transform:{{iconTfB}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                    <span style="display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:#f4f1ea;border:1px solid #e2dbcb;color:#0f2a63">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.6a2 2 0 104 0 2 2 0 10-4 0m12 0a2 2 0 104 0 2 2 0 10-4 0M4 17.6a2 2 0 104 0 2 2 0 10-4 0m12 0a2 2 0 104 0 2 2 0 10-4 0M8.4 9.6h7.2M8.4 17.6h7.2M9.4 11.9h5.2l-.5 3.4H9.9zM10.6 11.9V8.2h2.8v3.7M9.4 6.6h5.2"></path></svg>
+                    </span>
+                    <span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#5d6a80">Quad</span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickB.tracteur}}" style="position:absolute;left:35.6%;top:89.5%;width:66px;height:66px;margin:-33px 0 0 -33px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:flex;flex-direction:column;align-items:center;gap:3px;transform:{{iconTfB}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                    <span style="display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:#f4f1ea;border:1px solid #e2dbcb;color:#0f2a63">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5a4 4 0 100-8 4 4 0 000 8m11.5 0a2.5 2.5 0 100-5 2.5 2.5 0 000 5M10.5 14h4M9.5 12V7h4.6l1.9 5M14.1 7h3.4"></path></svg>
+                    </span>
+                    <span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#5d6a80">Tracteur</span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickB.camping}}" style="position:absolute;left:13.6%;top:71%;width:66px;height:66px;margin:-33px 0 0 -33px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:flex;flex-direction:column;align-items:center;gap:3px;transform:{{iconTfB}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                    <span style="display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:#f4f1ea;border:1px solid #e2dbcb;color:#0f2a63">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5h14v9h-14zM16.5 9.5h3l2 2.6v3.4h-5M6.5 16.5a2 2 0 104 0 2 2 0 10-4 0m7 0a2 2 0 104 0 2 2 0 10-4 0M5.5 9h4.5v3.2H5.5z"></path></svg>
+                    </span>
+                    <span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#5d6a80">Camping-car</span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickB.groupe}}" style="position:absolute;left:8.6%;top:42.7%;width:66px;height:66px;margin:-33px 0 0 -33px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:flex;flex-direction:column;align-items:center;gap:3px;transform:{{iconTfB}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                    <span style="display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:#f4f1ea;border:1px solid #e2dbcb;color:#0f2a63">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 9.8h12.5v8.7H3.5zM16 12.6h3.5v5.9H16M6.2 9.8V6.6h4.3v3.2M10.2 11.8l-2.5 3.5h2.2l-.5 2.3 2.7-3.6h-2.2z"></path></svg>
+                    </span>
+                    <span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#5d6a80">Groupe</span>
+                  </span>
+                </button>
+
+                <button onClick="{{pickB.solaire}}" style="position:absolute;left:23%;top:17.8%;width:66px;height:66px;margin:-33px 0 0 -33px;padding:0;border:0;background:transparent;cursor:pointer">
+                  <span style="display:flex;flex-direction:column;align-items:center;gap:3px;transform:{{iconTfB}};transition:transform .95s cubic-bezier(.2,.85,.15,1)">
+                    <span style="display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:#f4f1ea;border:1px solid #e2dbcb;color:#0f2a63">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.5h13.5l2.2-8.5H6.2zM9 6v8.5M13 6v8.5M5.2 10.2h13M2.5 18.5h16"></path></svg>
+                    </span>
+                    <span style="font:600 10px 'Archivo';letter-spacing:.08em;text-transform:uppercase;color:#5d6a80">Solaire</span>
+                  </span>
+                </button>
+              </div>
+
+              <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:112px;height:112px;border-radius:50%;background:#fff;border:1px solid #e2dbcb;box-shadow:0 10px 26px rgba(10,20,40,.14);display:grid;place-items:center;z-index:3">
+                <img src="./logo.jpg" alt="Battery Agadir" style="width:96px;height:96px;border-radius:50%;object-fit:cover">
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#0f2a63">
+              <span style="font:700 12px 'Archivo';letter-spacing:.14em;text-transform:uppercase;color:#fff">{{selNameB}}</span>
+              <span style="font:600 11px 'Archivo';color:#f5d000">{{countB}}</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex:1;min-height:0;display:flex;flex-direction:column;padding:14px 16px 0">
+          <div style="display:flex;flex-direction:column;gap:9px;padding-bottom:10px">
+            <input value="{{qB}}" onInput="{{onQB}}" placeholder="Marque, modèle ou véhicule…" style="width:100%;padding:11px 14px;border-radius:13px;background:#fff;border:1px solid #e2dbcb;color:#101a2c;font:400 13px 'Archivo';outline:none">
+            <div style="display:flex;gap:7px;flex-wrap:wrap">
+              <sc-for list="{{chipsB}}" as="c" hint-placeholder-count="4">
+                <button onClick="{{c.on}}" style="padding:7px 11px;border-radius:999px;cursor:pointer;font:600 11px 'Archivo';letter-spacing:.06em;background:{{c.bg}};color:{{c.fg}};border:1px solid {{c.bd}}">{{c.label}}</button>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="flex:1;min-height:0;overflow:auto;display:flex;flex-direction:column;gap:10px;padding-bottom:20px">
+            <sc-for list="{{listB}}" as="b" hint-placeholder-count="3">
+              <div style="display:flex;gap:12px;align-items:center;padding:10px 12px;border-radius:18px;background:#fff;border:1px solid #e6e0d3">
+                <div style="position:relative;width:76px;height:76px;flex:none;border-radius:13px;overflow:hidden;background:#f0ece2">
+                  <image-slot id="{{b.slotB}}" shape="rect" fit="cover" placeholder="Photo"></image-slot>
+                </div>
+                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+                  <span style="font:600 10px 'Archivo';letter-spacing:.16em;text-transform:uppercase;color:#0f2a63">{{b.brand}}</span>
+                  <span style="font:700 15px/1.2 'Archivo';color:#101a2c">{{b.model}}</span>
+                  <span style="font:500 11px 'Archivo';color:#5d6a80">{{b.specLine}}</span>
+                  <span style="font:400 10px 'Archivo';color:#98a0ae">{{b.dim}}</span>
+                </div>
+                <div style="flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+                  <span style="font:700 21px 'Barlow Condensed';letter-spacing:.02em;color:#0f2a63">{{b.priceText}}</span>
+                  <button onClick="{{b.wa}}" style="display:flex;align-items:center;gap:5px;padding:8px 11px;border:0;border-radius:11px;background:#25d366;color:#042a13;font:700 11px 'Archivo';letter-spacing:.04em;cursor:pointer">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1a12 12 0 01-5.9-5c-.4-.7-.6-1.4-.6-2 0-.6.3-1.2.6-1.5.3-.3.5-.4.8-.4h.5c.2 0 .4 0 .5.4l.8 1.8c.1.2 0 .4-.1.5l-.4.5c-.1.2-.2.3 0 .6a8 8 0 003.5 3c.3.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l1.8.9c.3.1.3.3.3.5s0 .6-.1.9z"></path></svg>
+                    Envoyer
+                  </button>
+                </div>
+              </div>
+            </sc-for>
+
+            <sc-if value="{{emptyB}}" hint-placeholder-val="{{false}}">
+              <div style="padding:8px 4px;font:400 13px/1.6 'Archivo';color:#5d6a80">Aucune batterie ne correspond à ce filtre.</div>
+            </sc-if>
+
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:18px;background:#0f2a63">
+              <div style="display:flex;flex-direction:column;gap:3px">
+                <span style="font:700 12px 'Archivo';letter-spacing:.1em;text-transform:uppercase;color:#fff">Lun – Sam · 8h30 – 20h</span>
+                <span style="font:400 12px 'Archivo';color:#b9c6e0">Bd Hassan II, Agadir · pose sur place</span>
+              </div>
+              <a href="https://www.google.com/maps/search/battery+agadir" target="_blank" rel="noopener" style="flex:none;font:700 11px 'Archivo';letter-spacing:.1em;text-transform:uppercase;padding:9px 12px;border-radius:11px;background:rgba(245,208,0,.16);border:1px solid rgba(245,208,0,.5)">Itinéraire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width:300px;display:flex;flex-direction:column;gap:14px;padding:20px;border-radius:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)">
+      <span style="font:700 18px 'Barlow Condensed';letter-spacing:.1em;text-transform:uppercase;color:#f5d000">À remplacer</span>
+      <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:9px;font:400 13px/1.5 'Archivo';color:#c3cee1">
+        <li>Numéro WhatsApp du magasin (Tweaks → waNumber).</li>
+        <li>Photo de fond : glisse ton visuel sur le cadre du fond.</li>
+        <li>Photos des batteries : glisse-les dans chaque case.</li>
+        <li>Prix et références : ceux affichés sont des exemples à valider.</li>
+        <li>Adresse exacte + lien Google Maps du magasin.</li>
+      </ul>
+      <span style="font:700 18px 'Barlow Condensed';letter-spacing:.1em;text-transform:uppercase;color:#f5d000;margin-top:6px">Le message WhatsApp</span>
+      <p style="margin:0;font:400 13px/1.6 'Archivo';color:#c3cee1;text-wrap:pretty">Le bouton ouvre WhatsApp avec le message pré-écrit : marque, modèle, Ah / V / CCA, dimensions et prix. La photo, elle, s'ajoute côté client après l'envoi (WhatsApp ne permet pas de joindre une image via un lien).</p>
+    </div>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;waNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;212600000000&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Boutique&quot;},&quot;waGreeting&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Bonjour Battery Agadir,&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;WhatsApp&quot;},&quot;showPrices&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Catalogue&quot;},&quot;spinIdle&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Catalogue&quot;}}">
+class Component extends DCLogic {
+  state = { selA: null, selB: 'voiture', selC: null, selD: null, qA: '', qB: '', qC: '', qD: '', pfA: 'all', pfB: 'all', pfC: 'all', pfD: 'all' };
+
+  db = [
+    { k: 'voiture', n: 'Voiture', b: [
+      { id: 'v1', brand: 'VARTA', model: 'Blue Dynamic B18', ah: 44, v: 12, cca: 420, dim: '207 × 175 × 175 mm', price: 690, fits: 'Clio, Sandero, 208, Picanto' },
+      { id: 'v2', brand: 'BOSCH', model: 'S4 005', ah: 60, v: 12, cca: 540, dim: '242 × 175 × 190 mm', price: 890, fits: 'Logan, Golf, Fiesta, Ibiza' },
+      { id: 'v3', brand: 'FOX', model: 'Premium 70', ah: 70, v: 12, cca: 600, dim: '261 × 175 × 220 mm', price: 950, fits: 'Duster, Kangoo, Partner' },
+      { id: 'v4', brand: 'VARTA', model: 'Blue Dynamic E11', ah: 74, v: 12, cca: 680, dim: '278 × 175 × 190 mm', price: 1190, fits: 'Passat, Mégane, Focus, C4' },
+      { id: 'v5', brand: 'VOLTAGE', model: 'Silver 100', ah: 100, v: 12, cca: 800, dim: '353 × 175 × 190 mm', price: 1590, fits: 'Prado, Hilux, Touareg, X5' }
+    ] },
+    { k: 'moto', n: 'Moto / Scooter', b: [
+      { id: 'm1', brand: 'SP', model: 'Moto YTX7A-BS', ah: 7, v: 12, cca: 105, dim: '150 × 87 × 94 mm', price: 240, fits: 'SYM, Kymco, Docker' },
+      { id: 'm2', brand: 'SP', model: 'Moto YTX9-BS', ah: 8, v: 12, cca: 120, dim: '150 × 87 × 105 mm', price: 280, fits: 'CB500, MT-03, Z400' },
+      { id: 'm3', brand: 'LONG', model: 'YTZ12S Gel', ah: 11, v: 12, cca: 210, dim: '150 × 87 × 110 mm', price: 420, fits: 'Honda Forza, X-ADV' },
+      { id: 'm4', brand: 'VARTA', model: 'Powersports YTX14', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 520, fits: 'BMW GS, Africa Twin' }
+    ] },
+    { k: 'camion', n: 'Camion / Poids lourd', b: [
+      { id: 'c1', brand: 'BOSCH', model: 'T4 077', ah: 140, v: 12, cca: 850, dim: '513 × 189 × 223 mm', price: 2190, fits: 'Sprinter, Daily, Atego' },
+      { id: 'c2', brand: 'FOX', model: 'Truck 150', ah: 150, v: 12, cca: 1000, dim: '513 × 189 × 223 mm', price: 2350, fits: 'Actros, TGX, Renault T' },
+      { id: 'c3', brand: 'VARTA', model: 'Promotive M18', ah: 180, v: 12, cca: 1100, dim: '513 × 223 × 223 mm', price: 3150, fits: 'Volvo FH, Scania R' },
+      { id: 'c4', brand: 'VOLTAGE', model: 'Heavy 200', ah: 200, v: 12, cca: 1150, dim: '518 × 276 × 242 mm', price: 3490, fits: 'Bennes, remorques, bus' }
+    ] },
+    { k: 'bateau', n: 'Bateau / Jet-ski', b: [
+      { id: 'b1', brand: 'SP', model: 'Jet-ski YTX20-BS', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 590, fits: 'Sea-Doo, Yamaha WaveRunner' },
+      { id: 'b2', brand: 'VARTA', model: 'Professional DC 90', ah: 90, v: 12, cca: 800, dim: '353 × 175 × 190 mm', price: 1890, fits: 'Servitude, sondeur, guindeau' },
+      { id: 'b3', brand: 'LONG', model: 'Marine Gel 100', ah: 100, v: 12, cca: 700, dim: '330 × 171 × 220 mm', price: 2450, fits: 'Semi-rigide, barque pêche' },
+      { id: 'b4', brand: 'FOX', model: 'Marine 120', ah: 120, v: 12, cca: 850, dim: '410 × 176 × 227 mm', price: 2190, fits: 'Hors-bord, chalutier' }
+    ] },
+    { k: 'quad', n: 'Quad / Buggy', b: [
+      { id: 'q1', brand: 'VARTA', model: 'Powersports AGM YTX12', ah: 10, v: 12, cca: 200, dim: '152 × 88 × 131 mm', price: 460, fits: 'Raptor, Outlander' },
+      { id: 'q2', brand: 'LONG', model: 'Gel YTX16-BS', ah: 14, v: 12, cca: 230, dim: '150 × 87 × 161 mm', price: 480, fits: 'Buggy 800, SSV' },
+      { id: 'q3', brand: 'SP', model: 'Quad YTX20L-BS', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 560, fits: 'Polaris, Can-Am, Kymco' }
+    ] },
+    { k: 'tracteur', n: 'Tracteur / Agricole', b: [
+      { id: 't1', brand: 'VARTA', model: 'Promotive H3', ah: 100, v: 12, cca: 720, dim: '413 × 175 × 220 mm', price: 1750, fits: 'Massey 290, Kubota' },
+      { id: 't2', brand: 'FOX', model: 'Agri 143', ah: 143, v: 12, cca: 900, dim: '513 × 189 × 223 mm', price: 2250, fits: 'New Holland, Deutz' },
+      { id: 't3', brand: 'VOLTAGE', model: 'Agri 180', ah: 180, v: 12, cca: 1000, dim: '513 × 223 × 223 mm', price: 2950, fits: 'John Deere, Case IH' }
+    ] },
+    { k: 'camping', n: 'Camping-car', b: [
+      { id: 'k1', brand: 'LONG', model: 'Deep Cycle 105', ah: 105, v: 12, cca: 650, dim: '330 × 171 × 220 mm', price: 2350, fits: 'Cellule, frigo, éclairage' },
+      { id: 'k2', brand: 'VARTA', model: 'Professional DC 115', ah: 115, v: 12, cca: 760, dim: '353 × 175 × 190 mm', price: 2490, fits: 'Ducato, Boxer aménagé' },
+      { id: 'k3', brand: 'FOX', model: 'Camper AGM 100', ah: 100, v: 12, cca: 800, dim: '353 × 175 × 190 mm', price: 2690, fits: 'Van 4x4, fourgon' }
+    ] },
+    { k: 'groupe', n: 'Groupe électrogène', b: [
+      { id: 'g1', brand: 'SP', model: 'Start 60', ah: 60, v: 12, cca: 480, dim: '242 × 175 × 190 mm', price: 780, fits: 'Groupe 5 – 10 kVA' },
+      { id: 'g2', brand: 'FOX', model: 'Genset 100', ah: 100, v: 12, cca: 750, dim: '353 × 175 × 190 mm', price: 1490, fits: 'Groupe 15 – 30 kVA' },
+      { id: 'g3', brand: 'VOLTAGE', model: 'Genset 150', ah: 150, v: 12, cca: 950, dim: '513 × 189 × 223 mm', price: 2290, fits: 'Groupe 40 kVA et +' }
+    ] },
+    { k: 'solaire', n: 'Solaire / Onduleur', b: [
+      { id: 's1', brand: 'LONG', model: 'Gel Solar 100', ah: 100, v: 12, cca: 0, dim: '330 × 171 × 220 mm', price: 2590, fits: 'Kit 1 kW, pompage' },
+      { id: 's2', brand: 'VOLTAGE', model: 'Solar AGM 150', ah: 150, v: 12, cca: 0, dim: '483 × 170 × 240 mm', price: 3390, fits: 'Kit 2 kW, onduleur 24V' },
+      { id: 's3', brand: 'SP', model: 'Solar Tubulaire 200', ah: 200, v: 12, cca: 0, dim: '518 × 276 × 242 mm', price: 4190, fits: 'Site isolé, ferme' }
+    ] }
+  ];
+
+  fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
+
+  priceText(p) {
+    return this.props.showPrices === false ? 'Prix sur demande' : this.fmt(p) + ' Dh';
+  }
+
+  wa(bat, vehName) {
+    const num = String(this.props.waNumber || '212600000000').replace(/[^0-9]/g, '');
+    const hello = this.props.waGreeting || 'Bonjour Battery Agadir,';
+    const lines = [
+      hello, '',
+      'Je suis intéressé(e) par cette batterie :',
+      'Modèle : ' + bat.brand + ' ' + bat.model,
+      'Pour : ' + vehName,
+      'Capacité : ' + bat.ah + ' Ah — ' + bat.v + ' V' + (bat.cca ? ' — ' + bat.cca + ' A (CCA)' : ''),
+      'Dimensions : ' + bat.dim,
+      'Prix catalogue : ' + this.priceText(bat.price), '',
+      'Est-elle disponible ? Et avec la pose ?'
+    ];
+    window.open('https://wa.me/' + num + '?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+  }
+
+  filter(list, q, pf) {
+    const s = q.trim().toLowerCase();
+    return list.filter((b) => {
+      if (s && !(b.brand + ' ' + b.model + ' ' + b.fits + ' ' + b.ah).toLowerCase().includes(s)) return false;
+      if (pf === 'low' && b.price > 800) return false;
+      if (pf === 'mid' && (b.price < 800 || b.price > 1500)) return false;
+      if (pf === 'high' && b.price <= 1500) return false;
+      return true;
+    });
+  }
+
+  chips(active, key, dark) {
+    return [['all', 'Tous'], ['low', '≤ 800 Dh'], ['mid', '800 – 1 500'], ['high', '> 1 500 Dh']].map(([k, label]) => ({
+      k, label,
+      bg: k === active ? '#f5d000' : (dark ? 'rgba(255,255,255,.06)' : '#fff'),
+      fg: k === active ? '#0a1424' : (dark ? '#c3cee1' : '#5d6a80'),
+      bd: k === active ? '#f5d000' : (dark ? 'rgba(255,255,255,.16)' : '#e2dbcb'),
+      on: () => this.setState({ [key]: k })
+    }));
+  }
+
+  cards(veh, side) {
+    return (list) => list.map((b) => ({
+      ...b,
+      slotA: 'ag-a-' + b.id,
+      slotB: 'ag-b-' + b.id,
+      slotC: 'ag-c-' + b.id,
+      slotD: 'ag-d-' + b.id,
+      ahText: b.ah + ' Ah',
+      vText: b.v + ' V',
+      ccaText: b.cca ? b.cca + ' A' : 'Décharge lente',
+      specLine: b.ah + ' Ah · ' + b.v + ' V · ' + (b.cca ? b.cca + ' A (CCA)' : 'décharge lente') + ' · ' + b.fits,
+      priceText: this.priceText(b.price),
+      wa: () => this.wa(b, veh.n)
+    }));
+  }
+
+  picks(key) {
+    const o = {};
+    this.db.forEach((v) => { o[v.k] = () => this.setState({ [key]: v.k }); });
+    return o;
+  }
+
+  renderVals() {
+    const idxA = Math.max(0, this.db.findIndex((v) => v.k === this.state.selA));
+    const vehA = this.db[idxA];
+    const idxB = Math.max(0, this.db.findIndex((v) => v.k === this.state.selB));
+    const vehB = this.db[idxB];
+    const listA = this.cards(vehA)(this.filter(vehA.b, this.state.qA, this.state.pfA));
+    const listB = this.cards(vehB)(this.filter(vehB.b, this.state.qB, this.state.pfB));
+    const idxC = Math.max(0, this.db.findIndex((v) => v.k === this.state.selC));
+    const vehC = this.db[idxC];
+    const listC = this.cards(vehC)(this.filter(vehC.b, this.state.qC, this.state.pfC));
+    const idxD = Math.max(0, this.db.findIndex((v) => v.k === this.state.selD));
+    const vehD = this.db[idxD];
+    const listD = this.cards(vehD)(this.filter(vehD.b, this.state.qD, this.state.pfD));
+    const hasSelA = !!this.state.selA;
+    const hasSelC = !!this.state.selC;
+    const hasSelD = !!this.state.selD;
+
+    return {
+      spinA: hasSelA || this.props.spinIdle === false ? 'paused' : 'running',
+      ringTfA: 'rotate(' + (hasSelA ? -40 * idxA : 0) + 'deg)',
+      iconTfA: 'rotate(' + (hasSelA ? 40 * idxA : 0) + 'deg)',
+      hasSelA, noSelA: !hasSelA,
+      selNameA: vehA.n,
+      titleA: 'Batteries ' + vehA.n,
+      countA: listA.length + (listA.length > 1 ? ' modèles compatibles' : ' modèle compatible') + ' · stock magasin',
+      listA, emptyA: listA.length === 0,
+      qA: this.state.qA,
+      onQA: (e) => this.setState({ qA: e.target.value }),
+      chipsA: this.chips(this.state.pfA, 'pfA', true),
+      pickA: this.picks('selA'),
+      closeA: () => this.setState({ selA: null, qA: '', pfA: 'all' }),
+
+      ringTfB: 'rotate(' + -40 * idxB + 'deg)',
+      iconTfB: 'rotate(' + 40 * idxB + 'deg)',
+      selNameB: vehB.n,
+      countB: listB.length + '/' + vehB.b.length,
+      listB, emptyB: listB.length === 0,
+      qB: this.state.qB,
+      onQB: (e) => this.setState({ qB: e.target.value }),
+      chipsB: this.chips(this.state.pfB, 'pfB', false),
+      pickB: this.picks('selB'),
+
+      spinC: hasSelC || this.props.spinIdle === false ? 'paused' : 'running',
+      ringTfC: 'rotate(' + (hasSelC ? -40 * idxC : 0) + 'deg)',
+      iconTfC: 'rotate(' + (hasSelC ? 40 * idxC : 0) + 'deg)',
+      hasSelC, noSelC: !hasSelC,
+      selNameC: vehC.n,
+      titleC: 'Batteries ' + vehC.n,
+      countC: listC.length + (listC.length > 1 ? ' modèles compatibles' : ' modèle compatible') + ' · stock magasin',
+      listC, emptyC: listC.length === 0,
+      qC: this.state.qC,
+      onQC: (e) => this.setState({ qC: e.target.value }),
+      chipsC: this.chips(this.state.pfC, 'pfC', true),
+      pickC: this.picks('selC'),
+      closeC: () => this.setState({ selC: null, qC: '', pfC: 'all' }),
+
+      spinD: hasSelD || this.props.spinIdle === false ? 'paused' : 'running',
+      ringTfD: 'rotate(' + (hasSelD ? -40 * idxD : 0) + 'deg)',
+      iconTfD: 'rotate(' + (hasSelD ? 40 * idxD : 0) + 'deg)',
+      hasSelD, noSelD: !hasSelD,
+      selNameD: vehD.n,
+      titleD: 'Batteries ' + vehD.n,
+      countD: listD.length + (listD.length > 1 ? ' modèles compatibles' : ' modèle compatible') + ' · stock magasin',
+      listD, emptyD: listD.length === 0,
+      qD: this.state.qD,
+      onQD: (e) => this.setState({ qD: e.target.value }),
+      chipsD: this.chips(this.state.pfD, 'pfD', true),
+      pickD: this.picks('selD'),
+      closeD: () => this.setState({ selD: null, qD: '', pfD: 'all' })
+    };
+  }
+}
+</script>
+</body>
+</html>

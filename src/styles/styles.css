@@ -1,0 +1,897 @@
+/* ==========================================================================
+   Battery Agadir — Catalogue-jeu interactif
+   Reproduction hi-fi des designs 2a (mobile) et 2b (desktop).
+   Toutes les valeurs (couleurs, typos, espacements, rayons, ombres, anims)
+   sont reprises au pixel près du handoff.
+   ========================================================================== */
+
+:root {
+  --bg: #050b1a;
+  --accent: #f5d000;
+  --text: #ffffff;
+  --text-2: #a9b6ce;
+  --text-3: #8fa0bd;
+  --text-4: #7f8ea9;
+  --chip-text: #cdd8ea;
+  --wa: #25d366;
+  --wa-text: #042a13;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Archivo', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: #ffffff;
+}
+
+input::placeholder {
+  color: #7f8ea9;
+}
+
+/* ---- Keyframes --------------------------------------------------------- */
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes orbitRev {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+@keyframes sheetUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+@keyframes halo {
+  0%, 100% { opacity: .35; transform: scale(1); }
+  50% { opacity: .85; transform: scale(1.06); }
+}
+
+/* ==========================================================================
+   Écran / frames
+   ========================================================================== */
+.screen {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: var(--bg);
+}
+.screen__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.screen__veil {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.screen__veil--mobile {
+  background: linear-gradient(
+    180deg,
+    rgba(3, 8, 20, 0.26) 0%,
+    rgba(3, 8, 20, 0.42) 38%,
+    rgba(4, 10, 26, 0.82) 76%,
+    #050b1a 100%
+  );
+}
+.screen__veil--desktop {
+  background: linear-gradient(
+    100deg,
+    rgba(3, 8, 20, 0.62) 0%,
+    rgba(3, 8, 20, 0.3) 45%,
+    rgba(3, 8, 20, 0.72) 100%
+  );
+}
+.screen__content--mobile {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px 0;
+}
+.screen__left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 520px;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 32px;
+}
+
+/* ==========================================================================
+   Barre du haut
+   ========================================================================== */
+.topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.topbar__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.topbar__wordmark {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.topbar__tagline {
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.topbar__links {
+  display: flex;
+  gap: 8px;
+}
+.iconlink {
+  width: 38px;
+  height: 38px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.iconlink:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.screen--desktop .topbar {
+  align-items: center;
+  gap: 16px;
+}
+.screen--desktop .topbar__wordmark {
+  font-size: 22px;
+  letter-spacing: 0.2em;
+}
+.screen--desktop .topbar__tagline {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+}
+.screen--desktop .topbar__links {
+  gap: 9px;
+}
+.screen--desktop .iconlink {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+}
+
+/* ==========================================================================
+   Bandeau infos
+   ========================================================================== */
+.infobar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.screen--mobile .infobar {
+  margin-bottom: 22px;
+}
+.infobar__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.infobar__hours {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.infobar__address {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.infobar__cta {
+  flex: none;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 9px 12px;
+  border-radius: 11px;
+  background: rgba(245, 208, 0, 0.14);
+  border: 1px solid rgba(245, 208, 0, 0.4);
+  color: var(--accent);
+  transition: background 0.2s ease;
+}
+.infobar__cta:hover {
+  color: var(--accent);
+  background: rgba(245, 208, 0, 0.22);
+}
+.screen--desktop .infobar {
+  gap: 22px;
+  padding: 16px 22px;
+  width: max-content;
+}
+.screen--desktop .infobar__hours {
+  font-size: 13px;
+}
+.screen--desktop .infobar__address {
+  font-size: 13px;
+}
+.screen--desktop .infobar__cta {
+  font-size: 12px;
+  padding: 11px 15px;
+  border-radius: 12px;
+}
+
+/* ==========================================================================
+   Cercle (composant clé)
+   ========================================================================== */
+.wheel {
+  position: relative;
+  margin: auto;
+}
+.wheel--mobile {
+  width: 330px;
+  height: 330px;
+}
+.wheel--desktop {
+  width: 470px;
+  height: 470px;
+}
+
+.wheel__halo {
+  position: absolute;
+  border-radius: 50%;
+  animation: halo 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+.wheel--mobile .wheel__halo {
+  inset: 26px;
+  background: radial-gradient(circle, rgba(245, 208, 0, 0.14), transparent 68%);
+}
+.wheel--desktop .wheel__halo {
+  inset: 40px;
+  background: radial-gradient(circle, rgba(245, 208, 0, 0.13), transparent 68%);
+}
+
+.wheel__marker {
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 0;
+  z-index: 4;
+}
+.wheel--mobile .wheel__marker {
+  top: -30px;
+  margin-left: -9px;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 15px solid #f5d000;
+}
+.wheel--desktop .wheel__marker {
+  top: -32px;
+  margin-left: -11px;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 17px solid #f5d000;
+}
+
+.wheel__orbit {
+  position: absolute;
+  inset: 0;
+}
+.wheel--mobile .wheel__orbit {
+  animation: orbit 46s linear infinite;
+}
+.wheel--desktop .wheel__orbit {
+  animation: orbit 60s linear infinite;
+}
+
+.wheel__ring {
+  position: absolute;
+  inset: 0;
+}
+.wheel--mobile .wheel__ring {
+  transition: transform 0.95s cubic-bezier(0.2, 0.85, 0.15, 1);
+}
+.wheel--desktop .wheel__ring {
+  transition: transform 1s cubic-bezier(0.2, 0.85, 0.15, 1);
+}
+
+.wheel__dashed {
+  position: absolute;
+  border-radius: 50%;
+}
+.wheel--mobile .wheel__dashed {
+  inset: 16px;
+  border: 1px dashed rgba(245, 208, 0, 0.34);
+}
+.wheel--desktop .wheel__dashed {
+  inset: 26px;
+  border: 1px dashed rgba(245, 208, 0, 0.32);
+}
+
+/* ---- Boutons d'engin --------------------------------------------------- */
+.engine {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.wheel--mobile .engine {
+  width: 76px;
+  height: 76px;
+  margin: -38px 0 0 -38px;
+}
+.wheel--desktop .engine {
+  width: 104px;
+  height: 104px;
+  margin: -52px 0 0 -52px;
+}
+.engine__counter {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+.wheel--mobile .engine__counter {
+  animation: orbitRev 46s linear infinite;
+}
+.wheel--desktop .engine__counter {
+  animation: orbitRev 60s linear infinite;
+}
+.engine__stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wheel--mobile .engine__stack {
+  gap: 4px;
+  transition: transform 0.95s cubic-bezier(0.2, 0.85, 0.15, 1);
+}
+.wheel--desktop .engine__stack {
+  gap: 8px;
+  transition: transform 1s cubic-bezier(0.2, 0.85, 0.15, 1);
+}
+.engine__pill {
+  display: grid;
+  place-items: center;
+  background: rgba(8, 16, 34, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--accent);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.wheel--mobile .engine__pill {
+  width: 50px;
+  height: 50px;
+  border-radius: 17px;
+}
+.wheel--desktop .engine__pill {
+  width: 68px;
+  height: 68px;
+  border-radius: 23px;
+  background: rgba(8, 16, 34, 0.72);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+}
+/* Hover (production) : accent + léger zoom */
+.engine:hover .engine__pill {
+  border-color: rgba(245, 208, 0, 0.6);
+  transform: scale(1.06);
+}
+.engine__pill--active {
+  border-color: rgba(245, 208, 0, 0.55);
+}
+.engine__label {
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.wheel--mobile .engine__label {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: #c9d4e6;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+}
+.wheel--desktop .engine__label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #d3dcec;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* ---- Centre + logo ----------------------------------------------------- */
+.wheel__center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 28%, #14418f, #061631);
+  border: 2px solid rgba(245, 208, 0, 0.55);
+  display: grid;
+  place-items: center;
+  z-index: 3;
+}
+.wheel--mobile .wheel__center {
+  width: 134px;
+  height: 134px;
+  box-shadow: 0 0 0 10px rgba(245, 208, 0, 0.06), 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+.wheel--desktop .wheel__center {
+  width: 196px;
+  height: 196px;
+  box-shadow: 0 0 0 14px rgba(245, 208, 0, 0.06), 0 22px 50px rgba(0, 0, 0, 0.55);
+}
+.wheel__logo {
+  border-radius: 50%;
+  object-fit: cover;
+}
+.wheel--mobile .wheel__logo {
+  width: 106px;
+  height: 106px;
+}
+.wheel--desktop .wheel__logo {
+  width: 160px;
+  height: 160px;
+}
+
+/* ---- Pastille de sélection --------------------------------------------- */
+.wheel__sel-pill {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  background: #f5d000;
+  color: #08121f;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-radius: 999px;
+}
+.wheel--mobile .wheel__sel-pill {
+  bottom: -4px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  padding: 7px 15px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+.wheel--desktop .wheel__sel-pill {
+  bottom: -14px;
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  padding: 9px 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+/* ==========================================================================
+   Feuille (mobile) & panneau (desktop)
+   ========================================================================== */
+.sheet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: min(568px, 88dvh);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #0b1a34, #060d1e 60%);
+  border-top: 2px solid #f5d000;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0 -24px 60px rgba(0, 0, 0, 0.6);
+  animation: sheetUp 0.5s cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+
+.panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, rgba(9, 20, 42, 0.94), rgba(5, 11, 26, 0.96));
+  border-left: 2px solid #f5d000;
+  box-shadow: -24px 0 60px rgba(0, 0, 0, 0.5);
+}
+.panel__filled {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.panel__empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 40px;
+}
+.panel__eyebrow {
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.panel__headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.panel__lead {
+  margin: 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-2);
+}
+
+/* ==========================================================================
+   Catalogue (partagé feuille + panneau)
+   ========================================================================== */
+.cat__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.sheet .cat__header {
+  padding: 16px 18px 12px;
+}
+.panel .cat__header {
+  padding: 26px 26px 14px;
+  gap: 16px;
+}
+.cat__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.panel .cat__heading {
+  gap: 6px;
+}
+.cat__title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.sheet .cat__title {
+  font-size: 24px;
+}
+.panel .cat__title {
+  font-size: 30px;
+}
+.cat__count {
+  font-weight: 400;
+  color: var(--text-3);
+}
+.sheet .cat__count {
+  font-size: 11px;
+}
+.panel .cat__count {
+  font-size: 12px;
+}
+.cat__close {
+  flex: none;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.cat__close:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+.sheet .cat__close {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  font-size: 20px;
+}
+.panel .cat__close {
+  width: 40px;
+  height: 40px;
+  border-radius: 13px;
+  font-size: 22px;
+}
+
+.cat__filters {
+  display: flex;
+  flex-direction: column;
+}
+.sheet .cat__filters {
+  padding: 0 18px 10px;
+  gap: 9px;
+}
+.panel .cat__filters {
+  padding: 0 26px 12px;
+  gap: 10px;
+}
+.cat__search {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-weight: 400;
+  outline: none;
+  border-radius: 13px;
+}
+.sheet .cat__search {
+  padding: 11px 14px;
+  font-size: 13px;
+}
+.panel .cat__search {
+  padding: 12px 15px;
+  font-size: 14px;
+}
+.cat__chips {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sheet .cat__chips {
+  gap: 7px;
+}
+.panel .cat__chips {
+  gap: 8px;
+}
+.chip {
+  cursor: pointer;
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #c3cee1;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.sheet .chip {
+  padding: 7px 11px;
+  font-size: 11px;
+}
+.panel .chip {
+  padding: 8px 13px;
+  font-size: 12px;
+}
+.chip--active {
+  background: #f5d000;
+  color: #0a1424;
+  border-color: #f5d000;
+}
+
+.cat__grid {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+}
+.sheet .cat__grid {
+  padding: 6px 18px 24px;
+  gap: 12px;
+}
+.panel .cat__grid {
+  padding: 8px 26px 28px;
+  gap: 14px;
+}
+
+/* ---- Carte produit ----------------------------------------------------- */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  transition: background 0.2s ease;
+}
+.card:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+.card--mobile {
+  gap: 7px;
+  padding: 10px;
+  border-radius: 18px;
+}
+.card--desktop {
+  gap: 8px;
+  padding: 12px;
+  border-radius: 20px;
+}
+.card__photo {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+}
+.card--mobile .card__photo {
+  height: 92px;
+  border-radius: 12px;
+}
+.card--desktop .card__photo {
+  height: 112px;
+  border-radius: 14px;
+}
+.card__brand {
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.card__model {
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+.card--mobile .card__model {
+  font-size: 15px;
+}
+.card--desktop .card__model {
+  font-size: 16px;
+}
+.card__specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.card__spec {
+  font-weight: 600;
+  color: var(--chip-text);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+}
+.card--mobile .card__spec {
+  font-size: 10px;
+  padding: 3px 6px;
+}
+.card--desktop .card__spec {
+  font-size: 11px;
+  padding: 4px 7px;
+}
+.card__dim {
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text-4);
+}
+.card--mobile .card__dim {
+  font-size: 10px;
+}
+.card--desktop .card__dim {
+  font-size: 11px;
+}
+.card__price {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+}
+.card--mobile .card__price {
+  font-size: 21px;
+}
+.card--desktop .card__price {
+  font-size: 24px;
+}
+.card__cta {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 0;
+  background: var(--wa);
+  color: var(--wa-text);
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.card__cta:hover {
+  background: #1fbe5b;
+}
+.card--mobile .card__cta {
+  gap: 6px;
+  padding: 10px 0;
+  border-radius: 12px;
+  font-size: 12px;
+}
+.card--desktop .card__cta {
+  gap: 7px;
+  padding: 11px 0;
+  border-radius: 13px;
+  font-size: 13px;
+}
+
+/* ---- État vide --------------------------------------------------------- */
+.cat__empty {
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-3);
+}
+.sheet .cat__empty {
+  padding: 0 18px 26px;
+  font-size: 13px;
+}
+.panel .cat__empty {
+  padding: 0 26px 30px;
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   Responsive & accessibilité
+   ========================================================================== */
+/* Très petits écrans : réduire le cercle pour qu'il tienne dans la largeur. */
+@media (max-width: 380px) {
+  .wheel--mobile {
+    transform: scale(0.86);
+    transform-origin: center;
+  }
+}
+
+/* Respect de prefers-reduced-motion : on coupe rotations/halo/transitions. */
+@media (prefers-reduced-motion: reduce) {
+  .wheel__orbit,
+  .engine__counter,
+  .wheel__halo,
+  .sheet {
+    animation: none !important;
+  }
+  .wheel__halo {
+    opacity: 0.6;
+  }
+  .wheel__ring,
+  .engine__stack,
+  .engine__pill {
+    transition: none !important;
+  }
+}
