@@ -48,9 +48,10 @@ export default function Desktop() {
             <span className="panel__eyebrow">Catalogue</span>
             <span className="panel__headline">Clique sur ton engin</span>
             <p className="panel__lead">
-              Voiture, moto, camion, bateau, quad, tracteur, camping-car, groupe électrogène ou
-              solaire : la liste des batteries compatibles s'affiche ici avec la fiche technique, le
-              prix et l'envoi direct sur WhatsApp.
+              Voiture, moto, camion, bateau, quad, tracteur, camping-car, groupe électrogène,
+              solaire, fauteuil roulant, matériel industriel ou batterie de sauvegarde : la liste
+              des batteries compatibles s'affiche ici avec la fiche technique, le prix et l'envoi
+              direct sur WhatsApp.
             </p>
             <button type="button" className="finder-cta" onClick={() => setFinderOpen(true)}>
               <span className="finder-cta__icon" aria-hidden="true">✦</span>

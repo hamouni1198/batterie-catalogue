@@ -1,30 +1,27 @@
 import VehicleIcon from './icons/VehicleIcon.jsx'
 import BrandLockup from './BrandLockup.jsx'
 
-// Positions des 9 boutons autour du cercle (angle = −90° + i×40°, rayon 42 %),
-// exprimées en % du conteneur. Même grille pour mobile et desktop.
-const POSITIONS = [
-  { left: '50%', top: '8%' }, // 0 voiture
-  { left: '77%', top: '17.8%' }, // 1 moto
-  { left: '91.4%', top: '42.7%' }, // 2 camion
-  { left: '86.4%', top: '71%' }, // 3 bateau
-  { left: '64.4%', top: '89.5%' }, // 4 quad
-  { left: '35.6%', top: '89.5%' }, // 5 tracteur
-  { left: '13.6%', top: '71%' }, // 6 camping
-  { left: '8.6%', top: '42.7%' }, // 7 groupe
-  { left: '23%', top: '17.8%' }, // 8 solaire
-]
-
 // Réglages par variante (tailles/épaisseurs propres à chaque écran).
 const VARIANTS = {
   mobile: { icon: 25, strokeWidth: 1.6, labelKey: 'labelMobile' },
   desktop: { icon: 34, strokeWidth: 1.5, labelKey: 'labelDesktop' },
 }
 
+// Position d'un engin autour du cercle : angle = −90° + i × pas, rayon 42 %.
+// Calculé dynamiquement selon le nombre d'engins (9, 12, …).
+function positionFor(i, count) {
+  const step = 360 / count
+  const rad = ((-90 + i * step) * Math.PI) / 180
+  return {
+    left: `${(50 + 42 * Math.cos(rad)).toFixed(2)}%`,
+    top: `${(50 + 42 * Math.sin(rad)).toFixed(2)}%`,
+  }
+}
+
 // Le cercle : logo au centre, engins autour, anneau rotatif.
 // - `spinning` pilote la rotation d'attente (running/paused).
-// - À la sélection, l'anneau tourne de −40°×index et les icônes contre-tournent
-//   de +40°×index pour rester droites (transition gérée en CSS par variante).
+// - À la sélection, l'anneau tourne de −pas×index et les icônes contre-tournent
+//   de +pas×index pour rester droites (pas = 360 / nombre d'engins).
 export default function VehicleWheel({
   variant = 'mobile',
   vehicles,
@@ -35,8 +32,10 @@ export default function VehicleWheel({
   spinning,
 }) {
   const cfg = VARIANTS[variant]
-  const ringDeg = hasSelection ? -40 * index : 0
-  const iconDeg = hasSelection ? 40 * index : 0
+  const count = vehicles.length
+  const step = 360 / count
+  const ringDeg = hasSelection ? -step * index : 0
+  const iconDeg = hasSelection ? step * index : 0
   const playState = spinning ? 'running' : 'paused'
   const selectedVehicle = vehicles[index]
 
@@ -56,7 +55,7 @@ export default function VehicleWheel({
                 key={v.key}
                 type="button"
                 className="engine"
-                style={POSITIONS[i]}
+                style={positionFor(i, count)}
                 onClick={() => onSelect(v.key)}
                 aria-pressed={isActive}
                 aria-label={v[cfg.labelKey]}

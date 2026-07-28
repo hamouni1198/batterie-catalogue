@@ -17,6 +17,15 @@ const PATHS = {
   groupe:
     'M3.5 9.8h12.5v8.7H3.5zM16 12.6h3.5v5.9H16M6.2 9.8V6.6h4.3v3.2M10.2 11.8l-2.5 3.5h2.2l-.5 2.3 2.7-3.6h-2.2z',
   solaire: 'M4 14.5h13.5l2.2-8.5H6.2zM9 6v8.5M13 6v8.5M5.2 10.2h13M2.5 18.5h16',
+  // Fauteuil roulant (symbole accessibilité / handicap)
+  fauteuil:
+    'M17 4a1 1 0 10-2 0 1 1 0 102 0M18 19l1-7-6 1M5 8l3-3 5.5 3-2.4 3.5M4.3 14.5a5 5 0 006.9 6M13.8 17.5a5 5 0 00-6.9-6',
+  // Industriel (chariot élévateur / transpalette)
+  industriel:
+    'M15 19a2 2 0 10-4 0 2 2 0 104 0M7 19a2 2 0 10-4 0 2 2 0 104 0M12 12H5a2 2 0 00-2 2v5M8 19h3M16 2v17h5M6 12V7c0-1.1.9-2 2-2h3l5 5',
+  // Mémoire / backup (puce mémoire)
+  memoire:
+    'M6 4h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2zM9 9h6v6H9zM15 2v2M9 2v2M15 20v2M9 20v2M2 15h2M2 9h2M20 15h2M20 9h2',
 }
 
 export default function VehicleIcon({ name, size = 25, strokeWidth = 1.6 }) {

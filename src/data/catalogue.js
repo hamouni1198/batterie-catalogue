@@ -122,6 +122,39 @@ export const vehicles = [
       { id: 's3', brand: 'SP', model: 'Solar Tubulaire 200', ah: 200, v: 12, cca: 0, dim: '518 × 276 × 242 mm', price: 4190, fits: 'Site isolé, ferme' },
     ],
   },
+  {
+    key: 'fauteuil',
+    name: 'Fauteuil roulant',
+    labelMobile: 'Fauteuil',
+    labelDesktop: 'Fauteuil roulant',
+    batteries: [
+      { id: 'f1', brand: 'SP', model: 'Gel 12-22', ah: 22, v: 12, cca: 0, dim: '181 × 76 × 167 mm', price: 420, fits: 'Fauteuil électrique, scooter PMR' },
+      { id: 'f2', brand: 'LONG', model: 'AGM 12-35', ah: 35, v: 12, cca: 0, dim: '195 × 130 × 168 mm', price: 620, fits: 'Fauteuil lourd, scooter 4 roues' },
+      { id: 'f3', brand: 'VOLTAGE', model: 'Gel 12-50', ah: 50, v: 12, cca: 0, dim: '197 × 165 × 170 mm', price: 890, fits: 'Mobilité longue autonomie' },
+    ],
+  },
+  {
+    key: 'industriel',
+    name: 'Industriel',
+    labelMobile: 'Industriel',
+    labelDesktop: 'Industriel / Levage',
+    batteries: [
+      { id: 'in1', brand: 'FOX', model: 'Traction T105', ah: 105, v: 12, cca: 0, dim: '330 × 172 × 240 mm', price: 1990, fits: 'Transpalette élec., nacelle' },
+      { id: 'in2', brand: 'VOLTAGE', model: 'Traction T150 24V', ah: 150, v: 24, cca: 0, dim: '518 × 276 × 242 mm', price: 3990, fits: 'Gerbeur, chariot élévateur' },
+      { id: 'in3', brand: 'LONG', model: 'Industrial 200', ah: 200, v: 12, cca: 0, dim: '522 × 240 × 224 mm', price: 3490, fits: 'Balayeuse, autolaveuse' },
+    ],
+  },
+  {
+    key: 'memoire',
+    name: 'Mémoire / Backup',
+    labelMobile: 'Mémoire',
+    labelDesktop: 'Mémoire / Backup',
+    batteries: [
+      { id: 'me1', brand: 'SP', model: 'Backup 12-1.2', ah: 1.2, v: 12, cca: 0, dim: '97 × 43 × 52 mm', price: 120, fits: 'Sauvegarde calculateur / radio' },
+      { id: 'me2', brand: 'LONG', model: 'Gel Backup 12-2.3', ah: 2.3, v: 12, cca: 0, dim: '178 × 34 × 64 mm', price: 160, fits: 'Maintien mémoire au changement' },
+      { id: 'me3', brand: 'VARTA', model: 'Backup 12-3.4', ah: 3.4, v: 12, cca: 0, dim: '134 × 67 × 60 mm', price: 220, fits: 'Alarme, centralisation, mémoire' },
+    ],
+  },
 ]
 
 export default vehicles
