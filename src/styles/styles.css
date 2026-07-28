@@ -111,7 +111,10 @@ input::placeholder {
   inset: 0;
   display: flex;
   flex-direction: column;
-  padding: 24px 20px 0;
+  /* Réserve la zone sûre (barre d'état / encoche en haut, indicateur home en
+     bas) pour que la barre du haut ne soit pas masquée par le téléphone.
+     Requiert viewport-fit=cover (déclaré dans index.html). */
+  padding: calc(24px + env(safe-area-inset-top)) 20px env(safe-area-inset-bottom);
 }
 .screen__left {
   position: absolute;
@@ -733,7 +736,7 @@ input::placeholder {
   align-content: start;
 }
 .sheet .cat__grid {
-  padding: 6px 18px 24px;
+  padding: 6px 18px calc(24px + env(safe-area-inset-bottom));
   gap: 12px;
 }
 .panel .cat__grid {
