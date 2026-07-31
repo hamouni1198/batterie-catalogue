@@ -6,7 +6,7 @@ import { priceText } from './format.js'
 // Limite connue : un lien wa.me ne peut pas joindre de photo ; elle s'envoie
 // manuellement après (voir handoff § Interactions).
 export function buildWhatsappLink(battery, vehicleName, config) {
-  const number = String(config.whatsappNumber || '212600000000').replace(/[^0-9]/g, '')
+  const number = String(config.whatsappNumber || '212777376489').replace(/[^0-9]/g, '')
   const greeting = config.whatsappGreeting || 'Bonjour Battery Dynamic,'
 
   const lines = [
