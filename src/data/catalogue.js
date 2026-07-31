@@ -62,7 +62,6 @@ export const vehicles = [
     batteries: [
       { id: 'bt5077', brand: 'BOSCH', model: 'T5 077', ah: 180, v: 12, cca: 1000, dim: '513 × 223 × 223 mm', price: 3200, fits: 'Camions, poids lourds, tracteurs routiers', photo: '/batteries/bt5077.webp' },
       { id: 'c2', brand: 'FOX', model: 'Truck 150', ah: 150, v: 12, cca: 1000, dim: '513 × 189 × 223 mm', price: 2350, fits: 'Actros, TGX, Renault T' },
-      { id: 'c3', brand: 'VARTA', model: 'Promotive M18', ah: 180, v: 12, cca: 1100, dim: '513 × 223 × 223 mm', price: 3150, fits: 'Volvo FH, Scania R' },
       { id: 'c4', brand: 'VOLTAGE', model: 'Heavy 200', ah: 200, v: 12, cca: 1150, dim: '518 × 276 × 242 mm', price: 3490, fits: 'Bennes, remorques, bus' },
     ],
   },
@@ -73,7 +72,6 @@ export const vehicles = [
     labelDesktop: 'Bateau / Jet-ski',
     batteries: [
       { id: 'b1', brand: 'SP', model: 'Jet-ski YTX20-BS', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 590, fits: 'Sea-Doo, Yamaha WaveRunner' },
-      { id: 'b2', brand: 'VARTA', model: 'Professional DC 90', ah: 90, v: 12, cca: 800, dim: '353 × 175 × 190 mm', price: 1890, fits: 'Servitude, sondeur, guindeau' },
       { id: 'b3', brand: 'LONG', model: 'Marine Gel 100', ah: 100, v: 12, cca: 700, dim: '330 × 171 × 220 mm', price: 2450, fits: 'Semi-rigide, barque pêche' },
       { id: 'b4', brand: 'FOX', model: 'Marine 120', ah: 120, v: 12, cca: 850, dim: '410 × 176 × 227 mm', price: 2190, fits: 'Hors-bord, chalutier' },
     ],
@@ -84,7 +82,6 @@ export const vehicles = [
     labelMobile: 'Quad',
     labelDesktop: 'Quad / Buggy',
     batteries: [
-      { id: 'q1', brand: 'VARTA', model: 'Powersports AGM YTX12', ah: 10, v: 12, cca: 200, dim: '152 × 88 × 131 mm', price: 460, fits: 'Raptor, Outlander' },
       { id: 'q2', brand: 'LONG', model: 'Gel YTX16-BS', ah: 14, v: 12, cca: 230, dim: '150 × 87 × 161 mm', price: 480, fits: 'Buggy 800, SSV' },
       { id: 'q3', brand: 'SP', model: 'Quad YTX20L-BS', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 560, fits: 'Polaris, Can-Am, Kymco' },
     ],
@@ -96,7 +93,6 @@ export const vehicles = [
     labelDesktop: 'Camping-car',
     batteries: [
       { id: 'k1', brand: 'LONG', model: 'Deep Cycle 105', ah: 105, v: 12, cca: 650, dim: '330 × 171 × 220 mm', price: 2350, fits: 'Cellule, frigo, éclairage' },
-      { id: 'k2', brand: 'VARTA', model: 'Professional DC 115', ah: 115, v: 12, cca: 760, dim: '353 × 175 × 190 mm', price: 2490, fits: 'Ducato, Boxer aménagé' },
       { id: 'k3', brand: 'FOX', model: 'Camper AGM 100', ah: 100, v: 12, cca: 800, dim: '353 × 175 × 190 mm', price: 2690, fits: 'Van 4x4, fourgon' },
     ],
   },
@@ -152,7 +148,6 @@ export const vehicles = [
     batteries: [
       { id: 'me1', brand: 'SP', model: 'Backup 12-1.2', ah: 1.2, v: 12, cca: 0, dim: '97 × 43 × 52 mm', price: 120, fits: 'Sauvegarde calculateur / radio' },
       { id: 'me2', brand: 'LONG', model: 'Gel Backup 12-2.3', ah: 2.3, v: 12, cca: 0, dim: '178 × 34 × 64 mm', price: 160, fits: 'Maintien mémoire au changement' },
-      { id: 'me3', brand: 'VARTA', model: 'Backup 12-3.4', ah: 3.4, v: 12, cca: 0, dim: '134 × 67 × 60 mm', price: 220, fits: 'Alarme, centralisation, mémoire' },
     ],
   },
 ]
