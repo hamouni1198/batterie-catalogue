@@ -95,11 +95,11 @@ export default function Mobile() {
           <div className="accueil-actions">
             <button type="button" className="finder-cta" onClick={() => setFinderOpen(true)}>
               <span className="finder-cta__icon" aria-hidden="true">✦</span>
-              Aide-moi à choisir ma batterie
+              M'aider à choisir
             </button>
             <button type="button" className="brand-cta" onClick={() => setBrandOpen(true)}>
               <span className="brand-cta__icon" aria-hidden="true">▦</span>
-              Voir par marque
+              Par marque
             </button>
           </div>
         )}
