@@ -79,17 +79,6 @@ export const vehicles = [
     ],
   },
   {
-    key: 'tracteur',
-    name: 'Tracteur / Agricole',
-    labelMobile: 'Tracteur',
-    labelDesktop: 'Tracteur',
-    batteries: [
-      { id: 't1', brand: 'VARTA', model: 'Promotive H3', ah: 100, v: 12, cca: 720, dim: '413 × 175 × 220 mm', price: 1750, fits: 'Massey 290, Kubota' },
-      { id: 't2', brand: 'FOX', model: 'Agri 143', ah: 143, v: 12, cca: 900, dim: '513 × 189 × 223 mm', price: 2250, fits: 'New Holland, Deutz' },
-      { id: 't3', brand: 'VOLTAGE', model: 'Agri 180', ah: 180, v: 12, cca: 1000, dim: '513 × 223 × 223 mm', price: 2950, fits: 'John Deere, Case IH' },
-    ],
-  },
-  {
     key: 'camping',
     name: 'Camping-car',
     labelMobile: 'Camping-car',

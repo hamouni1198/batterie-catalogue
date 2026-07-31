@@ -50,9 +50,9 @@ export default function Desktop() {
             <span className="panel__eyebrow">Catalogue</span>
             <span className="panel__headline">Clique sur ton engin</span>
             <p className="panel__lead">
-              Voiture, moto, camion, bateau, quad, tracteur, camping-car, groupe électrogène,
-              solaire, fauteuil roulant, matériel industriel ou batterie de sauvegarde : la liste
-              des batteries compatibles s'affiche ici avec la fiche technique, le prix et l'envoi
+              Voiture, moto, camion, bateau, quad, camping-car, groupe électrogène, solaire,
+              fauteuil roulant, matériel industriel ou batterie de sauvegarde : la liste des
+              batteries compatibles s'affiche ici avec la fiche technique, le prix et l'envoi
               direct sur WhatsApp.
             </p>
             <div className="accueil-actions accueil-actions--desktop">
