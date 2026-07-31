@@ -24,10 +24,15 @@ export const vehicles = [
     labelMobile: 'Voiture',
     labelDesktop: 'Voiture',
     batteries: [
-      { id: 'v1', brand: 'VARTA', model: 'Blue Dynamic B18', ah: 44, v: 12, cca: 420, dim: '207 × 175 × 175 mm', price: 690, fits: 'Clio, Sandero, 208, Picanto' },
       { id: 'v3', brand: 'FOX', model: 'Premium 70', ah: 70, v: 12, cca: 600, dim: '261 × 175 × 220 mm', price: 950, fits: 'Duster, Kangoo, Partner' },
-      { id: 'v4', brand: 'VARTA', model: 'Blue Dynamic E11', ah: 74, v: 12, cca: 680, dim: '278 × 175 × 190 mm', price: 1190, fits: 'Passat, Mégane, Focus, C4' },
       { id: 'v5', brand: 'VOLTAGE', model: 'Silver 100', ah: 100, v: 12, cca: 800, dim: '353 × 175 × 190 mm', price: 1590, fits: 'Prado, Hilux, Touareg, X5' },
+      // VARTA — données réelles (specs constructeur ; prix source à valider avec tes marges)
+      { id: 'vc14', brand: 'VARTA', model: 'Dynamic SLI C14', ah: 56, v: 12, cca: 480, dim: '242 × 175 × 175 mm', price: 950, fits: 'Clio, 208, Corsa, Polo · L2', photo: '/batteries/vc14.webp' },
+      { id: 've13', brand: 'VARTA', model: 'Dynamic SLI E13', ah: 70, v: 12, cca: 640, dim: '278 × 175 × 175 mm', price: 1000, fits: 'Mégane, Focus, Passat · L3', photo: '/batteries/ve13.webp' },
+      { id: 'vf17', brand: 'VARTA', model: 'Dynamic SLI F17', ah: 80, v: 12, cca: 740, dim: '315 × 175 × 175 mm', price: 1450, fits: 'Passat, Qashqai, C4 · L4', photo: '/batteries/vf17.webp' },
+      { id: 'vh3', brand: 'VARTA', model: 'Dynamic SLI H3', ah: 100, v: 12, cca: 830, dim: '353 × 175 × 175 mm', price: 1900, fits: 'Touareg, X5, Transporter · L5', photo: '/batteries/vh3.webp' },
+      { id: 'va7', brand: 'VARTA', model: 'Dynamic AGM A7', ah: 70, v: 12, cca: 760, dim: '278 × 175 × 190 mm', price: 2400, fits: 'Start-Stop — Golf, A3, Série 3 · L3', photo: '/batteries/va7.webp' },
+      { id: 'va6', brand: 'VARTA', model: 'Dynamic AGM A6', ah: 80, v: 12, cca: 800, dim: '315 × 175 × 190 mm', price: 2500, fits: 'Start-Stop — Passat, X1, 3008 · L4', photo: '/batteries/va6.webp' },
       // BOSCH — données réelles (specs constructeur ; prix source maisondebatterie.ma, à valider avec tes marges)
       { id: 'bs3005', brand: 'BOSCH', model: 'S3 005', ah: 56, v: 12, cca: 480, dim: '242 × 175 × 175 mm', price: 900, fits: 'Clio, 208, Corsa, Polo · L2', photo: '/batteries/bs3005.webp' },
       { id: 'bs3007', brand: 'BOSCH', model: 'S3 007', ah: 70, v: 12, cca: 640, dim: '278 × 175 × 175 mm', price: 1050, fits: 'Mégane, Focus, Golf, Astra · L3', photo: '/batteries/bs3007.webp' },
@@ -46,7 +51,7 @@ export const vehicles = [
       { id: 'm1', brand: 'SP', model: 'Moto YTX7A-BS', ah: 7, v: 12, cca: 105, dim: '150 × 87 × 94 mm', price: 240, fits: 'SYM, Kymco, Docker' },
       { id: 'm2', brand: 'SP', model: 'Moto YTX9-BS', ah: 8, v: 12, cca: 120, dim: '150 × 87 × 105 mm', price: 280, fits: 'CB500, MT-03, Z400' },
       { id: 'm3', brand: 'LONG', model: 'YTZ12S Gel', ah: 11, v: 12, cca: 210, dim: '150 × 87 × 110 mm', price: 420, fits: 'Honda Forza, X-ADV' },
-      { id: 'm4', brand: 'VARTA', model: 'Powersports YTX14', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 520, fits: 'BMW GS, Africa Twin' },
+      { id: 'vytx20l', brand: 'VARTA', model: 'Powersports AGM YTX20L-BS', ah: 18, v: 12, cca: 250, dim: '175 × 87 × 155 mm', price: 1350, fits: 'Moto, quad, jet-ski (YTX20L-4)', photo: '/batteries/vytx20l.webp' },
     ],
   },
   {
