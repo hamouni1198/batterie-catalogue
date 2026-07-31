@@ -25,10 +25,16 @@ export const vehicles = [
     labelDesktop: 'Voiture',
     batteries: [
       { id: 'v1', brand: 'VARTA', model: 'Blue Dynamic B18', ah: 44, v: 12, cca: 420, dim: '207 × 175 × 175 mm', price: 690, fits: 'Clio, Sandero, 208, Picanto' },
-      { id: 'v2', brand: 'BOSCH', model: 'S4 005', ah: 60, v: 12, cca: 540, dim: '242 × 175 × 190 mm', price: 890, fits: 'Logan, Golf, Fiesta, Ibiza' },
       { id: 'v3', brand: 'FOX', model: 'Premium 70', ah: 70, v: 12, cca: 600, dim: '261 × 175 × 220 mm', price: 950, fits: 'Duster, Kangoo, Partner' },
       { id: 'v4', brand: 'VARTA', model: 'Blue Dynamic E11', ah: 74, v: 12, cca: 680, dim: '278 × 175 × 190 mm', price: 1190, fits: 'Passat, Mégane, Focus, C4' },
       { id: 'v5', brand: 'VOLTAGE', model: 'Silver 100', ah: 100, v: 12, cca: 800, dim: '353 × 175 × 190 mm', price: 1590, fits: 'Prado, Hilux, Touareg, X5' },
+      // BOSCH — données réelles (specs constructeur ; prix source maisondebatterie.ma, à valider avec tes marges)
+      { id: 'bs3005', brand: 'BOSCH', model: 'S3 005', ah: 56, v: 12, cca: 480, dim: '242 × 175 × 175 mm', price: 900, fits: 'Clio, 208, Corsa, Polo · L2' },
+      { id: 'bs3007', brand: 'BOSCH', model: 'S3 007', ah: 70, v: 12, cca: 640, dim: '278 × 175 × 175 mm', price: 1050, fits: 'Mégane, Focus, Golf, Astra · L3' },
+      { id: 'bs4010', brand: 'BOSCH', model: 'S4 010', ah: 80, v: 12, cca: 740, dim: '315 × 175 × 175 mm', price: 1370, fits: 'Passat, 3008, Qashqai, C4 · L4' },
+      { id: 'bs5013', brand: 'BOSCH', model: 'S5 013', ah: 100, v: 12, cca: 830, dim: '353 × 175 × 175 mm', price: 1850, fits: 'Touareg, X5, Espace, Transporter · L5' },
+      { id: 'bs5a11', brand: 'BOSCH', model: 'S5 A11 AGM', ah: 80, v: 12, cca: 800, dim: '315 × 175 × 190 mm', price: 2700, fits: 'Start-Stop — Golf 7, A3, Série 1 · L4' },
+      { id: 'bs5a15', brand: 'BOSCH', model: 'S5 A15 AGM', ah: 105, v: 12, cca: 950, dim: '394 × 175 × 190 mm', price: 3000, fits: 'Start-Stop — X5, Q7, Touareg, Série 5 · L6' },
     ],
   },
   {
@@ -49,7 +55,7 @@ export const vehicles = [
     labelMobile: 'Camion',
     labelDesktop: 'Camion',
     batteries: [
-      { id: 'c1', brand: 'BOSCH', model: 'T4 077', ah: 140, v: 12, cca: 850, dim: '513 × 189 × 223 mm', price: 2190, fits: 'Sprinter, Daily, Atego' },
+      { id: 'bt5077', brand: 'BOSCH', model: 'T5 077', ah: 180, v: 12, cca: 1000, dim: '513 × 223 × 223 mm', price: 3200, fits: 'Camions, poids lourds, tracteurs routiers' },
       { id: 'c2', brand: 'FOX', model: 'Truck 150', ah: 150, v: 12, cca: 1000, dim: '513 × 189 × 223 mm', price: 2350, fits: 'Actros, TGX, Renault T' },
       { id: 'c3', brand: 'VARTA', model: 'Promotive M18', ah: 180, v: 12, cca: 1100, dim: '513 × 223 × 223 mm', price: 3150, fits: 'Volvo FH, Scania R' },
       { id: 'c4', brand: 'VOLTAGE', model: 'Heavy 200', ah: 200, v: 12, cca: 1150, dim: '518 × 276 × 242 mm', price: 3490, fits: 'Bennes, remorques, bus' },
