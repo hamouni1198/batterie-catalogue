@@ -9,10 +9,10 @@
 export const config = {
   // Numéro WhatsApp au format international, sans « + » ni espaces.
   // PLACEHOLDER — remplacer par le vrai numéro (ex. 2126XXXXXXXX).
-  whatsappNumber: '212600000000',
+  whatsappNumber: '212777376489',
 
   // Numéro d'appel (bouton « Appeler »). PLACEHOLDER.
-  phoneNumber: '+212600000000',
+  phoneNumber: '+212777376489',
 
   // Première ligne du message WhatsApp pré-rempli.
   whatsappGreeting: 'Bonjour Battery Dynamic,',
