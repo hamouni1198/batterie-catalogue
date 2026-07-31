@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { vehicles } from '../data/catalogue.js'
-import { priceText } from '../lib/format.js'
+import { enrichBattery } from '../lib/battery.js'
 
 // Définition des filtres prix (en Dh). L'ordre est celui des chips.
 export const PRICE_FILTERS = [
@@ -44,13 +44,9 @@ export function useCatalogue(showPrices = true) {
 
   const list = useMemo(
     () =>
-      filterBatteries(vehicle.batteries, query, priceFilter).map((b) => ({
-        ...b,
-        ahText: b.ah + ' Ah',
-        vText: b.v + ' V',
-        ccaText: b.cca ? b.cca + ' A' : 'Décharge lente',
-        priceText: priceText(b.price, showPrices),
-      })),
+      filterBatteries(vehicle.batteries, query, priceFilter).map((b) =>
+        enrichBattery(b, showPrices),
+      ),
     [vehicle, query, priceFilter, showPrices],
   )
 

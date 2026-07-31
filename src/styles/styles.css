@@ -1008,8 +1008,23 @@ input::placeholder {
 /* ==========================================================================
    Assistant : bouton d'entrée + modal
    ========================================================================== */
-.finder-cta {
-  align-self: center;
+/* Actions d'accueil (assistant + marques) */
+.accueil-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.screen--mobile .accueil-actions {
+  margin-bottom: 12px;
+}
+.accueil-actions--desktop {
+  align-items: flex-start;
+  margin-top: 4px;
+}
+
+.finder-cta,
+.brand-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1019,12 +1034,14 @@ input::placeholder {
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.02em;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.finder-cta {
   color: #fff;
   padding: 12px 18px;
   border-radius: 14px;
   border: 1px solid rgba(225, 27, 34, 0.5);
   background: rgba(225, 27, 34, 0.14);
-  transition: background 0.2s ease, border-color 0.2s ease;
 }
 .finder-cta:hover {
   background: rgba(225, 27, 34, 0.24);
@@ -1034,12 +1051,75 @@ input::placeholder {
   color: #e11b22;
   font-size: 14px;
 }
-.screen--mobile .finder-cta {
-  margin-bottom: 12px;
+/* Bouton secondaire « Voir par marque » */
+.brand-cta {
+  color: #eae4e6;
+  padding: 11px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
 }
-.panel__empty .finder-cta {
-  align-self: flex-start;
-  margin-top: 4px;
+.brand-cta:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.brand-cta__icon {
+  color: #e11b22;
+  font-size: 13px;
+}
+
+/* Chip contexte (engin) dans la carte, utilisé par la vue « marques ». */
+.card__spec--ctx {
+  background: rgba(225, 27, 34, 0.16);
+  color: #f2c3c5;
+  border: 1px solid rgba(225, 27, 34, 0.35);
+}
+
+/* Navigateur par marque (grille + liste) */
+.brandgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.brandcard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  cursor: pointer;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  transition: background 0.2s ease, border-color 0.2s ease;
+  text-align: left;
+}
+.brandcard:hover {
+  background: rgba(225, 27, 34, 0.14);
+  border-color: rgba(225, 27, 34, 0.5);
+}
+.brandcard__name {
+  font-family: 'Archivo Black', system-ui, sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+.brandcard__count {
+  font-weight: 500;
+  font-size: 11px;
+  color: var(--text-3);
+}
+.brandlist__count {
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--text-3);
+}
+.brandlist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .finder {

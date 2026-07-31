@@ -4,6 +4,7 @@ import InfoBar from '../components/InfoBar.jsx'
 import VehicleWheel from '../components/VehicleWheel.jsx'
 import Catalogue from '../components/Catalogue.jsx'
 import BatteryFinder from '../components/BatteryFinder.jsx'
+import BrandBrowser from '../components/BrandBrowser.jsx'
 import { useCatalogue } from '../hooks/useCatalogue.js'
 import { usePrefersReducedMotion } from '../hooks/useMediaQuery.js'
 import config from '../config.js'
@@ -16,6 +17,7 @@ export default function Desktop() {
   const reducedMotion = usePrefersReducedMotion()
   const spinning = config.spinIdle && !cat.hasSelection && !reducedMotion
   const [finderOpen, setFinderOpen] = useState(false)
+  const [brandOpen, setBrandOpen] = useState(false)
 
   return (
     <div className="screen screen--desktop">
@@ -53,10 +55,16 @@ export default function Desktop() {
               des batteries compatibles s'affiche ici avec la fiche technique, le prix et l'envoi
               direct sur WhatsApp.
             </p>
-            <button type="button" className="finder-cta" onClick={() => setFinderOpen(true)}>
-              <span className="finder-cta__icon" aria-hidden="true">✦</span>
-              Aide-moi à choisir ma batterie
-            </button>
+            <div className="accueil-actions accueil-actions--desktop">
+              <button type="button" className="finder-cta" onClick={() => setFinderOpen(true)}>
+                <span className="finder-cta__icon" aria-hidden="true">✦</span>
+                Aide-moi à choisir ma batterie
+              </button>
+              <button type="button" className="brand-cta" onClick={() => setBrandOpen(true)}>
+                <span className="brand-cta__icon" aria-hidden="true">▦</span>
+                Voir par marque
+              </button>
+            </div>
           </div>
         )}
       </aside>
@@ -71,6 +79,8 @@ export default function Desktop() {
           onClose={() => setFinderOpen(false)}
         />
       )}
+
+      {brandOpen && <BrandBrowser vehicles={cat.vehicles} onClose={() => setBrandOpen(false)} />}
     </div>
   )
 }

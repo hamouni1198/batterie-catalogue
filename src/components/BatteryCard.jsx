@@ -3,7 +3,7 @@ import { WhatsappIcon } from './icons/SocialIcons.jsx'
 // Carte produit — présentation « ligne compacte » : badge capacité (Ah) à
 // gauche, marque + modèle + specs au centre, prix + CTA WhatsApp à droite.
 // Pas de photo (évite l'emplacement vide) — la capacité sert de repère visuel.
-export default function BatteryCard({ battery, variant = 'mobile', onOrder }) {
+export default function BatteryCard({ battery, variant = 'mobile', onOrder, context }) {
   return (
     <article className={`card card--${variant}`}>
       <div className="card__badge">
@@ -15,6 +15,7 @@ export default function BatteryCard({ battery, variant = 'mobile', onOrder }) {
         <span className="card__brand">{battery.brand}</span>
         <span className="card__model">{battery.model}</span>
         <div className="card__specs">
+          {context && <span className="card__spec card__spec--ctx">{context}</span>}
           <span className="card__spec">{battery.vText}</span>
           <span className="card__spec">{battery.ccaText}</span>
         </div>
