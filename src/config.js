@@ -33,7 +33,7 @@ export const config = {
     tagline: 'vente en gros & détail',
     taglineDesktop: 'Vente en gros & détail · Agadir',
     hours: 'Lun – Sam · 8h30 – 20h',
-    address: 'Bd Hassan II, Agadir · pose sur place',
+    address: '9 Juillet, Khiam 1, Agadir · pose sur place',
     // Compte Instagram officiel.
     instagramUrl: 'https://www.instagram.com/battery_dynamic/',
     // Lien Google Maps officiel de la boutique (bouton « Itinéraire » + icône).
