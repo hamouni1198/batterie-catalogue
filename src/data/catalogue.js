@@ -75,6 +75,15 @@ export const vehicles = [
       { id: 'exetx14', brand: 'EXIDE', model: 'ETX14 AGM', ah: 12, v: 12, cca: 210, dim: '150 × 87 × 145 mm', price: 950, fits: 'YTX14 / AGM 12-14 — moto, quad (AGM)', photo: '/batteries/exagm14.webp' },
       { id: 'exetx16', brand: 'EXIDE', model: 'ETX16 AGM', ah: 16, v: 12, cca: 170, dim: '175 × 87 × 155 mm', price: 1200, fits: 'YTX16 / AGM 12-16 — moto, jet-ski (AGM)', photo: '/batteries/exagm16.webp' },
       { id: 'exetx20hl', brand: 'EXIDE', model: 'ETX20HL AGM', ah: 21, v: 12, cca: 350, dim: '205 × 87 × 162 mm', price: 1400, fits: 'YTX20HL / AGM 12-23 — gros custom, Harley (AGM)', photo: '/batteries/exagm23.webp' },
+      // YUASA — série YTX Maintenance Free AGM. Specs officielles YUASA (V/Ah/CCA/dim) ; PRIX À CONFIRMER (placeholders).
+      { id: 'yuytx4', brand: 'YUASA', model: 'YTX4L-BS', ah: 3, v: 12, cca: 50, dim: '114 × 71 × 86 mm', price: 350, fits: 'Scooter, petite moto (AGM MF)', photo: '/batteries/yuytx4.webp' },
+      { id: 'yuytx5l', brand: 'YUASA', model: 'YTX5L-BS', ah: 4, v: 12, cca: 80, dim: '115 × 72 × 107 mm', price: 400, fits: 'Scooter, petite moto (AGM MF)', photo: '/batteries/yuytx5l.webp' },
+      { id: 'yuytx7a', brand: 'YUASA', model: 'YTX7A-BS', ah: 6, v: 12, cca: 105, dim: '150 × 87 × 93 mm', price: 450, fits: 'SYM, Kymco, scooter 125 (AGM MF)', photo: '/batteries/yuytx7a.webp' },
+      { id: 'yuytx9', brand: 'YUASA', model: 'YTX9-BS', ah: 8, v: 12, cca: 135, dim: '152 × 87 × 107 mm', price: 550, fits: 'CB500, MT-03, Z400 (AGM MF)', photo: '/batteries/yuytx9.webp' },
+      { id: 'yuytx12', brand: 'YUASA', model: 'YTX12-BS', ah: 10, v: 12, cca: 180, dim: '150 × 87 × 130 mm', price: 750, fits: 'Moto route, gros scooter (AGM MF)', photo: '/batteries/yuytx12.webp' },
+      { id: 'yuytx14', brand: 'YUASA', model: 'YTX14-BS', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 950, fits: 'Moto, quad, jet-ski (AGM MF)', photo: '/batteries/yuytx14.webp' },
+      { id: 'yuytx20l', brand: 'YUASA', model: 'YTX20L-BS', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 1500, fits: 'Gros custom, quad, jet-ski (AGM MF)', photo: '/batteries/yuytx20l.webp' },
+      { id: 'yuytx30', brand: 'YUASA', model: 'YTX30L-BS / YIX30L', ah: 30, v: 12, cca: 385, dim: '166 × 126 × 175 mm', price: 2200, fits: 'Gros custom, Harley, motoneige (AGM MF)', photo: '/batteries/yuytx30.webp' },
     ],
   },
   {
