@@ -36,7 +36,8 @@ export const config = {
     address: 'Bd Hassan II, Agadir · pose sur place',
     // Compte Instagram officiel.
     instagramUrl: 'https://www.instagram.com/battery_dynamic/',
-    mapsUrl: 'https://www.google.com/maps/search/battery+dynamic+agadir',
+    // Lien Google Maps officiel de la boutique (bouton « Itinéraire » + icône).
+    mapsUrl: 'https://maps.app.goo.gl/ctkk5Vt1Noc7i6zAA',
 
     // Horaires structurés (pour le badge « Ouvert maintenant »). Jours :
     // 0 = dimanche … 6 = samedi. Heures au format 24h "HH:MM".
