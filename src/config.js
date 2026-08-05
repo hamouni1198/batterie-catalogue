@@ -8,7 +8,7 @@
 
 export const config = {
   // Numéro WhatsApp officiel, au format international, sans « + » ni espaces.
-  whatsappNumber: '212777376489',
+  whatsappNumber: '212643388802',
 
   // Numéro d'appel officiel (bouton « Appeler »).
   phoneNumber: '+212643388802',
