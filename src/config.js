@@ -11,7 +11,7 @@ export const config = {
   whatsappNumber: '212777376489',
 
   // Numéro d'appel officiel (bouton « Appeler »).
-  phoneNumber: '+212777376489',
+  phoneNumber: '+212643388802',
 
   // Première ligne du message WhatsApp pré-rempli.
   whatsappGreeting: 'Bonjour Battery Dynamic,',
@@ -34,7 +34,7 @@ export const config = {
     taglineDesktop: 'Vente en gros & détail · Agadir',
     hours: 'Lun – Sam · 8h30 – 20h',
     address: 'Bd Hassan II, Agadir · pose sur place',
-    // PLACEHOLDER — compte Instagram à confirmer avec le client.
+    // Compte Instagram officiel.
     instagramUrl: 'https://www.instagram.com/battery_dynamic/',
     mapsUrl: 'https://www.google.com/maps/search/battery+dynamic+agadir',
 
