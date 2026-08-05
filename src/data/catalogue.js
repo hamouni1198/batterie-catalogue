@@ -25,7 +25,6 @@ export const vehicles = [
     labelDesktop: 'Voiture',
     batteries: [
       { id: 'v3', brand: 'FOX', model: 'Premium 70', ah: 70, v: 12, cca: 600, dim: '261 × 175 × 220 mm', price: 950, fits: 'Duster, Kangoo, Partner' },
-      { id: 'v5', brand: 'VOLTAGE', model: 'Silver 100', ah: 100, v: 12, cca: 800, dim: '353 × 175 × 190 mm', price: 1590, fits: 'Prado, Hilux, Touareg, X5' },
       // VARTA — données réelles (specs constructeur ; prix source à valider avec tes marges)
       { id: 'vc14', brand: 'VARTA', model: 'Dynamic SLI C14', ah: 56, v: 12, cca: 480, dim: '242 × 175 × 175 mm', price: 950, fits: 'Clio, 208, Corsa, Polo · L2', photo: '/batteries/vc14.webp' },
       { id: 've13', brand: 'VARTA', model: 'Dynamic SLI E13', ah: 70, v: 12, cca: 640, dim: '278 × 175 × 175 mm', price: 1000, fits: 'Mégane, Focus, Passat · L3', photo: '/batteries/ve13.webp' },
@@ -40,6 +39,18 @@ export const vehicles = [
       { id: 'bs5013', brand: 'BOSCH', model: 'S5 013', ah: 100, v: 12, cca: 830, dim: '353 × 175 × 175 mm', price: 1850, fits: 'Touareg, X5, Espace, Transporter · L5', photo: '/batteries/bs5013.webp' },
       { id: 'bs5a11', brand: 'BOSCH', model: 'S5 A11 AGM', ah: 80, v: 12, cca: 800, dim: '315 × 175 × 190 mm', price: 2700, fits: 'Start-Stop — Golf 7, A3, Série 1 · L4', photo: '/batteries/bs5a11.webp' },
       { id: 'bs5a15', brand: 'BOSCH', model: 'S5 A15 AGM', ah: 105, v: 12, cca: 950, dim: '394 × 175 × 190 mm', price: 3000, fits: 'Start-Stop — X5, Q7, Touareg, Série 5 · L6', photo: '/batteries/bs5a15.webp' },
+      // VOLTAGE — données réelles (V/Ah/prix depuis le catalogue) ; CCA et
+      // dimensions estimés d'après le format standard (à confirmer, surtout E1/E2/M10/M11)
+      { id: 'volte1', brand: 'VOLTAGE', model: 'E1 40Ah', ah: 40, v: 12, cca: 330, dim: '187 × 127 × 227 mm', price: 650, fits: 'Petites voitures (NS40)' },
+      { id: 'voltl1', brand: 'VOLTAGE', model: 'L1 46Ah', ah: 46, v: 12, cca: 400, dim: '207 × 175 × 175 mm', price: 600, fits: 'Citadines · L1' },
+      { id: 'voltl2', brand: 'VOLTAGE', model: 'L2 60Ah', ah: 60, v: 12, cca: 540, dim: '242 × 175 × 175 mm', price: 750, fits: 'Compactes · L2' },
+      { id: 'volte2', brand: 'VOLTAGE', model: 'E2 60Ah', ah: 60, v: 12, cca: 480, dim: '232 × 173 × 225 mm', price: 700, fits: 'Berlines (format asiatique)' },
+      { id: 'voltm10', brand: 'VOLTAGE', model: 'M10 70Ah', ah: 70, v: 12, cca: 600, dim: '260 × 173 × 225 mm', price: 850, fits: 'SUV (format asiatique)' },
+      { id: 'voltl3', brand: 'VOLTAGE', model: 'L3 75Ah', ah: 75, v: 12, cca: 640, dim: '278 × 175 × 175 mm', price: 800, fits: 'Berlines · L3' },
+      { id: 'voltl4', brand: 'VOLTAGE', model: 'L4 80Ah', ah: 80, v: 12, cca: 740, dim: '315 × 175 × 175 mm', price: 1000, fits: 'Break, SUV · L4' },
+      { id: 'voltm11', brand: 'VOLTAGE', model: 'M11 95Ah', ah: 95, v: 12, cca: 830, dim: '306 × 173 × 225 mm', price: 1050, fits: '4x4, diesel · M11 (D31)' },
+      { id: 'voltl5', brand: 'VOLTAGE', model: 'L5 100Ah', ah: 100, v: 12, cca: 830, dim: '353 × 175 × 175 mm', price: 1100, fits: 'Grosses cylindrées · L5' },
+      { id: 'voltl6', brand: 'VOLTAGE', model: 'L6 110Ah', ah: 110, v: 12, cca: 920, dim: '353 × 175 × 190 mm', price: 1500, fits: 'Utilitaires, minibus · L6' },
     ],
   },
   {
@@ -62,7 +73,6 @@ export const vehicles = [
     batteries: [
       { id: 'bt5077', brand: 'BOSCH', model: 'T5 077', ah: 180, v: 12, cca: 1000, dim: '513 × 223 × 223 mm', price: 3200, fits: 'Camions, poids lourds, tracteurs routiers', photo: '/batteries/bt5077.webp' },
       { id: 'c2', brand: 'FOX', model: 'Truck 150', ah: 150, v: 12, cca: 1000, dim: '513 × 189 × 223 mm', price: 2350, fits: 'Actros, TGX, Renault T' },
-      { id: 'c4', brand: 'VOLTAGE', model: 'Heavy 200', ah: 200, v: 12, cca: 1150, dim: '518 × 276 × 242 mm', price: 3490, fits: 'Bennes, remorques, bus' },
     ],
   },
   {
@@ -104,7 +114,6 @@ export const vehicles = [
     batteries: [
       { id: 'g1', brand: 'SP', model: 'Start 60', ah: 60, v: 12, cca: 480, dim: '242 × 175 × 190 mm', price: 780, fits: 'Groupe 5 – 10 kVA' },
       { id: 'g2', brand: 'FOX', model: 'Genset 100', ah: 100, v: 12, cca: 750, dim: '353 × 175 × 190 mm', price: 1490, fits: 'Groupe 15 – 30 kVA' },
-      { id: 'g3', brand: 'VOLTAGE', model: 'Genset 150', ah: 150, v: 12, cca: 950, dim: '513 × 189 × 223 mm', price: 2290, fits: 'Groupe 40 kVA et +' },
     ],
   },
   {
@@ -114,7 +123,6 @@ export const vehicles = [
     labelDesktop: 'Solaire / Onduleur',
     batteries: [
       { id: 's1', brand: 'LONG', model: 'Gel Solar 100', ah: 100, v: 12, cca: 0, dim: '330 × 171 × 220 mm', price: 2590, fits: 'Kit 1 kW, pompage' },
-      { id: 's2', brand: 'VOLTAGE', model: 'Solar AGM 150', ah: 150, v: 12, cca: 0, dim: '483 × 170 × 240 mm', price: 3390, fits: 'Kit 2 kW, onduleur 24V' },
       { id: 's3', brand: 'SP', model: 'Solar Tubulaire 200', ah: 200, v: 12, cca: 0, dim: '518 × 276 × 242 mm', price: 4190, fits: 'Site isolé, ferme' },
     ],
   },
@@ -126,7 +134,6 @@ export const vehicles = [
     batteries: [
       { id: 'f1', brand: 'SP', model: 'Gel 12-22', ah: 22, v: 12, cca: 0, dim: '181 × 76 × 167 mm', price: 420, fits: 'Fauteuil électrique, scooter PMR' },
       { id: 'f2', brand: 'LONG', model: 'AGM 12-35', ah: 35, v: 12, cca: 0, dim: '195 × 130 × 168 mm', price: 620, fits: 'Fauteuil lourd, scooter 4 roues' },
-      { id: 'f3', brand: 'VOLTAGE', model: 'Gel 12-50', ah: 50, v: 12, cca: 0, dim: '197 × 165 × 170 mm', price: 890, fits: 'Mobilité longue autonomie' },
     ],
   },
   {
@@ -136,7 +143,6 @@ export const vehicles = [
     labelDesktop: 'Industriel / Levage',
     batteries: [
       { id: 'in1', brand: 'FOX', model: 'Traction T105', ah: 105, v: 12, cca: 0, dim: '330 × 172 × 240 mm', price: 1990, fits: 'Transpalette élec., nacelle' },
-      { id: 'in2', brand: 'VOLTAGE', model: 'Traction T150 24V', ah: 150, v: 24, cca: 0, dim: '518 × 276 × 242 mm', price: 3990, fits: 'Gerbeur, chariot élévateur' },
       { id: 'in3', brand: 'LONG', model: 'Industrial 200', ah: 200, v: 12, cca: 0, dim: '522 × 240 × 224 mm', price: 3490, fits: 'Balayeuse, autolaveuse' },
     ],
   },
