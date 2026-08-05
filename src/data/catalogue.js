@@ -51,6 +51,27 @@ export const vehicles = [
       { id: 'voltm11', brand: 'VOLTAGE', model: 'M11 95Ah', ah: 95, v: 12, cca: 830, dim: '306 × 173 × 225 mm', price: 1050, fits: '4x4, diesel · M11 (D31)', photo: '/batteries/voltm11.webp' },
       { id: 'voltl5', brand: 'VOLTAGE', model: 'L5 100Ah', ah: 100, v: 12, cca: 830, dim: '353 × 175 × 175 mm', price: 1100, fits: 'Grosses cylindrées · L5', photo: '/batteries/voltl5.webp' },
       { id: 'voltl6', brand: 'VOLTAGE', model: 'L6 110Ah', ah: 110, v: 12, cca: 920, dim: '353 × 175 × 190 mm', price: 1500, fits: 'Utilitaires, minibus · L6', photo: '/batteries/voltl6.webp' },
+      // EXIDE voiture — specs réelles (Ah/A) et prix promo (captures client) ; dimensions au format L/asiatique standard.
+      { id: 'exek1050', brand: 'EXIDE', model: 'EK1050 L6 AGM Start-Stop', ah: 105, v: 12, cca: 950, dim: '353 × 175 × 190 mm', price: 2950, fits: 'Start-Stop AGM · L6 (grosses berlines, SUV)', photo: '/batteries/exek1050.webp' },
+      { id: 'exek950', brand: 'EXIDE', model: 'EK950 L5 AGM Start-Stop', ah: 95, v: 12, cca: 850, dim: '353 × 175 × 175 mm', price: 2550, fits: 'Start-Stop AGM · L5', photo: '/batteries/exek950.webp' },
+      { id: 'exek800', brand: 'EXIDE', model: 'EK800 L4 AGM Start-Stop', ah: 80, v: 12, cca: 800, dim: '315 × 175 × 175 mm', price: 2250, fits: 'Start-Stop AGM · L4', photo: '/batteries/exek800.webp' },
+      { id: 'exek700', brand: 'EXIDE', model: 'EK700 L3 AGM Start-Stop', ah: 70, v: 12, cca: 760, dim: '278 × 175 × 175 mm', price: 1850, fits: 'Start-Stop AGM · L3', photo: '/batteries/exek700.webp' },
+      { id: 'exeb1100', brand: 'EXIDE', model: 'Excell EB1100 L6', ah: 110, v: 12, cca: 850, dim: '353 × 175 × 190 mm', price: 1850, fits: 'Utilitaires, minibus · L6', photo: '/batteries/exeb1100.webp' },
+      { id: 'exel800', brand: 'EXIDE', model: 'EL800 L4 EFB Start-Stop', ah: 80, v: 12, cca: 720, dim: '315 × 175 × 175 mm', price: 1680, fits: 'Start-Stop EFB · L4', photo: '/batteries/exel800.webp' },
+      { id: 'exel954', brand: 'EXIDE', model: 'EL954 D31 EFB Start-Stop', ah: 95, v: 12, cca: 800, dim: '306 × 173 × 225 mm', price: 1650, fits: 'Start-Stop EFB · M11D / D31 (4x4, diesel)', photo: '/batteries/exel954.webp' },
+      { id: 'exel700', brand: 'EXIDE', model: 'EL700 L3 EFB Start-Stop', ah: 70, v: 12, cca: 720, dim: '278 × 175 × 175 mm', price: 1580, fits: 'Start-Stop EFB · L3', photo: '/batteries/exel700.webp' },
+      { id: 'exea1000', brand: 'EXIDE', model: 'EA1000 L5', ah: 100, v: 12, cca: 900, dim: '353 × 175 × 175 mm', price: 1550, fits: 'Grosses cylindrées · L5', photo: '/batteries/exea1000.webp' },
+      { id: 'exel600', brand: 'EXIDE', model: 'EL600 L2 EFB Start-Stop', ah: 60, v: 12, cca: 640, dim: '242 × 175 × 175 mm', price: 1400, fits: 'Start-Stop EFB · L2', photo: '/batteries/exel600.webp' },
+      { id: 'exek151', brand: 'EXIDE', model: 'EK151 AGM Start-Stop (auxiliaire)', ah: 15, v: 12, cca: 200, dim: '150 × 90 × 145 mm', price: 1400, fits: 'Batterie auxiliaire / backup Start-Stop', photo: '/batteries/exek151.webp' },
+      { id: 'exeb950', brand: 'EXIDE', model: 'EB950 L5', ah: 95, v: 12, cca: 800, dim: '353 × 175 × 175 mm', price: 1350, fits: 'Grosses cylindrées · L5', photo: '/batteries/exeb950.webp' },
+      { id: 'exea770', brand: 'EXIDE', model: 'EA770 L3', ah: 77, v: 12, cca: 760, dim: '278 × 175 × 175 mm', price: 1200, fits: 'Berlines, break · L3', photo: '/batteries/exea770.webp' },
+      { id: 'exeb740', brand: 'EXIDE', model: 'EB740 L3', ah: 74, v: 12, cca: 680, dim: '278 × 175 × 175 mm', price: 1050, fits: 'Berlines, break · L3', photo: '/batteries/exeb740.webp' },
+      { id: 'exea722', brand: 'EXIDE', model: 'EA722 L3', ah: 72, v: 12, cca: 720, dim: '278 × 175 × 175 mm', price: 1030, fits: 'Berlines · L3', photo: '/batteries/exea722.webp' },
+      { id: 'exec700', brand: 'EXIDE', model: 'EC700 L3', ah: 70, v: 12, cca: 640, dim: '278 × 175 × 175 mm', price: 900, fits: 'Berlines · L3', photo: '/batteries/exec700.webp' },
+      { id: 'exec550', brand: 'EXIDE', model: 'EC550 L2', ah: 55, v: 12, cca: 460, dim: '242 × 175 × 175 mm', price: 800, fits: 'Compactes · L2', photo: '/batteries/exec550.webp' },
+      { id: 'exec652', brand: 'EXIDE', model: 'EC652 LB3', ah: 65, v: 12, cca: 540, dim: '278 × 175 × 175 mm', price: 732, fits: 'Berlines · LB3', photo: '/batteries/exec652.webp' },
+      { id: 'exec440', brand: 'EXIDE', model: 'EC440 L1', ah: 44, v: 12, cca: 360, dim: '207 × 175 × 175 mm', price: 720, fits: 'Citadines · L1', photo: '/batteries/exec440.webp' },
+      { id: 'exeb356', brand: 'EXIDE', model: 'Excell EB356 NS40', ah: 35, v: 12, cca: 240, dim: '197 × 129 × 227 mm', price: 670, fits: 'Petites voitures (format asiatique NS40)', photo: '/batteries/exeb356.webp' },
     ],
   },
   {
@@ -92,6 +113,10 @@ export const vehicles = [
     batteries: [
       { id: 'bt5077', brand: 'BOSCH', model: 'T5 077', ah: 180, v: 12, cca: 1000, dim: '513 × 223 × 223 mm', price: 3200, fits: 'Camions, poids lourds, tracteurs routiers', photo: '/batteries/bt5077.webp' },
       { id: 'c2', brand: 'FOX', model: 'Truck 150', ah: 150, v: 12, cca: 1000, dim: '513 × 189 × 223 mm', price: 2350, fits: 'Actros, TGX, Renault T' },
+      // EXIDE camion — specs réelles (Ah/A) et prix promo (captures client) ; dimensions au format M standard.
+      { id: 'exeg2153', brand: 'EXIDE', model: 'EG2153 M16', ah: 210, v: 12, cca: 1200, dim: '518 × 276 × 242 mm', price: 2500, fits: 'Poids lourds, bus · M16', photo: '/batteries/exeg2153.webp' },
+      { id: 'exeg1803', brand: 'EXIDE', model: 'EG1803 M15', ah: 180, v: 12, cca: 1000, dim: '513 × 223 × 223 mm', price: 2150, fits: 'Camions, poids lourds · M15', photo: '/batteries/exeg1803.webp' },
+      { id: 'exeg1403', brand: 'EXIDE', model: 'EG1403 M14', ah: 140, v: 12, cca: 800, dim: '513 × 189 × 223 mm', price: 1600, fits: 'Camions, utilitaires lourds · M14', photo: '/batteries/exeg1403.webp' },
     ],
   },
   {
