@@ -63,10 +63,10 @@ export const vehicles = [
       { id: 'm2', brand: 'SP', model: 'Moto YTX9-BS', ah: 8, v: 12, cca: 120, dim: '150 × 87 × 105 mm', price: 280, fits: 'CB500, MT-03, Z400' },
       { id: 'm3', brand: 'LONG', model: 'YTZ12S Gel', ah: 11, v: 12, cca: 210, dim: '150 × 87 × 110 mm', price: 420, fits: 'Honda Forza, X-ADV' },
       { id: 'vytx20l', brand: 'VARTA', model: 'Powersports AGM YTX20L-BS', ah: 18, v: 12, cca: 250, dim: '175 × 87 × 155 mm', price: 1350, fits: 'Moto, quad, jet-ski (YTX20L-4)', photo: '/batteries/vytx20l.webp' },
-      // VARTA Powersports AGM Active — specs réelles (V/Ah/A depuis l'étiquette produit) ; PRIX À CONFIRMER (placeholders).
-      { id: 'vytx14', brand: 'VARTA', model: 'Powersports AGM YTX14-4', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 700, fits: 'Moto, quad, jet-ski, motoneige (YTX14-BS)', photo: '/batteries/vytx14.webp' },
-      { id: 'vytz14s', brand: 'VARTA', model: 'Powersports AGM YTZ14S-4', ah: 11, v: 12, cca: 230, dim: '150 × 87 × 110 mm', price: 650, fits: 'Moto (YTZ14S-BS / TTZ14S-BS)', photo: '/batteries/vytz14s.webp' },
-      { id: 'vytz10s', brand: 'VARTA', model: 'Powersports AGM YTZ10S-4', ah: 8, v: 12, cca: 150, dim: '150 × 87 × 93 mm', price: 500, fits: 'Moto sportive (YTZ10S-BS / TTZ10S-BS)', photo: '/batteries/vytz10s.webp' },
+      // VARTA Powersports AGM Active — specs réelles (V/Ah/A depuis l'étiquette produit) et prix client.
+      { id: 'vytx14', brand: 'VARTA', model: 'Powersports AGM YTX14-4', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 1300, fits: 'Moto, quad, jet-ski, motoneige (YTX14-BS)', photo: '/batteries/vytx14.webp' },
+      { id: 'vytz14s', brand: 'VARTA', model: 'Powersports AGM YTZ14S-4', ah: 11, v: 12, cca: 230, dim: '150 × 87 × 110 mm', price: 1050, fits: 'Moto (YTZ14S-BS / TTZ14S-BS)', photo: '/batteries/vytz14s.webp' },
+      { id: 'vytz10s', brand: 'VARTA', model: 'Powersports AGM YTZ10S-4', ah: 8, v: 12, cca: 150, dim: '150 × 87 × 93 mm', price: 950, fits: 'Moto sportive (YTZ10S-BS / TTZ10S-BS)', photo: '/batteries/vytz10s.webp' },
     ],
   },
   {
