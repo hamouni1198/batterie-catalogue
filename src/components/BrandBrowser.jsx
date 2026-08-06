@@ -24,7 +24,7 @@ export default function BrandBrowser({ vehicles, onClose }) {
   }, [brand, onClose])
 
   return (
-    <div className="finder" role="dialog" aria-modal="true" aria-label="Marques">
+    <div className="finder finder--brands" role="dialog" aria-modal="true" aria-label="Marques">
       <div className="finder__backdrop" onClick={onClose} />
       <div className="finder__panel">
         <div className="finder__head">

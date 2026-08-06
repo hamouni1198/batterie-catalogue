@@ -1108,6 +1108,24 @@ input::placeholder {
   gap: 12px;
 }
 
+/* Vue « Par marque » : panneau élargi et grille 3–4 colonnes sur grand écran. */
+@media (min-width: 760px) {
+  .finder--brands .finder__panel {
+    max-width: 760px;
+  }
+  .finder--brands .brandlist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1040px) {
+  .finder--brands .finder__panel {
+    max-width: 1000px;
+  }
+  .finder--brands .brandlist {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .finder {
   position: absolute;
   inset: 0;
