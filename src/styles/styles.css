@@ -726,6 +726,23 @@ input::placeholder {
   padding: 12px 15px;
   font-size: 14px;
 }
+/* Champ de recherche avec loupe */
+.searchbox {
+  position: relative;
+  width: 100%;
+}
+.searchbox__icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  color: var(--text-4);
+  pointer-events: none;
+}
+.searchbox .cat__search {
+  padding-left: 40px;
+}
 .cat__chips {
   display: flex;
   flex-wrap: wrap;

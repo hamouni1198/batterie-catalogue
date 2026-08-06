@@ -1,27 +1,43 @@
 import { useEffect, useState } from 'react'
 import BatteryCard from './BatteryCard.jsx'
+import SearchIcon from './icons/SearchIcon.jsx'
 import { allBrands, batteriesOfBrand } from '../lib/battery.js'
 import { openWhatsapp } from '../lib/whatsapp.js'
 import config from '../config.js'
 
 // Navigateur par marque : liste toutes les marques du catalogue ; au clic sur
-// une marque, affiche toutes ses batteries (tous engins confondus).
+// une marque, affiche toutes ses batteries (tous engins confondus), avec une
+// recherche (modèle, engin, capacité).
 export default function BrandBrowser({ vehicles, onClose }) {
   const [brand, setBrand] = useState(null)
+  const [query, setQuery] = useState('')
   const brands = allBrands(vehicles)
-  const list = brand ? batteriesOfBrand(vehicles, brand, config.showPrices) : []
+  const all = brand ? batteriesOfBrand(vehicles, brand, config.showPrices) : []
+  const q = query.trim().toLowerCase()
+  const list = q
+    ? all.filter((b) =>
+        `${b.brand} ${b.model} ${b.vehicleName} ${b.ah} ${b.fits || ''}`.toLowerCase().includes(q),
+      )
+    : all
 
   // Fermeture au clavier (Échap).
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === 'Escape') {
-        if (brand) setBrand(null)
-        else onClose()
+        if (brand) {
+          setBrand(null)
+          setQuery('')
+        } else onClose()
       }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [brand, onClose])
+
+  const openBrand = (b) => {
+    setQuery('')
+    setBrand(b)
+  }
 
   return (
     <div className="finder finder--brands" role="dialog" aria-modal="true" aria-label="Marques">
@@ -44,7 +60,7 @@ export default function BrandBrowser({ vehicles, onClose }) {
                 key={b.brand}
                 type="button"
                 className="brandcard"
-                onClick={() => setBrand(b.brand)}
+                onClick={() => openBrand(b.brand)}
               >
                 <span className="brandcard__name">{b.brand}</span>
                 <span className="brandcard__count">
@@ -57,6 +73,18 @@ export default function BrandBrowser({ vehicles, onClose }) {
 
         {brand && (
           <>
+            <div className="searchbox">
+              <span className="searchbox__icon">
+                <SearchIcon size={16} />
+              </span>
+              <input
+                className="cat__search"
+                type="text"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Modèle, engin ou capacité…"
+              />
+            </div>
             <span className="brandlist__count">
               {list.length} batterie{list.length > 1 ? 's' : ''} · {brand}
             </span>
@@ -71,7 +99,14 @@ export default function BrandBrowser({ vehicles, onClose }) {
                 />
               ))}
             </div>
-            <button type="button" className="finder__back" onClick={() => setBrand(null)}>
+            <button
+              type="button"
+              className="finder__back"
+              onClick={() => {
+                setBrand(null)
+                setQuery('')
+              }}
+            >
               ← Toutes les marques
             </button>
           </>

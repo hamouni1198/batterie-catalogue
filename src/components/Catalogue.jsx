@@ -1,4 +1,5 @@
 import BatteryCard from './BatteryCard.jsx'
+import SearchIcon from './icons/SearchIcon.jsx'
 import { openWhatsapp } from '../lib/whatsapp.js'
 import config from '../config.js'
 
@@ -21,13 +22,18 @@ export default function Catalogue({ variant, catalogue }) {
       </div>
 
       <div className="cat__filters">
-        <input
-          className="cat__search"
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Marque, modèle ou véhicule…"
-        />
+        <div className="searchbox">
+          <span className="searchbox__icon">
+            <SearchIcon size={16} />
+          </span>
+          <input
+            className="cat__search"
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Marque, modèle ou véhicule…"
+          />
+        </div>
         <div className="cat__chips">
           {chips.map((c) => (
             <button
