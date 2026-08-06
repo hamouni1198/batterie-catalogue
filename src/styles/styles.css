@@ -765,104 +765,104 @@ input::placeholder {
   flex: 1;
   min-height: 0;
   overflow: auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: max-content;
+  align-content: start;
+  align-items: start;
 }
 .sheet .cat__grid {
-  padding: 6px 18px calc(24px + env(safe-area-inset-bottom));
-  gap: 10px;
+  padding: 8px 16px calc(24px + env(safe-area-inset-bottom));
+  gap: 12px;
 }
 .panel .cat__grid {
-  padding: 8px 26px 28px;
-  gap: 10px;
+  padding: 10px 24px 28px;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 14px;
 }
 
-/* ---- Carte produit (ligne compacte) ------------------------------------ */
+/* ---- Carte produit (photo en avant) ------------------------------------ */
 .card {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.11);
-  transition: background 0.2s ease;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 .card:hover {
   background: rgba(255, 255, 255, 0.07);
-}
-.card--mobile {
-  gap: 11px;
-  padding: 10px;
-  border-radius: 16px;
-}
-.card--desktop {
-  gap: 14px;
-  padding: 12px 14px;
-  border-radius: 18px;
+  border-color: rgba(225, 27, 34, 0.4);
+  transform: translateY(-2px);
 }
 
-/* Badge capacité (repère visuel à la place de la photo) */
-.card__badge {
+/* Zone photo (carrée) : grande image produit sur fond blanc */
+.card__photo {
+  position: relative;
+  width: 100%;
+  height: 150px;
   flex: none;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(225, 27, 34, 0.14);
-  border: 1px solid rgba(225, 27, 34, 0.5);
+  padding: 12px;
+  background: linear-gradient(160deg, rgba(225, 27, 34, 0.18), rgba(225, 27, 34, 0.04));
 }
-.card--mobile .card__badge {
-  width: 56px;
-  height: 56px;
-  border-radius: 13px;
+.card--desktop .card__photo {
+  height: 168px;
 }
-.card--desktop .card__badge {
-  width: 64px;
-  height: 64px;
-  border-radius: 15px;
-}
-.card__badge b {
-  font-family: 'Archivo Black', system-ui, sans-serif;
-  font-weight: 900;
-  color: #fff;
-  line-height: 1;
-}
-.card--mobile .card__badge b {
-  font-size: 19px;
-}
-.card--desktop .card__badge b {
-  font-size: 22px;
-}
-.card__badge i {
-  font-style: normal;
-  font-weight: 700;
-  color: var(--accent);
-}
-.card--mobile .card__badge i {
-  font-size: 10px;
-}
-.card--desktop .card__badge i {
-  font-size: 11px;
-}
-/* Quand la case affiche la photo produit (au lieu du badge Ah). */
-.card__badge--photo {
+.card__photo--img {
   background: #ffffff;
-  border-color: rgba(255, 255, 255, 0.22);
-  padding: 3px;
-  overflow: hidden;
 }
 .card__photo-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 9px;
   display: block;
 }
-
-.card__mid {
-  flex: 1;
-  min-width: 0;
+/* Sans photo : gros badge capacité Ah */
+.card__ah {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  align-items: center;
+  line-height: 1;
+}
+.card__ah b {
+  font-family: 'Archivo Black', system-ui, sans-serif;
+  font-size: 42px;
+  color: #fff;
+}
+.card__ah i {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--accent);
+  margin-top: 3px;
+}
+/* Prix en pastille sur la photo */
+.card__price-tag {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-family: 'Archivo Black', system-ui, sans-serif;
+  font-size: 14px;
+  color: var(--price);
+  background: rgba(10, 10, 12, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 9px;
+  border-radius: 9px;
+  white-space: nowrap;
+}
+.card--desktop .card__price-tag {
+  font-size: 15px;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 11px 12px 12px;
 }
 .card__brand {
   font-weight: 600;
@@ -873,12 +873,10 @@ input::placeholder {
 }
 .card__model {
   font-weight: 700;
+  font-size: 15px;
   line-height: 1.2;
   color: #fff;
   overflow-wrap: anywhere;
-}
-.card--mobile .card__model {
-  font-size: 14px;
 }
 .card--desktop .card__model {
   font-size: 16px;
@@ -890,17 +888,11 @@ input::placeholder {
 }
 .card__spec {
   font-weight: 600;
+  font-size: 10px;
+  padding: 3px 6px;
   color: var(--chip-text);
   background: rgba(255, 255, 255, 0.08);
   border-radius: 6px;
-}
-.card--mobile .card__spec {
-  font-size: 10px;
-  padding: 3px 6px;
-}
-.card--desktop .card__spec {
-  font-size: 11px;
-  padding: 4px 7px;
 }
 .card__dim {
   font-weight: 400;
@@ -908,31 +900,8 @@ input::placeholder {
   line-height: 1.3;
   color: var(--text-4);
 }
-.card--desktop .card__dim {
-  font-size: 11px;
-}
-
-.card__right {
-  flex: none;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 7px;
-}
-.card__price {
-  font-family: 'Archivo Black', system-ui, sans-serif;
-  font-weight: 900;
-  letter-spacing: 0;
-  color: var(--price);
-  white-space: nowrap;
-}
-.card--mobile .card__price {
-  font-size: 17px;
-}
-.card--desktop .card__price {
-  font-size: 20px;
-}
 .card__cta {
+  margin-top: 4px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -942,23 +911,16 @@ input::placeholder {
   color: var(--wa-text);
   font-family: 'Archivo', system-ui, sans-serif;
   font-weight: 700;
+  font-size: 12px;
   letter-spacing: 0.02em;
   white-space: nowrap;
+  padding: 9px 12px;
+  border-radius: 11px;
   cursor: pointer;
   transition: background 0.2s ease;
 }
 .card__cta:hover {
   background: #1fbe5b;
-}
-.card--mobile .card__cta {
-  padding: 8px 12px;
-  border-radius: 11px;
-  font-size: 12px;
-}
-.card--desktop .card__cta {
-  padding: 9px 14px;
-  border-radius: 12px;
-  font-size: 13px;
 }
 
 /* ---- État vide --------------------------------------------------------- */
@@ -1141,9 +1103,9 @@ input::placeholder {
   color: var(--text-3);
 }
 .brandlist {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+  gap: 12px;
 }
 
 .finder {
