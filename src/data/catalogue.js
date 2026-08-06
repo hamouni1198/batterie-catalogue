@@ -184,6 +184,7 @@ export const vehicles = [
       { id: 'js_sp10', brand: 'SP', model: 'YTX30L-BS', ah: 30, v: 12, cca: 400, dim: '166 × 126 × 175 mm', price: 850, fits: 'Sea-Doo, gros jet-ski (YTX30)', photo: '/batteries/catsp10.webp' },
       { id: 'js_sp12', brand: 'SP', model: 'YTX20L-BS MF', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 750, fits: 'Yamaha WaveRunner, Sea-Doo (YTX20L)', photo: '/batteries/catsp12.webp' },
       { id: 'js_sp5', brand: 'SP', model: 'YTX16-BS MF', ah: 14, v: 12, cca: 230, dim: '150 × 87 × 161 mm', price: 600, fits: 'Jet-ski compact (YTX16 / YB16)', photo: '/batteries/catsp5.webp' },
+      { id: 'js_y3', brand: 'YUASA', model: 'YTX12-BS', ah: 10, v: 12, cca: 180, dim: '150 × 87 × 130 mm', price: 800, fits: 'Jet-ski compact (YTX12) — AGM MF', photo: '/batteries/caty3.webp' },
     ],
   },
   {
@@ -197,6 +198,7 @@ export const vehicles = [
       { id: 'q_sp12', brand: 'SP', model: 'YTX20L-BS MF', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 750, fits: 'Polaris, Can-Am, Kymco (YTX20L)', photo: '/batteries/catsp12.webp' },
       { id: 'q_sp2', brand: 'SP', model: 'YTX14-BS MF', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 520, fits: 'Quad, buggy (YTX14)', photo: '/batteries/catsp2.webp' },
       { id: 'q_sp6', brand: 'SP', model: '12N5L-BS MF', ah: 5, v: 12, cca: 60, dim: '120 × 60 × 130 mm', price: 150, fits: 'Petit quad (12N9 / 12N5L)', photo: '/batteries/catsp6.webp' },
+      { id: 'q_y5', brand: 'YUASA', model: 'YB12AL-A', ah: 12, v: 12, cca: 150, dim: '134 × 80 × 160 mm', price: 450, fits: 'Quad, VTT (YB12AL)', photo: '/batteries/caty5.webp' },
     ],
   },
   {
