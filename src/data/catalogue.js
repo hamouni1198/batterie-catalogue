@@ -198,8 +198,8 @@ export const vehicles = [
     labelDesktop: 'Groupe électrogène',
     batteries: [
       { id: 'g_v7', brand: 'VARTA', model: 'K8 M14', ah: 140, v: 12, cca: 800, dim: '513 × 189 × 223 mm', price: 2390, fits: 'Groupe 30 – 60 kVA · M14', photo: '/batteries/catv7.webp' },
-      { id: 'g_f5', brand: 'FOX', model: 'L3 75Ah', ah: 75, v: 12, cca: 640, dim: '278 × 175 × 175 mm', price: 800, fits: 'Groupe 10 – 20 kVA · L3', photo: '/batteries/catf5.webp' },
-      { id: 'g_f3', brand: 'FOX', model: 'L2 60Ah', ah: 60, v: 12, cca: 540, dim: '242 × 175 × 175 mm', price: 750, fits: 'Groupe 5 – 10 kVA · L2', photo: '/batteries/catf3.webp' },
+      { id: 'g_vo3', brand: 'VOLTAGE', model: 'L3 75Ah', ah: 75, v: 12, cca: 640, dim: '278 × 175 × 175 mm', price: 800, fits: 'Groupe 10 – 20 kVA · L3', photo: '/batteries/catvo3.webp' },
+      { id: 'g_vo5', brand: 'VOLTAGE', model: 'L2 60Ah', ah: 60, v: 12, cca: 540, dim: '242 × 175 × 175 mm', price: 750, fits: 'Groupe 5 – 10 kVA · L2', photo: '/batteries/catvo5.webp' },
     ],
   },
   {
