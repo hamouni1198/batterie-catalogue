@@ -100,12 +100,10 @@ export const vehicles = [
       // SP
       { id: 'sp10', brand: 'SP', model: 'YTX30L-BS', ah: 30, v: 12, cca: 400, dim: '166 × 126 × 175 mm', price: 850, fits: 'Gros custom, jet-ski, motoneige', photo: '/batteries/catsp10.webp' },
       { id: 'sp12', brand: 'SP', model: 'YTX20L-BS MF', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 750, fits: 'Gros custom, quad, jet-ski', photo: '/batteries/catsp12.webp' },
-      { id: 'sp9', brand: 'SP', model: 'BB10L-B2', ah: 11, v: 12, cca: 130, dim: '136 × 91 × 146 mm', price: 550, fits: 'Moto ancienne', photo: '/batteries/catsp9.webp' },
       { id: 'sp2', brand: 'SP', model: 'YTX14-BS MF', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 520, fits: 'Moto, quad', photo: '/batteries/catsp2.webp' },
       { id: 'sp4', brand: 'SP', model: 'YTZ14S MF', ah: 11, v: 12, cca: 230, dim: '150 × 87 × 110 mm', price: 500, fits: 'Moto', photo: '/batteries/catsp4.webp' },
       { id: 'sp7', brand: 'SP', model: 'YTZ12S MF', ah: 11, v: 12, cca: 210, dim: '150 × 87 × 110 mm', price: 500, fits: 'Honda Forza, X-ADV', photo: '/batteries/catsp7.webp' },
       { id: 'sp3', brand: 'SP', model: 'YTX9-BS MF', ah: 8, v: 12, cca: 120, dim: '150 × 87 × 105 mm', price: 270, fits: 'Moto, scooter', photo: '/batteries/catsp3.webp' },
-      { id: 'sp11', brand: 'SP', model: 'BTX9-BS', ah: 8, v: 12, cca: 120, dim: '150 × 87 × 105 mm', price: 270, fits: 'Moto, scooter', photo: '/batteries/catsp11.webp' },
       { id: 'sp13', brand: 'SP', model: 'YTX7L-BS', ah: 6, v: 12, cca: 100, dim: '114 × 71 × 131 mm', price: 270, fits: 'Scooter, moto', photo: '/batteries/catsp13.webp' },
       { id: 'sp1', brand: 'SP', model: 'YTX5L-BS MF', ah: 4, v: 12, cca: 70, dim: '114 × 71 × 106 mm', price: 200, fits: 'Scooter, petite moto', photo: '/batteries/catsp1.webp' },
       { id: 'sp8', brand: 'SP', model: 'YTX4L-BS', ah: 3, v: 12, cca: 50, dim: '114 × 71 × 86 mm', price: 170, fits: 'Petite moto, scooter', photo: '/batteries/catsp8.webp' },
@@ -152,9 +150,9 @@ export const vehicles = [
   },
   {
     key: 'bateau',
-    name: 'Bateau / Jet-ski',
+    name: 'Bateau',
     labelMobile: 'Bateau',
-    labelDesktop: 'Bateau / Jet-ski',
+    labelDesktop: 'Bateau',
     batteries: [
       { id: 'v18', brand: 'VARTA', model: 'E23 D26 M10D Dual Purpose AGM', ah: 70, v: 12, cca: 570, dim: '260 × 173 × 225 mm', price: 1380, fits: 'Marine loisirs · D26', photo: '/batteries/catv18.webp' },
       { id: 'v19', brand: 'VARTA', model: 'E24 D26R M10G Starter', ah: 70, v: 12, cca: 570, dim: '260 × 173 × 225 mm', price: 1299, fits: 'Démarrage marine · D26 (borne à droite)', photo: '/batteries/catv19.webp' },
@@ -165,9 +163,17 @@ export const vehicles = [
       { id: 'v26', brand: 'VARTA', model: 'B32 NS60D Dual Purpose', ah: 45, v: 12, cca: 330, dim: '238 × 129 × 227 mm', price: 940, fits: 'Marine loisirs · NS60', photo: '/batteries/catv26.webp' },
       { id: 'v27', brand: 'VARTA', model: 'B23 E2D Starter', ah: 45, v: 12, cca: 300, dim: '232 × 127 × 225 mm', price: 910, fits: 'Démarrage marine · E2', photo: '/batteries/catv27.webp' },
       { id: 'v28', brand: 'VARTA', model: 'B19 L1 Starter', ah: 45, v: 12, cca: 400, dim: '207 × 175 × 175 mm', price: 850, fits: 'Démarrage marine · L1', photo: '/batteries/catv28.webp' },
-      { id: 'b_sp10', brand: 'SP', model: 'YTX30L-BS', ah: 30, v: 12, cca: 400, dim: '166 × 126 × 175 mm', price: 850, fits: 'Jet-ski, moto marine (YTX30)', photo: '/batteries/catsp10.webp' },
-      { id: 'b_sp12', brand: 'SP', model: 'YTX20L-BS MF', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 750, fits: 'Jet-ski (YTX20L)', photo: '/batteries/catsp12.webp' },
-      { id: 'b_sp5', brand: 'SP', model: 'YTX16-BS MF', ah: 14, v: 12, cca: 230, dim: '150 × 87 × 161 mm', price: 600, fits: 'Jet-ski (YTX16 / YB16)', photo: '/batteries/catsp5.webp' },
+    ],
+  },
+  {
+    key: 'jetski',
+    name: 'Jet-ski',
+    labelMobile: 'Jet-ski',
+    labelDesktop: 'Jet-ski',
+    batteries: [
+      { id: 'js_sp10', brand: 'SP', model: 'YTX30L-BS', ah: 30, v: 12, cca: 400, dim: '166 × 126 × 175 mm', price: 850, fits: 'Sea-Doo, gros jet-ski (YTX30)', photo: '/batteries/catsp10.webp' },
+      { id: 'js_sp12', brand: 'SP', model: 'YTX20L-BS MF', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 750, fits: 'Yamaha WaveRunner, Sea-Doo (YTX20L)', photo: '/batteries/catsp12.webp' },
+      { id: 'js_sp5', brand: 'SP', model: 'YTX16-BS MF', ah: 14, v: 12, cca: 230, dim: '150 × 87 × 161 mm', price: 600, fits: 'Jet-ski compact (YTX16 / YB16)', photo: '/batteries/catsp5.webp' },
     ],
   },
   {
