@@ -100,7 +100,6 @@ export const vehicles = [
       // SP
       { id: 'sp10', brand: 'SP', model: 'YTX30L-BS', ah: 30, v: 12, cca: 400, dim: '166 × 126 × 175 mm', price: 850, fits: 'Gros custom, jet-ski, motoneige', photo: '/batteries/catsp10.webp' },
       { id: 'sp12', brand: 'SP', model: 'YTX20L-BS MF', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 750, fits: 'Gros custom, quad, jet-ski', photo: '/batteries/catsp12.webp' },
-      { id: 'sp5', brand: 'SP', model: 'YTX16-BS MF', ah: 14, v: 12, cca: 230, dim: '150 × 87 × 161 mm', price: 600, fits: 'Moto, jet-ski', photo: '/batteries/catsp5.webp' },
       { id: 'sp9', brand: 'SP', model: 'BB10L-B2', ah: 11, v: 12, cca: 130, dim: '136 × 91 × 146 mm', price: 550, fits: 'Moto ancienne', photo: '/batteries/catsp9.webp' },
       { id: 'sp2', brand: 'SP', model: 'YTX14-BS MF', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 520, fits: 'Moto, quad', photo: '/batteries/catsp2.webp' },
       { id: 'sp4', brand: 'SP', model: 'YTZ14S MF', ah: 11, v: 12, cca: 230, dim: '150 × 87 × 110 mm', price: 500, fits: 'Moto', photo: '/batteries/catsp4.webp' },
@@ -166,6 +165,9 @@ export const vehicles = [
       { id: 'v26', brand: 'VARTA', model: 'B32 NS60D Dual Purpose', ah: 45, v: 12, cca: 330, dim: '238 × 129 × 227 mm', price: 940, fits: 'Marine loisirs · NS60', photo: '/batteries/catv26.webp' },
       { id: 'v27', brand: 'VARTA', model: 'B23 E2D Starter', ah: 45, v: 12, cca: 300, dim: '232 × 127 × 225 mm', price: 910, fits: 'Démarrage marine · E2', photo: '/batteries/catv27.webp' },
       { id: 'v28', brand: 'VARTA', model: 'B19 L1 Starter', ah: 45, v: 12, cca: 400, dim: '207 × 175 × 175 mm', price: 850, fits: 'Démarrage marine · L1', photo: '/batteries/catv28.webp' },
+      { id: 'b_sp10', brand: 'SP', model: 'YTX30L-BS', ah: 30, v: 12, cca: 400, dim: '166 × 126 × 175 mm', price: 850, fits: 'Jet-ski, moto marine (YTX30)', photo: '/batteries/catsp10.webp' },
+      { id: 'b_sp12', brand: 'SP', model: 'YTX20L-BS MF', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 750, fits: 'Jet-ski (YTX20L)', photo: '/batteries/catsp12.webp' },
+      { id: 'b_sp5', brand: 'SP', model: 'YTX16-BS MF', ah: 14, v: 12, cca: 230, dim: '150 × 87 × 161 mm', price: 600, fits: 'Jet-ski (YTX16 / YB16)', photo: '/batteries/catsp5.webp' },
     ],
   },
   {
@@ -175,8 +177,11 @@ export const vehicles = [
     labelDesktop: 'Quad / Buggy',
     batteries: [
       { id: 'q_y6', brand: 'YUASA', model: 'YIX30L-BS', ah: 30, v: 12, cca: 385, dim: '166 × 126 × 175 mm', price: 1800, fits: 'Gros quad, SSV (AGM MF)', photo: '/batteries/caty6.webp' },
+      { id: 'q_sp10', brand: 'SP', model: 'YTX30L-BS', ah: 30, v: 12, cca: 400, dim: '166 × 126 × 175 mm', price: 850, fits: 'Gros quad, SSV (YTX30)', photo: '/batteries/catsp10.webp' },
       { id: 'q_sp12', brand: 'SP', model: 'YTX20L-BS MF', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 750, fits: 'Polaris, Can-Am, Kymco (YTX20L)', photo: '/batteries/catsp12.webp' },
-      { id: 'q_sp5', brand: 'SP', model: 'YTX16-BS MF', ah: 14, v: 12, cca: 230, dim: '150 × 87 × 161 mm', price: 600, fits: 'Buggy, SSV (YTX16)', photo: '/batteries/catsp5.webp' },
+      { id: 'q_sp2', brand: 'SP', model: 'YTX14-BS MF', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 520, fits: 'Quad, buggy (YTX14)', photo: '/batteries/catsp2.webp' },
+      { id: 'q_sp7', brand: 'SP', model: 'YTZ12S MF', ah: 11, v: 12, cca: 210, dim: '150 × 87 × 110 mm', price: 500, fits: 'Quad (YTZ12S / YTX12)', photo: '/batteries/catsp7.webp' },
+      { id: 'q_sp6', brand: 'SP', model: '12N5L-BS MF', ah: 5, v: 12, cca: 60, dim: '120 × 60 × 130 mm', price: 150, fits: 'Petit quad (12N9 / 12N5L)', photo: '/batteries/catsp6.webp' },
     ],
   },
   {
