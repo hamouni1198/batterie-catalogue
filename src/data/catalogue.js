@@ -186,7 +186,6 @@ export const vehicles = [
       { id: 'q_sp10', brand: 'SP', model: 'YTX30L-BS', ah: 30, v: 12, cca: 400, dim: '166 × 126 × 175 mm', price: 850, fits: 'Gros quad, SSV (YTX30)', photo: '/batteries/catsp10.webp' },
       { id: 'q_sp12', brand: 'SP', model: 'YTX20L-BS MF', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 750, fits: 'Polaris, Can-Am, Kymco (YTX20L)', photo: '/batteries/catsp12.webp' },
       { id: 'q_sp2', brand: 'SP', model: 'YTX14-BS MF', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 520, fits: 'Quad, buggy (YTX14)', photo: '/batteries/catsp2.webp' },
-      { id: 'q_sp7', brand: 'SP', model: 'YTZ12S MF', ah: 11, v: 12, cca: 210, dim: '150 × 87 × 110 mm', price: 500, fits: 'Quad (YTZ12S / YTX12)', photo: '/batteries/catsp7.webp' },
       { id: 'q_sp6', brand: 'SP', model: '12N5L-BS MF', ah: 5, v: 12, cca: 60, dim: '120 × 60 × 130 mm', price: 150, fits: 'Petit quad (12N9 / 12N5L)', photo: '/batteries/catsp6.webp' },
     ],
   },
