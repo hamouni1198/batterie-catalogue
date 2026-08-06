@@ -211,13 +211,6 @@ export const vehicles = [
     labelMobile: 'Camping-car',
     labelDesktop: 'Camping-car',
     batteries: [
-      { id: 'ca2_e23', brand: 'VARTA', model: 'E23 D26 M10D', ah: 70, v: 12, cca: 570, dim: '260 × 173 × 225 mm', price: 1380, fits: 'Cellule + démarrage · D26', photo: '/batteries/catv18.webp' },
-      { id: 'ca2_e24', brand: 'VARTA', model: 'E24 D26R M10G', ah: 70, v: 12, cca: 570, dim: '260 × 173 × 225 mm', price: 1299, fits: 'Cellule + démarrage · D26 (borne à droite)', photo: '/batteries/catv19.webp' },
-      { id: 'ca2_n70', brand: 'VARTA', model: 'N70 EFB', ah: 70, v: 12, cca: 720, dim: '306 × 173 × 225 mm', price: 2000, fits: 'Cellule + démarrage · D26', photo: '/batteries/catv8.webp' },
-      { id: 'kv_vo10', brand: 'VOLTAGE', model: 'L6 110Ah', ah: 110, v: 12, cca: 920, dim: '353 × 175 × 190 mm', price: 1500, fits: 'Camping-car, cellule · L6', photo: '/batteries/catvo10.webp' },
-      { id: 'kv_vo9', brand: 'VOLTAGE', model: 'L5 100Ah', ah: 100, v: 12, cca: 830, dim: '353 × 175 × 175 mm', price: 1100, fits: 'Camping-car, cellule · L5', photo: '/batteries/catvo9.webp' },
-      { id: 'kv_vo8', brand: 'VOLTAGE', model: 'M11 95Ah', ah: 95, v: 12, cca: 830, dim: '306 × 173 × 225 mm', price: 1050, fits: 'Camping-car (format asiatique) · M11', photo: '/batteries/catvo8.webp' },
-      { id: 'kv_vo7', brand: 'VOLTAGE', model: 'M10 70Ah', ah: 70, v: 12, cca: 600, dim: '260 × 173 × 225 mm', price: 850, fits: 'Camping-car (format asiatique) · M10', photo: '/batteries/catvo7.webp' },
       // AGM (voiture Start-Stop) proposées aussi en camping-car — bonne endurance en cyclage cellule.
       { id: 'cmp_b13', brand: 'BOSCH', model: 'S5 A13 L5 AGM Start-Stop', ah: 95, v: 12, cca: 850, dim: '353 × 175 × 190 mm', price: 3150, fits: 'Camping-car, cellule (AGM) · L5', photo: '/batteries/catb13.webp' },
       { id: 'cmp_b14', brand: 'BOSCH', model: 'S5 A11 L4 AGM Start-Stop', ah: 80, v: 12, cca: 800, dim: '315 × 175 × 190 mm', price: 2650, fits: 'Camping-car, cellule (AGM) · L4', photo: '/batteries/catb14.webp' },
@@ -233,6 +226,14 @@ export const vehicles = [
       { id: 'cmp_j3', brand: 'JET', model: 'Power+ L5 AGM Start-Stop', ah: 95, v: 12, cca: 850, dim: '353 × 175 × 190 mm', price: 2800, fits: 'Camping-car, cellule (AGM) · L5', photo: '/batteries/catj3.webp' },
       { id: 'cmp_j2', brand: 'JET', model: 'Power+ L4 AGM Start-Stop', ah: 80, v: 12, cca: 800, dim: '315 × 175 × 190 mm', price: 2300, fits: 'Camping-car, cellule (AGM) · L4', photo: '/batteries/catj2.webp' },
       { id: 'cmp_j1', brand: 'JET', model: 'Power+ L3 AGM Start-Stop', ah: 70, v: 12, cca: 760, dim: '278 × 175 × 190 mm', price: 1800, fits: 'Camping-car, cellule (AGM) · L3', photo: '/batteries/catj1.webp' },
+      // Dual purpose / démarrage (aussi adaptées camping-car)
+      { id: 'ca2_e23', brand: 'VARTA', model: 'E23 D26 M10D', ah: 70, v: 12, cca: 570, dim: '260 × 173 × 225 mm', price: 1380, fits: 'Cellule + démarrage · D26', photo: '/batteries/catv18.webp' },
+      { id: 'ca2_e24', brand: 'VARTA', model: 'E24 D26R M10G', ah: 70, v: 12, cca: 570, dim: '260 × 173 × 225 mm', price: 1299, fits: 'Cellule + démarrage · D26 (borne à droite)', photo: '/batteries/catv19.webp' },
+      { id: 'ca2_n70', brand: 'VARTA', model: 'N70 EFB', ah: 70, v: 12, cca: 720, dim: '306 × 173 × 225 mm', price: 2000, fits: 'Cellule + démarrage · D26', photo: '/batteries/catv8.webp' },
+      { id: 'kv_vo10', brand: 'VOLTAGE', model: 'L6 110Ah', ah: 110, v: 12, cca: 920, dim: '353 × 175 × 190 mm', price: 1500, fits: 'Camping-car, cellule · L6', photo: '/batteries/catvo10.webp' },
+      { id: 'kv_vo9', brand: 'VOLTAGE', model: 'L5 100Ah', ah: 100, v: 12, cca: 830, dim: '353 × 175 × 175 mm', price: 1100, fits: 'Camping-car, cellule · L5', photo: '/batteries/catvo9.webp' },
+      { id: 'kv_vo8', brand: 'VOLTAGE', model: 'M11 95Ah', ah: 95, v: 12, cca: 830, dim: '306 × 173 × 225 mm', price: 1050, fits: 'Camping-car (format asiatique) · M11', photo: '/batteries/catvo8.webp' },
+      { id: 'kv_vo7', brand: 'VOLTAGE', model: 'M10 70Ah', ah: 70, v: 12, cca: 600, dim: '260 × 173 × 225 mm', price: 850, fits: 'Camping-car (format asiatique) · M10', photo: '/batteries/catvo7.webp' },
     ],
   },
   {
