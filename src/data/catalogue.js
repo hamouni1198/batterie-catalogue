@@ -25,13 +25,13 @@ export const vehicles = [
       // BOSCH
       { id: 'b13', brand: 'BOSCH', model: 'S5 A13 L5 AGM Start-Stop', ah: 95, v: 12, cca: 850, dim: '353 × 175 × 190 mm', price: 3150, fits: 'Start-Stop AGM · L5', photo: '/batteries/catb13.webp' },
       { id: 'b14', brand: 'BOSCH', model: 'S5 A11 L4 AGM Start-Stop', ah: 80, v: 12, cca: 800, dim: '315 × 175 × 190 mm', price: 2650, fits: 'Start-Stop AGM · L4', photo: '/batteries/catb14.webp' },
-      { id: 'b15', brand: 'BOSCH', model: 'S5 A08 L3 AGM Start-Stop', ah: 70, v: 12, cca: 760, dim: '278 × 175 × 190 mm', price: 2400, fits: 'Start-Stop AGM · L3', photo: '/batteries/catb15.webp' },
+      { id: 'b15', brand: 'BOSCH', model: 'S5 A08 L3 AGM Start-Stop', ah: 70, v: 12, cca: 760, dim: '278 × 175 × 190 mm', price: 2200, fits: 'Start-Stop AGM · L3', photo: '/batteries/catb15.webp' },
       { id: 'b11', brand: 'BOSCH', model: 'S5 013 L5', ah: 100, v: 12, cca: 830, dim: '353 × 175 × 175 mm', price: 1840, fits: 'Grosses cylindrées · L5', photo: '/batteries/catb11.webp' },
       { id: 'b1', brand: 'BOSCH', model: 'S4 029 M11', ah: 95, v: 12, cca: 830, dim: '306 × 173 × 225 mm', price: 1700, fits: '4x4, diesel · M11 (D31)', photo: '/batteries/catb1.webp' },
       { id: 'b8', brand: 'BOSCH', model: 'S4 010 L4', ah: 80, v: 12, cca: 740, dim: '315 × 175 × 175 mm', price: 1450, fits: 'Break, SUV · L4', photo: '/batteries/catb8.webp' },
       { id: 'b12', brand: 'BOSCH', model: 'S5 008 L3', ah: 77, v: 12, cca: 780, dim: '278 × 175 × 175 mm', price: 1420, fits: 'Berlines · L3', photo: '/batteries/catb12.webp' },
       { id: 'b9', brand: 'BOSCH', model: 'S4 008 L3', ah: 74, v: 12, cca: 680, dim: '278 × 175 × 175 mm', price: 1350, fits: 'Berlines, break · L3', photo: '/batteries/catb9.webp' },
-      { id: 'b3', brand: 'BOSCH', model: 'S3 008 L3', ah: 70, v: 12, cca: 640, dim: '278 × 175 × 175 mm', price: 1150, fits: 'Berlines · L3', photo: '/batteries/catb3.webp' },
+      { id: 'b3', brand: 'BOSCH', model: 'S3 008 L3', ah: 70, v: 12, cca: 640, dim: '278 × 175 × 175 mm', price: 1100, fits: 'Berlines · L3', photo: '/batteries/catb3.webp' },
       { id: 'b2', brand: 'BOSCH', model: 'S4 005 L2', ah: 60, v: 12, cca: 540, dim: '242 × 175 × 175 mm', price: 1050, fits: 'Compactes · L2', photo: '/batteries/catb2.webp' },
       { id: 'b10', brand: 'BOSCH', model: 'S4 006 L2', ah: 60, v: 12, cca: 540, dim: '242 × 175 × 190 mm', price: 1000, fits: 'Compactes · L2', photo: '/batteries/catb10.webp' },
       { id: 'b4', brand: 'BOSCH', model: 'S3 005 L2', ah: 56, v: 12, cca: 480, dim: '242 × 175 × 175 mm', price: 840, fits: 'Clio, 208, Corsa, Polo · L2', photo: '/batteries/catb4.webp' },
@@ -127,7 +127,7 @@ export const vehicles = [
       { id: 'exetx20hl', brand: 'EXIDE', model: 'ETX20HL AGM', ah: 21, v: 12, cca: 350, dim: '205 × 87 × 162 mm', price: 1400, fits: 'YTX20HL / AGM 12-23 — gros custom, Harley (AGM)', photo: '/batteries/exagm23.webp' },
       { id: 'exetx16', brand: 'EXIDE', model: 'ETX16 AGM', ah: 16, v: 12, cca: 170, dim: '175 × 87 × 155 mm', price: 1200, fits: 'YTX16 / AGM 12-16 — moto, jet-ski (AGM)', photo: '/batteries/exagm16.webp' },
       { id: 'exetx14', brand: 'EXIDE', model: 'ETX14 AGM', ah: 12, v: 12, cca: 210, dim: '150 × 87 × 145 mm', price: 950, fits: 'YTX14 / AGM 12-14 — moto, quad (AGM)', photo: '/batteries/exagm14.webp' },
-      { id: 'exetx12', brand: 'EXIDE', model: 'ETX12 AGM', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 110 mm', price: 950, fits: 'YTX12 / AGM 12-12 — moto (AGM)', photo: '/batteries/exagm12.webp' },
+      { id: 'exetx12', brand: 'EXIDE', model: 'ETX12 AGM', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 110 mm', price: 900, fits: 'YTX12 / AGM 12-12 — moto (AGM)', photo: '/batteries/exagm12.webp' },
       { id: 'exetx7', brand: 'EXIDE', model: 'ETX7 AGM', ah: 8.6, v: 12, cca: 145, dim: '150 × 87 × 93 mm', price: 600, fits: 'YTX7 / AGM 12-8 — scooter, moto (AGM)', photo: '/batteries/exagm8.webp' },
       { id: 'exetx9', brand: 'EXIDE', model: 'ETX9 AGM', ah: 9, v: 12, cca: 120, dim: '150 × 87 × 105 mm', price: 430, fits: 'YTX9-BS / AGM 12-9 — moto, scooter (AGM)', photo: '/batteries/exetx9c.webp' },
       // ZUNCI
@@ -175,7 +175,6 @@ export const vehicles = [
     labelDesktop: 'Quad / Buggy',
     batteries: [
       { id: 'q_y6', brand: 'YUASA', model: 'YIX30L-BS', ah: 30, v: 12, cca: 385, dim: '166 × 126 × 175 mm', price: 1800, fits: 'Gros quad, SSV (AGM MF)', photo: '/batteries/caty6.webp' },
-      { id: 'q_exetx20hl', brand: 'EXIDE', model: 'ETX20HL AGM', ah: 21, v: 12, cca: 350, dim: '205 × 87 × 162 mm', price: 1400, fits: 'Quad, SSV (YTX20HL)', photo: '/batteries/exagm23.webp' },
       { id: 'q_sp12', brand: 'SP', model: 'YTX20L-BS MF', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 750, fits: 'Polaris, Can-Am, Kymco (YTX20L)', photo: '/batteries/catsp12.webp' },
       { id: 'q_sp5', brand: 'SP', model: 'YTX16-BS MF', ah: 14, v: 12, cca: 230, dim: '150 × 87 × 161 mm', price: 600, fits: 'Buggy, SSV (YTX16)', photo: '/batteries/catsp5.webp' },
     ],
