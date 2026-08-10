@@ -22,7 +22,17 @@ function matchesPrice(price, filter) {
 function filterBatteries(list, query, priceFilter) {
   const q = query.trim().toLowerCase()
   return list.filter((b) => {
-    const haystack = (b.brand + ' ' + b.model + ' ' + b.fits + ' ' + b.ah).toLowerCase()
+    const haystack = (
+      b.brand +
+      ' ' +
+      b.model +
+      ' ' +
+      b.fits +
+      ' ' +
+      b.ah +
+      ' ' +
+      (b.spec || '')
+    ).toLowerCase()
     if (q && !haystack.includes(q)) return false
     return matchesPrice(b.price, priceFilter)
   })
@@ -95,7 +105,7 @@ export function useCatalogue(showPrices = true) {
     count,
     countText,
     isEmpty: count === 0,
-    title: 'Batteries ' + vehicle.name,
+    title: vehicle.key === 'chargeurs' ? vehicle.name : 'Batteries ' + vehicle.name,
     chips,
     // actions
     select,

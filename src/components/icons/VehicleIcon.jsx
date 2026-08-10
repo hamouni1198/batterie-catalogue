@@ -21,6 +21,9 @@ const PATHS = {
   // Fauteuil roulant (symbole accessibilité / handicap)
   fauteuil:
     'M17 4a1 1 0 10-2 0 1 1 0 102 0M18 19l1-7-6 1M5 8l3-3 5.5 3-2.4 3.5M4.3 14.5a5 5 0 006.9 6M13.8 17.5a5 5 0 00-6.9-6',
+  // Chargeurs / testeurs (batterie en charge — boîtier + éclair)
+  chargeurs:
+    'M3 8.5h13a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5a1 1 0 011-1zM18 11v3M9.6 9.5L7.8 12.4H10l-1.8 2.9',
   // Industriel (chariot élévateur / transpalette)
   industriel:
     'M15 19a2 2 0 10-4 0 2 2 0 104 0M7 19a2 2 0 10-4 0 2 2 0 104 0M12 12H5a2 2 0 00-2 2v5M8 19h3M16 2v17h5M6 12V7c0-1.1.9-2 2-2h3l5 5',

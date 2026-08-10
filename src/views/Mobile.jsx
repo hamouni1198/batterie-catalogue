@@ -101,6 +101,14 @@ export default function Mobile() {
               <span className="brand-cta__icon" aria-hidden="true">▦</span>
               Par marque
             </button>
+            <button
+              type="button"
+              className="brand-cta charger-cta"
+              onClick={() => cat.select('chargeurs')}
+            >
+              <span className="brand-cta__icon" aria-hidden="true">⚡</span>
+              Chargeurs
+            </button>
           </div>
         )}
         {!cat.hasSelection && <InfoBar />}

@@ -1008,18 +1008,29 @@ input::placeholder {
   align-items: center;
   gap: 10px;
 }
-/* Mobile : les deux boutons côte à côte (assistant + marque). */
+/* Mobile : « M'aider à choisir » pleine largeur, puis « Par marque » +
+   « Chargeurs » côte à côte en dessous. */
 .screen--mobile .accueil-actions {
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: stretch;
   gap: 8px;
   margin-bottom: 12px;
 }
-.screen--mobile .accueil-actions .finder-cta,
-.screen--mobile .accueil-actions .brand-cta {
-  flex: 1;
+.screen--mobile .accueil-actions .finder-cta {
+  flex: 1 1 100%;
   padding-left: 12px;
   padding-right: 12px;
+}
+.screen--mobile .accueil-actions .brand-cta {
+  flex: 1 1 0;
+  min-width: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.charger-cta__icon,
+.charger-cta .brand-cta__icon {
+  color: #ffd400;
 }
 .accueil-actions--desktop {
   align-items: flex-start;

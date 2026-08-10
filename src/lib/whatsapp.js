@@ -9,23 +9,39 @@ export function buildWhatsappLink(battery, vehicleName, config) {
   const number = String(config.whatsappNumber || '212643388802').replace(/[^0-9]/g, '')
   const greeting = config.whatsappGreeting || 'Bonjour Battery Dynamic,'
 
-  const lines = [
-    greeting,
-    '',
-    'Je suis intéressé(e) par cette batterie :',
-    'Modèle : ' + battery.brand + ' ' + battery.model,
-    'Pour : ' + vehicleName,
-    'Capacité : ' +
-      battery.ah +
-      ' Ah — ' +
-      battery.v +
-      ' V' +
-      (battery.cca ? ' — ' + battery.cca + ' A (CCA)' : ''),
-    'Dimensions : ' + battery.dim,
-    'Prix catalogue : ' + priceText(battery.price, config.showPrices),
-    '',
-    'Est-elle disponible ? Et avec la pose ?',
-  ]
+  const price =
+    battery.charger && !battery.price
+      ? 'Prix : sur demande'
+      : 'Prix catalogue : ' + priceText(battery.price, config.showPrices)
+
+  const lines = battery.charger
+    ? [
+        greeting,
+        '',
+        'Je suis intéressé(e) par ce produit :',
+        'Chargeur : ' + battery.brand + ' ' + battery.model,
+        battery.spec ? 'Type : ' + battery.spec : null,
+        price,
+        '',
+        'Est-il disponible ?',
+      ].filter(Boolean)
+    : [
+        greeting,
+        '',
+        'Je suis intéressé(e) par cette batterie :',
+        'Modèle : ' + battery.brand + ' ' + battery.model,
+        'Pour : ' + vehicleName,
+        'Capacité : ' +
+          battery.ah +
+          ' Ah — ' +
+          battery.v +
+          ' V' +
+          (battery.cca ? ' — ' + battery.cca + ' A (CCA)' : ''),
+        'Dimensions : ' + battery.dim,
+        'Prix catalogue : ' + priceText(battery.price, config.showPrices),
+        '',
+        'Est-elle disponible ? Et avec la pose ?',
+      ]
 
   return 'https://wa.me/' + number + '?text=' + encodeURIComponent(lines.join('\n'))
 }

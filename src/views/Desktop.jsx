@@ -64,6 +64,14 @@ export default function Desktop() {
                 <span className="brand-cta__icon" aria-hidden="true">▦</span>
                 Voir par marque
               </button>
+              <button
+                type="button"
+                className="brand-cta charger-cta"
+                onClick={() => cat.select('chargeurs')}
+              >
+                <span className="brand-cta__icon" aria-hidden="true">⚡</span>
+                Chargeurs & testeurs
+              </button>
             </div>
           </div>
         )}

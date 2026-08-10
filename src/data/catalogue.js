@@ -319,6 +319,21 @@ export const vehicles = [
       { id: 'in_l1', brand: 'LONG', model: 'AGM 6V 4.5Ah', ah: 4.5, v: 6, cca: 0, dim: '70 × 47 × 101 mm', price: 80, fits: 'Onduleur 6V, backup', photo: '/batteries/catl1.webp' },
     ],
   },
+  {
+    key: 'chargeurs',
+    name: 'Chargeurs & testeurs',
+    labelMobile: 'Chargeurs',
+    labelDesktop: 'Chargeurs & testeurs',
+    batteries: [
+      // Chargeurs / boosters BS — specs d'après les fiches ; PRIX + PHOTOS à venir (client).
+      { id: 'ch_bs60', brand: 'BS', charger: true, model: 'BS60', spec: '12 V · 1 / 4 / 6 A', ah: 0, v: 12, cca: 0, dim: '', price: 0, fits: 'Chargeur multi-ampérage (auto + moto)', photo: '' },
+      { id: 'ch_bs30', brand: 'BS', charger: true, model: 'BS30', spec: '12 V · 3 A', ah: 0, v: 12, cca: 0, dim: '', price: 0, fits: 'Chargeur auto / moto', photo: '' },
+      { id: 'ch_bs15', brand: 'BS', charger: true, model: 'BS15', spec: '12 V · 1,5 A', ah: 0, v: 12, cca: 0, dim: '', price: 0, fits: 'Mainteneur / petit chargeur moto', photo: '' },
+      { id: 'ch_bs10', brand: 'BS', charger: true, model: 'BS10', spec: '12 V · 1 A', ah: 0, v: 12, cca: 0, dim: '', price: 0, fits: 'Chargeur moto, petites batteries', photo: '' },
+      { id: 'ch_bk20', brand: 'BS', charger: true, model: 'BK20', spec: '3 bancs', ah: 0, v: 12, cca: 0, dim: '', price: 0, fits: 'Chargeur 3 sorties (atelier)', photo: '' },
+      { id: 'ch_pbox', brand: 'BS', charger: true, model: 'Power Box', spec: 'Booster', ah: 0, v: 12, cca: 0, dim: '', price: 0, fits: 'Démarreur / booster portable', photo: '' },
+    ],
+  },
 ]
 
 export default vehicles
