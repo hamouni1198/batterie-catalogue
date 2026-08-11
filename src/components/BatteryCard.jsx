@@ -9,7 +9,12 @@ export default function BatteryCard({ battery, variant = 'mobile', onOrder, cont
   const [imgOk, setImgOk] = useState(true)
   const hasPhoto = Boolean(battery.photo) && imgOk
   const isCharger = Boolean(battery.charger)
-  const priceLabel = isCharger && !battery.price ? 'Sur demande' : battery.priceText
+  const priceLabel =
+    isCharger && !battery.price
+      ? 'Sur demande'
+      : battery.price == null
+        ? '?? Dh'
+        : battery.priceText
 
   return (
     <article className={`card card--${variant}`}>

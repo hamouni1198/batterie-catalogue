@@ -147,15 +147,14 @@ export const vehicles = [
       { id: 'z3', brand: 'ZUNCI', model: '12N9-BS', ah: 9, v: 12, cca: 120, dim: '137 × 76 × 140 mm', price: 260, fits: 'Moto ancienne', photo: '/batteries/catz3.webp' },
       { id: 'z1', brand: 'ZUNCI', model: '12N5-BS', ah: 5, v: 12, cca: 45, dim: '120 × 60 × 130 mm', price: 180, fits: 'Petite moto, scooter', photo: '/batteries/catz1.webp' },
       { id: 'z4', brand: 'ZUNCI', model: 'YTX5L-BS', ah: 4, v: 12, cca: 70, dim: '114 × 71 × 106 mm', price: 180, fits: 'Scooter, petite moto', photo: '/batteries/catz4.webp' },
-      // BS — série BTX (moto AGM). Specs standard d'après le format ; PRIX + PHOTOS à venir (client).
-      { id: 'bs20hl', brand: 'BS', model: 'BTX20HL', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 161 mm', price: 800, fits: 'Gros custom, quad (YTX20HL) — prix à confirmer', photo: '' },
-      { id: 'bs20l', brand: 'BS', model: 'BTX20L', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 750, fits: 'Gros custom, quad, jet-ski (YTX20L) — prix à confirmer', photo: '' },
-      { id: 'bs14', brand: 'BS', model: 'BTX14', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 520, fits: 'Moto, quad (YTX14) — prix à confirmer', photo: '' },
-      { id: 'bs12', brand: 'BS', model: 'BTX12', ah: 10, v: 12, cca: 180, dim: '150 × 87 × 130 mm', price: 500, fits: 'Moto route (YTX12) — prix à confirmer', photo: '' },
-      { id: 'bs9', brand: 'BS', model: 'BTX9', ah: 8, v: 12, cca: 120, dim: '150 × 87 × 105 mm', price: 270, fits: 'Moto, scooter (YTX9) — prix à confirmer', photo: '' },
-      { id: 'bs7a', brand: 'BS', model: 'BTX7A', ah: 6, v: 12, cca: 105, dim: '150 × 87 × 94 mm', price: 270, fits: 'Scooter 125 (YTX7A) — prix à confirmer', photo: '' },
-      { id: 'bs5l', brand: 'BS', model: 'BTX5L', ah: 4, v: 12, cca: 80, dim: '114 × 71 × 106 mm', price: 200, fits: 'Scooter, petite moto (YTX5L) — prix à confirmer', photo: '' },
-      { id: 'bs4l', brand: 'BS', model: 'BTX4L', ah: 3, v: 12, cca: 50, dim: '114 × 71 × 86 mm', price: 170, fits: 'Petite moto, scooter (YTX4L) — prix à confirmer', photo: '' },
+      // BS — série BTX (moto SLA Factory Activated). Specs réelles (photos BS) ; PRIX À CONFIRMER (affichés « ?? »).
+      { id: 'bs20hl', brand: 'BS', model: 'BTX20HL', ah: 18.9, v: 12, cca: 270, dim: '175 × 87 × 161 mm', price: null, fits: 'Gros custom, quad (YTX20HL)', photo: '/batteries/bs20hl.webp' },
+      { id: 'bs14', brand: 'BS', model: 'BTX14', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: null, fits: 'Moto, quad (YTX14)', photo: '/batteries/bs14.webp' },
+      { id: 'bs12', brand: 'BS', model: 'BTX12', ah: 10.5, v: 12, cca: 180, dim: '150 × 87 × 130 mm', price: null, fits: 'Moto route (YTX12)', photo: '/batteries/bs12.webp' },
+      { id: 'bs9', brand: 'BS', model: 'BTX9', ah: 8.4, v: 12, cca: 120, dim: '150 × 87 × 105 mm', price: null, fits: 'Moto, scooter (YTX9)', photo: '/batteries/bs9.webp' },
+      { id: 'bs7a', brand: 'BS', model: 'BTX7A', ah: 6.3, v: 12, cca: 105, dim: '150 × 87 × 94 mm', price: null, fits: 'Scooter 125 (YTX7A)', photo: '/batteries/bs7a.webp' },
+      { id: 'bs5l', brand: 'BS', model: 'BTX5L', ah: 5.3, v: 12, cca: 80, dim: '114 × 71 × 106 mm', price: null, fits: 'Scooter, petite moto (YTX5L)', photo: '/batteries/bs5l.webp' },
+      { id: 'bs4l', brand: 'BS', model: 'BTX4L', ah: 4.2, v: 12, cca: 50, dim: '114 × 71 × 86 mm', price: null, fits: 'Petite moto, scooter (YTX4L)', photo: '/batteries/bs4l.webp' },
     ],
   },
   {
@@ -212,6 +211,7 @@ export const vehicles = [
       { id: 'q_sp2', brand: 'SP', model: 'YTX14-BS MF', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 520, fits: 'Quad, buggy (YTX14)', photo: '/batteries/catsp2.webp' },
       { id: 'q_sp6', brand: 'SP', model: '12N5L-BS MF', ah: 5, v: 12, cca: 60, dim: '120 × 60 × 130 mm', price: 150, fits: 'Petit quad (12N9 / 12N5L)', photo: '/batteries/catsp6.webp' },
       { id: 'q_y5', brand: 'YUASA', model: 'YB12AL-A', ah: 12, v: 12, cca: 150, dim: '134 × 80 × 160 mm', price: 450, fits: 'Quad, VTT (YB12AL)', photo: '/batteries/caty5.webp' },
+      { id: 'bs51913', brand: 'BS', model: '51913 SLA MAX', ah: 22, v: 12, cca: 275, dim: '181 × 77 × 171 mm', price: null, fits: 'Quad, tondeuse autoportée, utilitaire (U1)', photo: '/batteries/bs51913.webp' },
     ],
   },
   {

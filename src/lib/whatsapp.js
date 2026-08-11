@@ -38,7 +38,9 @@ export function buildWhatsappLink(battery, vehicleName, config) {
           ' V' +
           (battery.cca ? ' — ' + battery.cca + ' A (CCA)' : ''),
         'Dimensions : ' + battery.dim,
-        'Prix catalogue : ' + priceText(battery.price, config.showPrices),
+        battery.price == null
+          ? 'Prix : à confirmer'
+          : 'Prix catalogue : ' + priceText(battery.price, config.showPrices),
         '',
         'Est-elle disponible ? Et avec la pose ?',
       ]
