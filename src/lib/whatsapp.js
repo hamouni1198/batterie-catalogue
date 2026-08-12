@@ -10,9 +10,11 @@ export function buildWhatsappLink(battery, vehicleName, config) {
   const greeting = config.whatsappGreeting || 'Bonjour Battery Dynamic,'
 
   const price =
-    battery.charger && !battery.price
-      ? 'Prix : sur demande'
-      : 'Prix catalogue : ' + priceText(battery.price, config.showPrices)
+    battery.price == null
+      ? 'Prix : à confirmer'
+      : battery.charger && !battery.price
+        ? 'Prix : sur demande'
+        : 'Prix catalogue : ' + priceText(battery.price, config.showPrices)
 
   const lines = battery.charger
     ? [
