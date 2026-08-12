@@ -75,7 +75,7 @@ export const vehicles = [
       { id: 'vo4', brand: 'VOLTAGE', model: 'E2 60Ah', ah: 60, v: 12, cca: 480, dim: '232 × 173 × 225 mm', price: 700, fits: 'Berlines (format asiatique) · E2', photo: '/batteries/catvo4.webp' },
       { id: 'vo2', brand: 'VOLTAGE', model: 'E1 40Ah', ah: 40, v: 12, cca: 330, dim: '187 × 127 × 227 mm', price: 650, fits: 'Petites voitures · E1 (NS40)', photo: '/batteries/catvo2.webp' },
       { id: 'vo1', brand: 'VOLTAGE', model: 'L1 46Ah', ah: 46, v: 12, cca: 400, dim: '207 × 175 × 175 mm', price: 600, fits: 'Citadines · L1', photo: '/batteries/catvo1.webp' },
-      { id: 'vol0', brand: 'VOLTAGE', model: 'L0 35Ah', ah: 35, v: 12, cca: 280, dim: '175 × 175 × 190 mm', price: 900, fits: 'Petites voitures · L0', photo: '' },
+      { id: 'vol0', brand: 'VOLTAGE', model: 'L0 35Ah', ah: 35, v: 12, cca: 280, dim: '175 × 175 × 190 mm', price: 900, fits: 'Petites voitures · L0', photo: '/batteries/vol0.webp' },
       // ENERGIZER
       { id: 'e3', brand: 'ENERGIZER', model: 'Premium AGM EA95 L5', ah: 95, v: 12, cca: 850, dim: '353 × 175 × 190 mm', price: 2800, fits: 'Start-Stop AGM · L5', photo: '/batteries/cate3.webp' },
       { id: 'e2', brand: 'ENERGIZER', model: 'Premium AGM EA80 L4', ah: 80, v: 12, cca: 800, dim: '315 × 175 × 190 mm', price: 2400, fits: 'Start-Stop AGM · L4', photo: '/batteries/cate2.webp' },
@@ -191,8 +191,8 @@ export const vehicles = [
       { id: 'cv_vo8', brand: 'VOLTAGE', model: 'M11 95Ah', ah: 95, v: 12, cca: 830, dim: '306 × 173 × 225 mm', price: 1050, fits: 'Camionnette diesel · M11 (D31)', photo: '/batteries/catvo8.webp' },
       { id: 'cv_vo7', brand: 'VOLTAGE', model: 'M10 70Ah', ah: 70, v: 12, cca: 600, dim: '260 × 173 × 225 mm', price: 850, fits: 'Camionnette · M10', photo: '/batteries/catvo7.webp' },
       // VOLTAGE camion (M-format) — prix client ; photos à venir (envoyer en ZIP).
-      { id: 'vm16', brand: 'VOLTAGE', model: 'M16 210Ah', ah: 210, v: 12, cca: 1400, dim: '518 × 276 × 242 mm', price: 2500, fits: 'Poids lourds, bus · M16', photo: '' },
-      { id: 'vm15', brand: 'VOLTAGE', model: 'M15 165Ah', ah: 165, v: 12, cca: 1200, dim: '513 × 223 × 223 mm', price: 1800, fits: 'Camions, poids lourds · M15', photo: '' },
+      { id: 'vm16', brand: 'VOLTAGE', model: 'M16 210Ah', ah: 210, v: 12, cca: 1400, dim: '518 × 276 × 242 mm', price: 2500, fits: 'Poids lourds, bus · M16', photo: '/batteries/vm16.webp' },
+      { id: 'vm15', brand: 'VOLTAGE', model: 'M15 165Ah', ah: 165, v: 12, cca: 1200, dim: '513 × 223 × 223 mm', price: 1800, fits: 'Camions, poids lourds · M15', photo: '/batteries/vm15.webp' },
       { id: 'vm14', brand: 'VOLTAGE', model: 'M14 135Ah', ah: 135, v: 12, cca: 950, dim: '513 × 189 × 223 mm', price: 1600, fits: 'Camions, utilitaires lourds · M14', photo: '' },
     ],
   },
