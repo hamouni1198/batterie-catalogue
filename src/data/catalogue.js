@@ -193,7 +193,7 @@ export const vehicles = [
       // VOLTAGE camion (M-format) — prix client ; photos à venir (envoyer en ZIP).
       { id: 'vm16', brand: 'VOLTAGE', model: 'M16 210Ah', ah: 210, v: 12, cca: 1400, dim: '518 × 276 × 242 mm', price: 2500, fits: 'Poids lourds, bus · M16', photo: '/batteries/vm16.webp' },
       { id: 'vm15', brand: 'VOLTAGE', model: 'M15 165Ah', ah: 165, v: 12, cca: 1200, dim: '513 × 223 × 223 mm', price: 1800, fits: 'Camions, poids lourds · M15', photo: '/batteries/vm15.webp' },
-      { id: 'vm14', brand: 'VOLTAGE', model: 'M14 135Ah', ah: 135, v: 12, cca: 950, dim: '513 × 189 × 223 mm', price: 1600, fits: 'Camions, utilitaires lourds · M14', photo: '' },
+      { id: 'vm14', brand: 'VOLTAGE', model: 'M14 135Ah', ah: 135, v: 12, cca: 950, dim: '513 × 189 × 223 mm', price: 1600, fits: 'Camions, utilitaires lourds · M14', photo: '/batteries/vm14.webp' },
     ],
   },
   {
