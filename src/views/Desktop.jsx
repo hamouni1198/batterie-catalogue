@@ -88,7 +88,13 @@ export default function Desktop() {
         />
       )}
 
-      {brandOpen && <BrandBrowser vehicles={cat.vehicles} onClose={() => setBrandOpen(false)} />}
+      {brandOpen && (
+        <BrandBrowser
+          vehicles={cat.vehicles}
+          onClose={() => setBrandOpen(false)}
+          variant="desktop"
+        />
+      )}
     </div>
   )
 }

@@ -1140,6 +1140,19 @@ input::placeholder {
 .cat__filters--brands {
   gap: 9px;
 }
+/* Bouton retour « ← Toutes les marques » dans la feuille par marque (mobile). */
+.cat__back {
+  align-self: flex-start;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--accent);
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  padding: 0 0 2px;
+}
 
 /* Mobile : la vue « Par marque » passe en plein écran, comme la feuille par
    engin (au lieu d'un panneau flottant plus étroit). */

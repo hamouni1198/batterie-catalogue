@@ -143,7 +143,13 @@ export default function Mobile() {
         />
       )}
 
-      {brandOpen && <BrandBrowser vehicles={cat.vehicles} onClose={() => setBrandOpen(false)} />}
+      {brandOpen && (
+        <BrandBrowser
+          vehicles={cat.vehicles}
+          onClose={() => setBrandOpen(false)}
+          variant="mobile"
+        />
+      )}
     </div>
   )
 }
