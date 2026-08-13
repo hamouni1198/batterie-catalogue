@@ -369,6 +369,7 @@ export const vehicles = [
       { id: 'ch_bs10', brand: 'BS', charger: true, model: 'BS10', spec: '6 / 12 V · 1 A', ah: 0, v: 12, cca: 0, dim: '', price: 550, fits: 'Chargeur moto, petites batteries', photo: '/batteries/chbs10.webp' },
       { id: 'ch_bk20', brand: 'BS', charger: true, model: 'BK20', spec: '6 / 12 V · 3 × 2 A', ah: 0, v: 12, cca: 0, dim: '', price: 1800, fits: 'Chargeur 3 bancs (atelier)', photo: '/batteries/chbk20.webp' },
       { id: 'ch_bspowerbox', brand: 'BS', charger: true, model: 'Power Box MAX PB-02', spec: '12 V · 2000 A · Booster', ah: 0, v: 12, cca: 0, dim: '', price: 1900, fits: 'Démarreur de secours portable (jump starter)', photo: '/batteries/chbspowerbox.webp' },
+      { id: 'ch_bs60', brand: 'BS', charger: true, model: 'BS60', spec: '12 V · 1 / 4 / 6 A', ah: 0, v: 12, cca: 0, dim: '', price: 1050, fits: 'Chargeur & mainteneur intelligent (fonction reconditionnement)', photo: '/batteries/chbs60.webp' },
     ],
   },
 ]
