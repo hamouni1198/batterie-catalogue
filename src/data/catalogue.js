@@ -165,7 +165,7 @@ export const vehicles = [
       { id: 'bs9', brand: 'BS', model: 'BTX9', ah: 8.4, v: 12, cca: 120, dim: '150 × 87 × 105 mm', price: 350, fits: 'Moto, scooter (YTX9)', photo: '/batteries/bs9.webp' },
       { id: 'bs7a', brand: 'BS', model: 'BTX7A', ah: 6.3, v: 12, cca: 105, dim: '150 × 87 × 94 mm', price: 280, fits: 'Scooter 125 (YTX7A)', photo: '/batteries/bs7a.webp' },
       { id: 'bs5l', brand: 'BS', model: 'BTX5L', ah: 5.3, v: 12, cca: 80, dim: '114 × 71 × 106 mm', price: 250, fits: 'Scooter, petite moto (YTX5L)', photo: '/batteries/bs5l.webp' },
-      { id: 'bs4l', brand: 'BS', model: 'BTX4L', ah: 4.2, v: 12, cca: 50, dim: '114 × 71 × 86 mm', price: 170, fits: 'Petite moto, scooter (YTX4L)', photo: '/batteries/bs4l.webp' },
+      { id: 'bs4l', brand: 'BS', model: 'BTX4L+ / BTZ5S', ah: 4.2, v: 12, cca: 65, dim: '114 × 71 × 86 mm', price: 170, fits: 'Petite moto, scooter (YTX4L / YTZ5S)', photo: '/batteries/bs4l.webp' },
       // BS — autres séries moto (BTX / BTZ / BT-B Hajra / BGZ gel). Specs réelles (photos BS) ; prix « ?? ».
       { id: 'bsbix30l', brand: 'BS', model: 'BIX30L', ah: 30, v: 12, cca: 385, dim: '166 × 126 × 175 mm', price: 1100, fits: 'Gros custom, Harley (YIX30L)', photo: '/batteries/bsbix30l.webp' },
       { id: 'bsbgz32hl', brand: 'BS', model: 'BGZ32HL', ah: 32, v: 12, cca: 350, dim: '205 × 90 × 162 mm', price: 1500, fits: 'Gros custom, marine (SLA MAX)', photo: '/batteries/bsbgz32hl.webp' },
@@ -187,7 +187,6 @@ export const vehicles = [
       { id: 'bsbb12a', brand: 'BS', model: 'BB12A-A/B', ah: 12.6, v: 12, cca: 150, dim: '134 × 80 × 160 mm', price: 480, fits: 'Moto ancienne (YB12A-A/B)', photo: '/batteries/bsbb12a.webp' },
       { id: 'bsbb9b', brand: 'BS', model: 'BB9-B', ah: 9.5, v: 12, cca: 115, dim: '137 × 76 × 140 mm', price: 350, fits: 'Moto ancienne (YB9-B / CB9-B)', photo: '/batteries/bsbb9b.webp' },
       { id: 'bsbtz8v', brand: 'BS', model: 'BTZ8V', ah: 7.4, v: 12, cca: 120, dim: '113 × 70 × 110 mm', price: 350, fits: 'Honda, scooter (YTZ8V)', photo: '/batteries/bsbtz8v.webp' },
-      { id: 'bsbtx4lp', brand: 'BS', model: 'BTX4L+ / BTZ5S', ah: 4.2, v: 12, cca: 65, dim: '114 × 71 × 86 mm', price: 300, fits: 'Scooter, petite moto (YTX4L / YTZ5S)', photo: '/batteries/bsbtx4lp.webp' },
     ],
   },
   {
