@@ -180,6 +180,14 @@ export const vehicles = [
       { id: 'bsbt9b', brand: 'BS', model: 'BT9B-4', ah: 8.4, v: 12, cca: 120, dim: '150 × 70 × 105 mm', price: 400, fits: 'Yamaha (YT9B-BS)', photo: '/batteries/bsbt9b.webp' },
       { id: 'bsbtz7s', brand: 'BS', model: 'BTZ7S', ah: 6.3, v: 12, cca: 130, dim: '113 × 70 × 105 mm', price: 300, fits: 'Moto, scooter (YTZ7S)', photo: '/batteries/bsbtz7s.webp' },
       { id: 'bsbtx7l', brand: 'BS', model: 'BTX7L', ah: 6, v: 12, cca: 85, dim: '114 × 71 × 131 mm', price: 300, fits: 'Scooter, moto (YTX7L)', photo: '/batteries/bsbtx7l.webp' },
+      // BS — série moto (photos client, fond blanc).
+      { id: 'bsbtx14h', brand: 'BS', model: 'BTX14H', ah: 14.7, v: 12, cca: 220, dim: '150 × 87 × 145 mm', price: 700, fits: 'Moto, quad (YTX14H · SLA MAX)', photo: '/batteries/bsbtx14h.webp' },
+      { id: 'bsbtx14ahl', brand: 'BS', model: 'BTX14AHL', ah: 14.7, v: 12, cca: 210, dim: '134 × 89 × 166 mm', price: 650, fits: 'Moto, quad (YTX14AHL / YB14L-A2)', photo: '/batteries/bsbtx14ahl.webp' },
+      { id: 'bsbt14bbs', brand: 'BS', model: 'BT14B-BS', ah: 12.6, v: 12, cca: 185, dim: '150 × 70 × 145 mm', price: 600, fits: 'Yamaha Fazer, FZ (YT14B-BS)', photo: '/batteries/bsbt14bbs.webp' },
+      { id: 'bsbb12a', brand: 'BS', model: 'BB12A-A/B', ah: 12.6, v: 12, cca: 150, dim: '134 × 80 × 160 mm', price: 480, fits: 'Moto ancienne (YB12A-A/B)', photo: '/batteries/bsbb12a.webp' },
+      { id: 'bsbb9b', brand: 'BS', model: 'BB9-B', ah: 9.5, v: 12, cca: 115, dim: '137 × 76 × 140 mm', price: 350, fits: 'Moto ancienne (YB9-B / CB9-B)', photo: '/batteries/bsbb9b.webp' },
+      { id: 'bsbtz8v', brand: 'BS', model: 'BTZ8V', ah: 7.4, v: 12, cca: 120, dim: '113 × 70 × 110 mm', price: 350, fits: 'Honda, scooter (YTZ8V)', photo: '/batteries/bsbtz8v.webp' },
+      { id: 'bsbtx4lp', brand: 'BS', model: 'BTX4L+ / BTZ5S', ah: 4.2, v: 12, cca: 65, dim: '114 × 71 × 86 mm', price: 300, fits: 'Scooter, petite moto (YTX4L / YTZ5S)', photo: '/batteries/bsbtx4lp.webp' },
     ],
   },
   {
@@ -242,6 +250,7 @@ export const vehicles = [
       { id: 'q_y5', brand: 'YUASA', model: 'YB12AL-A', ah: 12, v: 12, cca: 150, dim: '134 × 80 × 160 mm', price: 450, fits: 'Quad, VTT (YB12AL)', photo: '/batteries/caty5.webp' },
       { id: 'bs51913', brand: 'BS', model: '51913 SLA MAX', ah: 22, v: 12, cca: 275, dim: '181 × 77 × 171 mm', price: 800, fits: 'Quad, tondeuse autoportée, utilitaire (U1)', photo: '/batteries/bs51913.webp' },
       { id: 'bs53030', brand: 'BS', model: '530-30 SLA', ah: 30, v: 12, cca: 325, dim: '187 × 127 × 182 mm', price: 800, fits: 'Quad, tondeuse autoportée, utilitaire (U1)', photo: '/batteries/bs53030.webp' },
+      { id: 'bsu1r9', brand: 'BS', model: 'U1R-9 SLA', ah: 28, v: 12, cca: 280, dim: '196 × 131 × 180 mm', price: 750, fits: 'Tondeuse autoportée, quad utilitaire (U1R-280)', photo: '/batteries/bsu1r9.webp' },
     ],
   },
   {
@@ -360,6 +369,7 @@ export const vehicles = [
       { id: 'ch_bs15', brand: 'BS', charger: true, model: 'BS15', spec: '12 V · 1,5 A', ah: 0, v: 12, cca: 0, dim: '', price: 650, fits: 'Chargeur intelligent / mainteneur moto', photo: '/batteries/chbs15.webp' },
       { id: 'ch_bs10', brand: 'BS', charger: true, model: 'BS10', spec: '6 / 12 V · 1 A', ah: 0, v: 12, cca: 0, dim: '', price: 550, fits: 'Chargeur moto, petites batteries', photo: '/batteries/chbs10.webp' },
       { id: 'ch_bk20', brand: 'BS', charger: true, model: 'BK20', spec: '6 / 12 V · 3 × 2 A', ah: 0, v: 12, cca: 0, dim: '', price: 1800, fits: 'Chargeur 3 bancs (atelier)', photo: '/batteries/chbk20.webp' },
+      { id: 'ch_bspowerbox', brand: 'BS', charger: true, model: 'Power Box MAX PB-02', spec: '12 V · 2000 A · Booster', ah: 0, v: 12, cca: 0, dim: '', price: 1900, fits: 'Démarreur de secours portable (jump starter)', photo: '/batteries/chbspowerbox.webp' },
     ],
   },
 ]
