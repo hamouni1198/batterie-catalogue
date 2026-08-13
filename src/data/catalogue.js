@@ -179,7 +179,7 @@ export const vehicles = [
       { id: 'bsbtz10s', brand: 'BS', model: 'BTZ10S', ah: 9, v: 12, cca: 190, dim: '150 × 87 × 93 mm', price: 450, fits: 'Moto sportive (YTZ10S)', photo: '/batteries/bsbtz10s.webp' },
       { id: 'bsbt9b', brand: 'BS', model: 'BT9B-4', ah: 8.4, v: 12, cca: 120, dim: '150 × 70 × 105 mm', price: 400, fits: 'Yamaha (YT9B-BS)', photo: '/batteries/bsbt9b.webp' },
       { id: 'bsbtz7s', brand: 'BS', model: 'BTZ7S', ah: 6.3, v: 12, cca: 130, dim: '113 × 70 × 105 mm', price: 300, fits: 'Moto, scooter (YTZ7S)', photo: '/batteries/bsbtz7s.webp' },
-      { id: 'bsbtx7l', brand: 'BS', model: 'BTX7L', ah: 6, v: 12, cca: 85, dim: '114 × 71 × 131 mm', price: null, fits: 'Scooter, moto (YTX7L)', photo: '/batteries/bsbtx7l.webp' },
+      { id: 'bsbtx7l', brand: 'BS', model: 'BTX7L', ah: 6, v: 12, cca: 85, dim: '114 × 71 × 131 mm', price: 300, fits: 'Scooter, moto (YTX7L)', photo: '/batteries/bsbtx7l.webp' },
     ],
   },
   {
