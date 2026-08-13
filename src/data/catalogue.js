@@ -114,6 +114,16 @@ export const vehicles = [
     batteries: [
       // SP
       { id: 'sp10', brand: 'SP', model: 'YTX30L-BS', ah: 30, v: 12, cca: 400, dim: '166 × 126 × 175 mm', price: 850, fits: 'Gros custom, jet-ski, motoneige', photo: '/batteries/catsp10.webp' },
+      // SP — nouveaux modèles (photos + prix client, spécifications d'après les étiquettes).
+      { id: 'sphcx32l', brand: 'SP', model: 'HCX32L-BS MF', ah: 32, v: 12, cca: 385, dim: '166 × 126 × 175 mm', price: 1000, fits: 'Gros custom, quad, jet-ski (32Ah)', photo: '/batteries/sphcx32l.webp' },
+      { id: 'sphcx24l', brand: 'SP', model: 'HCX24L-i MF', ah: 24, v: 12, cca: 350, dim: '205 × 87 × 162 mm', price: 800, fits: 'Gros custom, quad, jet-ski (24Ah)', photo: '/batteries/sphcx24l.webp' },
+      { id: 'sphcx16', brand: 'SP', model: 'HCX16-BS MF', ah: 16, v: 12, cca: 230, dim: '150 × 87 × 161 mm', price: 800, fits: 'Moto, quad, jet-ski (16Ah)', photo: '/batteries/sphcx16.webp' },
+      { id: 'sphcz10s', brand: 'SP', model: 'HCZ10S MF', ah: 9, v: 12, cca: 190, dim: '150 × 87 × 93 mm', price: 550, fits: 'Moto sportive (YTZ10S)', photo: '/batteries/sphcz10s.webp' },
+      { id: 'spytx12', brand: 'SP', model: 'YTX12-BS MF', ah: 10, v: 12, cca: 180, dim: '150 × 87 × 130 mm', price: 500, fits: 'Moto route, gros scooter (YTX12)', photo: '/batteries/spytx12.webp' },
+      { id: 'spyt12b', brand: 'SP', model: 'YT12B-4 MF', ah: 10.5, v: 12, cca: 210, dim: '150 × 70 × 130 mm', price: 500, fits: 'Ducati, Yamaha (YT12B-BS)', photo: '/batteries/spyt12b.webp' },
+      { id: 'spyt7b', brand: 'SP', model: 'YT7B-BS MF', ah: 6.5, v: 12, cca: 110, dim: '150 × 65 × 93 mm', price: 450, fits: 'Yamaha (YT7B-BS)', photo: '/batteries/spyt7b.webp' },
+      { id: 'spytz7s', brand: 'SP', model: 'YTZ7S MF', ah: 6, v: 12, cca: 130, dim: '113 × 70 × 85 mm', price: 300, fits: 'Moto, scooter (YTZ7S)', photo: '/batteries/spytz7s.webp' },
+      { id: 'sp12n9', brand: 'SP', model: '12N9-BS MF', ah: 9, v: 12, cca: 85, dim: '137 × 76 × 140 mm', price: 280, fits: 'Moto ancienne (12N9)', photo: '/batteries/sp12n9.webp' },
       { id: 'sp12', brand: 'SP', model: 'YTX20L-BS MF', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 750, fits: 'Gros custom, quad, jet-ski', photo: '/batteries/catsp12.webp' },
       { id: 'sp2', brand: 'SP', model: 'YTX14-BS MF', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 520, fits: 'Moto, quad', photo: '/batteries/catsp2.webp' },
       { id: 'sp4', brand: 'SP', model: 'YTZ14S MF', ah: 11, v: 12, cca: 230, dim: '150 × 87 × 110 mm', price: 500, fits: 'Moto', photo: '/batteries/catsp4.webp' },
@@ -122,7 +132,7 @@ export const vehicles = [
       { id: 'sp13', brand: 'SP', model: 'YTX7L-BS', ah: 6, v: 12, cca: 100, dim: '114 × 71 × 131 mm', price: 270, fits: 'Scooter, moto', photo: '/batteries/catsp13.webp' },
       { id: 'sp1', brand: 'SP', model: 'YTX5L-BS MF', ah: 4, v: 12, cca: 70, dim: '114 × 71 × 106 mm', price: 200, fits: 'Scooter, petite moto', photo: '/batteries/catsp1.webp' },
       { id: 'sp8', brand: 'SP', model: 'YTX4L-BS', ah: 3, v: 12, cca: 50, dim: '114 × 71 × 86 mm', price: 170, fits: 'Petite moto, scooter', photo: '/batteries/catsp8.webp' },
-      { id: 'sp6', brand: 'SP', model: '12N5L-BS MF', ah: 5, v: 12, cca: 60, dim: '120 × 60 × 130 mm', price: 150, fits: 'Petite moto (conventionnelle) · prix à confirmer', photo: '/batteries/catsp6.webp' },
+      { id: 'sp6', brand: 'SP', model: '12N5L-BS MF', ah: 5, v: 12, cca: 60, dim: '120 × 60 × 130 mm', price: 200, fits: 'Petite moto, scooter, quad (12N5L)', photo: '/batteries/catsp6.webp' },
       // YUASA
       { id: 'y6', brand: 'YUASA', model: 'YIX30L-BS', ah: 30, v: 12, cca: 385, dim: '166 × 126 × 175 mm', price: 1800, fits: 'Gros custom, motoneige, jet-ski (AGM MF)', photo: '/batteries/caty6.webp' },
       { id: 'y3', brand: 'YUASA', model: 'YTX12-BS', ah: 10, v: 12, cca: 180, dim: '150 × 87 × 130 mm', price: 800, fits: 'Moto route, gros scooter (AGM MF)', photo: '/batteries/caty3.webp' },
