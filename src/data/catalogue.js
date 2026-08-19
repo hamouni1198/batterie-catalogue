@@ -77,7 +77,7 @@ export const vehicles = [
       { id: 'vo1', brand: 'VOLTAGE', model: 'L1 46Ah', ah: 46, v: 12, cca: 400, dim: '207 × 175 × 175 mm', price: 600, fits: 'Citadines · L1', photo: '/batteries/catvo1.webp' },
       { id: 'vol0', brand: 'VOLTAGE', model: 'L0 35Ah', ah: 35, v: 12, cca: 280, dim: '175 × 175 × 190 mm', price: 900, fits: 'Petites voitures · L0', photo: '/batteries/vol0.webp' },
       // EXIDE — batteries voiture (démarrage). Prix réels ; photos à venir (placeholder).
-      { id: 'exc1', brand: 'EXIDE', model: 'E1 35Ah — Excell EB350A (asiatique)', ah: 35, v: 12, cca: 240, dim: '187 × 127 × 227 mm', price: 700, fits: 'Petite voiture (NS40) · E1', photo: '/batteries/exc_eb350.webp' },
+      { id: 'exc1', brand: 'EXIDE', model: 'E1 35Ah — Excell EB356A (asiatique)', ah: 35, v: 12, cca: 240, dim: '187 × 127 × 227 mm', price: 700, fits: 'Petite voiture (NS40) · E1', photo: '/batteries/exc_eb350.webp' },
       { id: 'exc2', brand: 'EXIDE', model: 'L1 44Ah — Excell EB442', ah: 44, v: 12, cca: 420, dim: '207 × 175 × 175 mm', price: 700, fits: 'Citadine · L1', photo: '/batteries/exc_eb442.webp' },
       { id: 'exc3', brand: 'EXIDE', model: 'L1 44Ah — Classic EC440', ah: 44, v: 12, cca: 360, dim: '207 × 175 × 175 mm', price: 750, fits: 'Citadine · L1', photo: '/batteries/exc_ec440.webp' },
       { id: 'exc4', brand: 'EXIDE', model: 'E2 45Ah — Excell EB460', ah: 45, v: 12, cca: 330, dim: '232 × 173 × 225 mm', price: 800, fits: 'Berline asiatique · E2', photo: '/batteries/exc_eb460.webp' },
@@ -98,7 +98,7 @@ export const vehicles = [
       { id: 'exc19', brand: 'EXIDE', model: 'L3 70Ah — AGM EK720', ah: 70, v: 12, cca: 760, dim: '278 × 175 × 175 mm', price: 1800, fits: 'Berline · L3 · AGM start-stop', photo: '/batteries/exc_ek720.webp' },
       { id: 'exc20', brand: 'EXIDE', model: 'L4 80Ah — EFB EL800', ah: 80, v: 12, cca: 720, dim: '315 × 175 × 175 mm', price: 1500, fits: 'Break, SUV · L4 · EFB start-stop', photo: '/batteries/exc_el800.webp' },
       { id: 'exc21', brand: 'EXIDE', model: 'L4 80Ah — AGM EK820', ah: 80, v: 12, cca: 720, dim: '315 × 175 × 175 mm', price: 2100, fits: 'Break, SUV · L4 · AGM start-stop', photo: '/batteries/exc_ek820.webp' },
-      { id: 'exc22', brand: 'EXIDE', model: 'L5 100Ah EFB', ah: 100, v: 12, cca: 900, dim: '353 × 175 × 175 mm', price: 1400, fits: 'Grosse cylindrée · L5 · EFB start-stop', photo: '/batteries/exide_placeholder.webp' },
+      { id: 'exc22', brand: 'EXIDE', model: 'L5 100Ah — EFB EL1000', ah: 100, v: 12, cca: 900, dim: '353 × 175 × 175 mm', price: 1400, fits: 'Grosse cylindrée · L5 · EFB start-stop', photo: '/batteries/exc_el1000.webp' },
       { id: 'exc23', brand: 'EXIDE', model: 'L5 95Ah — AGM EK950', ah: 95, v: 12, cca: 850, dim: '353 × 175 × 175 mm', price: 2400, fits: 'Grosse cylindrée · L5 · AGM start-stop', photo: '/batteries/exc_ek950.webp' },
       // ENERGIZER
       { id: 'e3', brand: 'ENERGIZER', model: 'Premium AGM EA95 L5', ah: 95, v: 12, cca: 850, dim: '353 × 175 × 190 mm', price: 2800, fits: 'Start-Stop AGM · L5', photo: '/batteries/cate3.webp' },
@@ -179,7 +179,7 @@ export const vehicles = [
       // EXIDE — série ETX (AGM Powersports). Réf. croisées AGM 12-X / ETX##-BS / YTX##.
       { id: 'exetx20hl', brand: 'EXIDE', model: 'ETX20HL-BS AGM', ah: 18, v: 12, cca: 270, dim: '175 × 87 × 155 mm', price: 1200, fits: 'YTX20HL — gros custom, Harley, quad (AGM)', photo: '/batteries/exetx20hln.webp' },
       { id: 'exetx16', brand: 'EXIDE', model: 'ETX16 AGM', ah: 16, v: 12, cca: 170, dim: '175 × 87 × 155 mm', price: 1200, fits: 'YTX16 / AGM 12-16 — moto, jet-ski (AGM)', photo: '/batteries/exagm16.webp' },
-      { id: 'exetx14', brand: 'EXIDE', model: 'ETX14-BS AGM', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 900, fits: 'YTX14 — moto, quad (AGM)', photo: '/batteries/exetx14n.webp' },
+      { id: 'exetx14', brand: 'EXIDE', model: 'ETX14AHL-BS AGM', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 900, fits: 'YTX14 — moto, quad (AGM)', photo: '/batteries/exetx14n.webp' },
       { id: 'exetx12', brand: 'EXIDE', model: 'ETX12-BS AGM', ah: 10, v: 12, cca: 180, dim: '150 × 87 × 130 mm', price: 800, fits: 'YTX12 — moto route (AGM)', photo: '/batteries/exetx12n.webp' },
       { id: 'exetx9', brand: 'EXIDE', model: 'ETX9-BS AGM', ah: 8, v: 12, cca: 120, dim: '150 × 87 × 105 mm', price: 450, fits: 'YTX9-BS — moto, scooter (AGM)', photo: '/batteries/exetx9n.webp' },
       { id: 'exetx7a', brand: 'EXIDE', model: 'ETX7A-BS AGM', ah: 6.3, v: 12, cca: 105, dim: '150 × 87 × 94 mm', price: 380, fits: 'YTX7A — scooter 125, moto (AGM)', photo: '/batteries/exetx7a.webp' },
