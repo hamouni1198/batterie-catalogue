@@ -254,10 +254,6 @@ export const vehicles = [
       { id: 'ba_e23', brand: 'VARTA', model: 'E23 D26 M10D', ah: 70, v: 12, cca: 570, dim: '260 × 173 × 225 mm', price: 1380, fits: 'Bateau, dual purpose · D26', photo: '/batteries/catv18.webp' },
       { id: 'ba_e24', brand: 'VARTA', model: 'E24 D26R M10G', ah: 70, v: 12, cca: 570, dim: '260 × 173 × 225 mm', price: 1299, fits: 'Démarrage marine · D26 (borne à droite)', photo: '/batteries/catv19.webp' },
       { id: 'ba_n70', brand: 'VARTA', model: 'N70 EFB', ah: 70, v: 12, cca: 720, dim: '306 × 173 × 225 mm', price: 2000, fits: 'Bateau, dual purpose · D26', photo: '/batteries/catv8.webp' },
-      // EXIDE Marine & Leisure (Dual) — démarrage + servitude. Prix à confirmer.
-      { id: 'ba_ep500', brand: 'EXIDE', model: 'Marine Dual EP500 50Ah', ah: 50, v: 12, cca: 800, dim: '207 × 175 × 190 mm', price: null, fits: 'Bateau, camping-car — démarrage + servitude (Dual)', photo: '/batteries/exc_ep500.webp' },
-      { id: 'ba_ep600', brand: 'EXIDE', model: 'Marine Dual EP600 70Ah', ah: 70, v: 12, cca: 760, dim: '278 × 175 × 190 mm', price: null, fits: 'Bateau, camping-car — démarrage + servitude (Dual)', photo: '/batteries/exc_ep600.webp' },
-      { id: 'ba_ep800', brand: 'EXIDE', model: 'Marine Dual EP800 95Ah', ah: 95, v: 12, cca: 850, dim: '353 × 175 × 190 mm', price: null, fits: 'Bateau, camping-car — démarrage + servitude (Dual)', photo: '/batteries/exc_ep800.webp' },
     ],
   },
   {
