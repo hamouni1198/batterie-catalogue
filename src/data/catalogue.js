@@ -79,10 +79,10 @@ export const vehicles = [
       // EXIDE — batteries voiture (démarrage). Prix réels ; photos à venir (placeholder).
       { id: 'exc1', brand: 'EXIDE', model: 'E1 35Ah — Excell EB356A (asiatique)', ah: 35, v: 12, cca: 240, dim: '187 × 127 × 227 mm', price: 700, fits: 'Petite voiture (NS40) · E1', photo: '/batteries/exc_eb350.webp' },
       { id: 'exc2', brand: 'EXIDE', model: 'L1 44Ah — Excell EB442', ah: 44, v: 12, cca: 420, dim: '207 × 175 × 175 mm', price: 700, fits: 'Citadine · L1', photo: '/batteries/exc_eb442.webp' },
-      { id: 'exc3', brand: 'EXIDE', model: 'L1 44Ah — Classic EC440', ah: 44, v: 12, cca: 360, dim: '207 × 175 × 175 mm', price: 750, fits: 'Citadine · L1', photo: '/batteries/exc_ec440.webp' },
+      { id: 'exc3', brand: 'EXIDE', model: 'L1 44Ah — Classic EC440', ah: 44, v: 12, cca: 360, dim: '207 × 175 × 175 mm', price: 800, fits: 'Citadine · L1', photo: '/batteries/exc_ec440.webp' },
       { id: 'exc4', brand: 'EXIDE', model: 'E2 45Ah — Excell EB460', ah: 45, v: 12, cca: 330, dim: '232 × 173 × 225 mm', price: 800, fits: 'Berline asiatique · E2', photo: '/batteries/exc_eb460.webp' },
       { id: 'exc5', brand: 'EXIDE', model: 'L2 55Ah — Classic EC550', ah: 55, v: 12, cca: 460, dim: '242 × 175 × 175 mm', price: 750, fits: 'Compacte · L2', photo: '/batteries/exc_ec550.webp' },
-      { id: 'exc6', brand: 'EXIDE', model: 'L2 62Ah — Excell EB620', ah: 62, v: 12, cca: 540, dim: '242 × 175 × 175 mm', price: 800, fits: 'Compacte · L2', photo: '/batteries/exc_eb620.webp' },
+      { id: 'exc6', brand: 'EXIDE', model: 'L2 62Ah — Excell EB620', ah: 62, v: 12, cca: 540, dim: '242 × 175 × 175 mm', price: 850, fits: 'Compacte · L2', photo: '/batteries/exc_eb620.webp' },
       { id: 'exc7', brand: 'EXIDE', model: 'M10 70Ah — Excell EB705', ah: 70, v: 12, cca: 540, dim: '260 × 173 × 225 mm', price: 950, fits: 'SUV asiatique · M10', photo: '/batteries/exc_eb705.webp' },
       { id: 'exc8', brand: 'EXIDE', model: 'L3 70Ah — Classic EC700', ah: 70, v: 12, cca: 640, dim: '278 × 175 × 175 mm', price: 900, fits: 'Berline · L3', photo: '/batteries/exc_ec700.webp' },
       { id: 'exc9', brand: 'EXIDE', model: 'L3 74Ah — Excell EB740', ah: 74, v: 12, cca: 680, dim: '278 × 175 × 175 mm', price: 1000, fits: 'Berline · L3', photo: '/batteries/exc_eb740.webp' },
