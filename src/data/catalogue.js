@@ -165,10 +165,10 @@ export const vehicles = [
       { id: 'y2', brand: 'YUASA', model: 'YB5L-B', ah: 5, v: 12, cca: 60, dim: '121 × 61 × 131 mm', price: 250, fits: 'Scooter, moto 125', photo: '/batteries/caty2.webp' },
       { id: 'y1', brand: 'YUASA', model: 'YB4L-B', ah: 4, v: 12, cca: 50, dim: '120 × 70 × 92 mm', price: 250, fits: 'Scooter, petite moto (conventionnelle)', photo: '/batteries/caty1.webp' },
       // YUASA — nouvelles réfs (photos réelles fond blanc). Prix à confirmer (« ?? »).
-      { id: 'yuytx14bs', brand: 'YUASA', model: 'YTX14-BS', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: null, fits: 'Moto, quad, scooter (AGM MF)', photo: '/batteries/yuytx14bs.webp' },
-      { id: 'yuytx20hl', brand: 'YUASA', model: 'YTX20HL', ah: 18.9, v: 12, cca: 310, dim: '175 × 87 × 155 mm', price: null, fits: 'Gros custom, motoneige, quad (AGM MF)', photo: '/batteries/yuytx20hl.webp' },
-      { id: 'yuytz14s', brand: 'YUASA', model: 'YTZ14S', ah: 11.8, v: 12, cca: 230, dim: '150 × 87 × 110 mm', price: null, fits: 'Moto, quad, scooter (High Performance MF)', photo: '/batteries/yuytz14s.webp' },
-      { id: 'yuytz12s', brand: 'YUASA', model: 'YTZ12S', ah: 11.6, v: 12, cca: 210, dim: '150 × 87 × 110 mm', price: null, fits: 'Moto route, scooter (High Performance MF)', photo: '/batteries/yuytz12s.webp' },
+      { id: 'yuytx14bs', brand: 'YUASA', model: 'YTX14-BS', ah: 12, v: 12, cca: 200, dim: '150 × 87 × 145 mm', price: 1200, fits: 'Moto, quad, scooter (AGM MF)', photo: '/batteries/yuytx14bs.webp' },
+      { id: 'yuytx20hl', brand: 'YUASA', model: 'YTX20HL', ah: 18.9, v: 12, cca: 310, dim: '175 × 87 × 155 mm', price: 1600, fits: 'Gros custom, motoneige, quad (AGM MF)', photo: '/batteries/yuytx20hl.webp' },
+      { id: 'yuytz14s', brand: 'YUASA', model: 'YTZ14S', ah: 11.8, v: 12, cca: 230, dim: '150 × 87 × 110 mm', price: 1950, fits: 'Moto, quad, scooter (High Performance MF)', photo: '/batteries/yuytz14s.webp' },
+      { id: 'yuytz12s', brand: 'YUASA', model: 'YTZ12S', ah: 11.6, v: 12, cca: 210, dim: '150 × 87 × 110 mm', price: 1900, fits: 'Moto route, scooter (High Performance MF)', photo: '/batteries/yuytz12s.webp' },
       { id: 'yuytz7s', brand: 'YUASA', model: 'YTZ7S', ah: 6.3, v: 12, cca: 130, dim: '114 × 70 × 105 mm', price: 900, fits: 'Moto, scooter (gel MF)', photo: '/batteries/yuytz7s.webp' },
       { id: 'yuyb16b', brand: 'YUASA', model: 'YB16-B', ah: 19, v: 12, cca: 215, dim: '175 × 100 × 155 mm', price: 800, fits: 'Moto, motoneige, quad (Yumicron plomb/acide)', photo: '/batteries/yuyb16b.webp' },
       // VARTA Powersports AGM
