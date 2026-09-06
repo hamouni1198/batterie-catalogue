@@ -10,11 +10,16 @@ export const PRICE_FILTERS = [
   { key: 'high', label: '> 1 500 Dh' },
 ]
 
+// Les prix inconnus (null -> « Sur demande ») n'apparaissent que sous « Tous » :
+// sans ce garde-fou, `null <= 800` vaut true et les ferait tomber dans « Moins
+// de 800 Dh ».
 function matchesPrice(price, filter) {
+  if (filter === 'all') return true
+  if (price == null) return false
   if (filter === 'low') return price <= 800
   if (filter === 'mid') return price >= 800 && price <= 1500
   if (filter === 'high') return price > 1500
-  return true // all
+  return true
 }
 
 // Filtre : recherche insensible à la casse sur marque + modèle + véhicules

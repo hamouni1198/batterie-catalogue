@@ -39,13 +39,13 @@ export function buildWhatsappLink(battery, vehicleName, config) {
           battery.v +
           ' V' +
           (battery.cca ? ' — ' + battery.cca + ' A (CCA)' : ''),
-        'Dimensions : ' + battery.dim,
+        battery.dim ? 'Dimensions : ' + battery.dim : null,
         battery.price == null
           ? 'Prix : à confirmer'
           : 'Prix catalogue : ' + priceText(battery.price, config.showPrices),
         '',
         'Est-elle disponible ? Et avec la pose ?',
-      ]
+      ].filter((line) => line !== null)
 
   return 'https://wa.me/' + number + '?text=' + encodeURIComponent(lines.join('\n'))
 }
