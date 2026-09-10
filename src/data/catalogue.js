@@ -363,14 +363,19 @@ export const vehicles = [
       // référence réelle relevées sur l'étiquette (photos boutique détourées) ;
       // pour les autres, le modèle reste noté « 12V xxAh » en attendant.
       // Dimensions au format standard SLA (identiques aux LONG de même
-      // capacité) ; 12V 23Ah et 12V 60Ah restent à confirmer.
+      // capacité) ; celles laissées vides restent à relever (23, 28, 39, 44,
+      // 53 et 60 Ah) — la ligne est simplement omise sur la carte.
       { id: 'so_msb_12v75', brand: 'MSB', model: '12V 75Ah', ah: 75, v: 12, cca: 0, dim: '260 × 169 × 210 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
       { id: 'so_msb_12v60', brand: 'MSB', model: 'LPCG12-60', ah: 60, v: 12, cca: 0, dim: '', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_lpcg1260.webp' },
       { id: 'so_msb_12v55', brand: 'MSB', model: 'LPC12-55', ah: 55, v: 12, cca: 0, dim: '229 × 138 × 213 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_lpc1255.webp' },
+      { id: 'so_msb_ldc1253', brand: 'MSB', model: 'LDC12-53', ah: 53, v: 12, cca: 0, dim: '', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_ldc1253.webp' },
       { id: 'so_msb_12v50', brand: 'MSB', model: '12V 50Ah', ah: 50, v: 12, cca: 0, dim: '229 × 138 × 213 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
+      { id: 'so_msb_ldc1244', brand: 'MSB', model: 'LDC12-44', ah: 44, v: 12, cca: 0, dim: '', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_ldc1244.webp' },
       { id: 'so_msb_12v40', brand: 'MSB', model: '12V 40Ah', ah: 40, v: 12, cca: 0, dim: '197 × 165 × 170 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
+      { id: 'so_msb_ldc1239', brand: 'MSB', model: 'LDC12-39', ah: 39, v: 12, cca: 0, dim: '', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_ldc1239.webp' },
       { id: 'so_msb_12v36', brand: 'MSB', model: '12V 36Ah', ah: 36, v: 12, cca: 0, dim: '196 × 130 × 169 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
       { id: 'so_msb_12v30', brand: 'MSB', model: '12V 30Ah', ah: 30, v: 12, cca: 0, dim: '166 × 175 × 125 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
+      { id: 'so_msb_lp1228h', brand: 'MSB', model: 'LP12-28H', ah: 28, v: 12, cca: 0, dim: '', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_lp1228h.webp' },
       { id: 'so_msb_12v26', brand: 'MSB', model: '12V 26Ah', ah: 26, v: 12, cca: 0, dim: '166 × 175 × 125 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
       { id: 'so_msb_12v25', brand: 'MSB', model: 'LDC12-25', ah: 25, v: 12, cca: 0, dim: '166 × 175 × 125 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_ldc1225.webp' },
       { id: 'so_msb_12v23', brand: 'MSB', model: '12V 23Ah', ah: 23, v: 12, cca: 0, dim: '', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
@@ -442,6 +447,9 @@ export const vehicles = [
       { id: 'in_l_6v7', brand: 'LONG', model: 'WP7-6S 6V', ah: 7, v: 6, cca: 0, dim: '151 × 34 × 94 mm', price: 140, fits: 'Onduleur industriel, alarme, backup', photo: '/batteries/long_wp76.webp' },
       { id: 'in_l_6v45', brand: 'LONG', model: 'WP4.5-6 6V', ah: 4.5, v: 6, cca: 0, dim: '70 × 47 × 101 mm', price: 80, fits: 'Onduleur industriel, alarme, backup', photo: '/batteries/long_wp456.webp' },
       { id: 'in_l_6v3', brand: 'LONG', model: 'WP3-6 6V', ah: 3, v: 6, cca: 0, dim: '134 × 34 × 64 mm', price: 200, fits: 'Onduleur industriel, alarme, backup', photo: '/batteries/long_wp36.webp' },
+      // MSB — traction (boîtier vert). Prix à définir.
+      { id: 'in_msb_evf38', brand: 'MSB', model: 'LDC12-38 (6-EVF-38)', ah: 38, v: 12, cca: 0, dim: '', price: null, fits: 'Traction — voiturette, nacelle, chariot électrique', photo: '/batteries/msb_evf38.webp' },
+      { id: 'in_msb_ev45', brand: 'MSB', model: 'LDC12024 (6-EV-45)', ah: 54, v: 12, cca: 0, dim: '', price: null, fits: 'Traction — voiturette, nacelle, chariot électrique', photo: '/batteries/msb_ev45.webp' },
     ],
   },
   {
