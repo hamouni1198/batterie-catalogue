@@ -363,29 +363,31 @@ export const vehicles = [
       // référence réelle relevées sur l'étiquette (photos boutique détourées) ;
       // pour les autres, le modèle reste noté « 12V xxAh » en attendant.
       // Dimensions au format standard SLA (identiques aux LONG de même
-      // capacité) ; celles laissées vides restent à relever (23, 28, 39, 44,
-      // 53 et 60 Ah) — la ligne est simplement omise sur la carte.
+      // capacité) ; celles laissées vides restent à relever (2.3, 23, 28 et
+      // 60 Ah) — la ligne est simplement omise sur la carte.
+      // Les fiches 50 / 40 / 36 Ah ont été fusionnées avec les LDC12-53,
+      // LDC12-44 et LDC12-39 : c'est le même produit, la capacité affichée
+      // est celle de l'étiquette.
       { id: 'so_msb_12v75', brand: 'MSB', model: '12V 75Ah', ah: 75, v: 12, cca: 0, dim: '260 × 169 × 210 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
       { id: 'so_msb_12v60', brand: 'MSB', model: 'LPCG12-60', ah: 60, v: 12, cca: 0, dim: '', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_lpcg1260.webp' },
       { id: 'so_msb_12v55', brand: 'MSB', model: 'LPC12-55', ah: 55, v: 12, cca: 0, dim: '229 × 138 × 213 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_lpc1255.webp' },
-      { id: 'so_msb_ldc1253', brand: 'MSB', model: 'LDC12-53', ah: 53, v: 12, cca: 0, dim: '', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_ldc1253.webp' },
-      { id: 'so_msb_12v50', brand: 'MSB', model: '12V 50Ah', ah: 50, v: 12, cca: 0, dim: '229 × 138 × 213 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
-      { id: 'so_msb_ldc1244', brand: 'MSB', model: 'LDC12-44', ah: 44, v: 12, cca: 0, dim: '', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_ldc1244.webp' },
-      { id: 'so_msb_12v40', brand: 'MSB', model: '12V 40Ah', ah: 40, v: 12, cca: 0, dim: '197 × 165 × 170 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
-      { id: 'so_msb_ldc1239', brand: 'MSB', model: 'LDC12-39', ah: 39, v: 12, cca: 0, dim: '', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_ldc1239.webp' },
-      { id: 'so_msb_12v36', brand: 'MSB', model: '12V 36Ah', ah: 36, v: 12, cca: 0, dim: '196 × 130 × 169 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
+      { id: 'so_msb_ldc1253', brand: 'MSB', model: 'LDC12-53', ah: 53, v: 12, cca: 0, dim: '229 × 138 × 213 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_ldc1253.webp' },
+      { id: 'so_msb_ldc1244', brand: 'MSB', model: 'LDC12-44', ah: 44, v: 12, cca: 0, dim: '197 × 165 × 170 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_ldc1244.webp' },
+      { id: 'so_msb_ldc1239', brand: 'MSB', model: 'LDC12-39', ah: 39, v: 12, cca: 0, dim: '196 × 130 × 169 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_ldc1239.webp' },
       { id: 'so_msb_12v30', brand: 'MSB', model: '12V 30Ah', ah: 30, v: 12, cca: 0, dim: '166 × 175 × 125 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
       { id: 'so_msb_lp1228h', brand: 'MSB', model: 'LP12-28H', ah: 28, v: 12, cca: 0, dim: '', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_lp1228h.webp' },
-      { id: 'so_msb_12v26', brand: 'MSB', model: '12V 26Ah', ah: 26, v: 12, cca: 0, dim: '166 × 175 × 125 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
+      { id: 'so_msb_12v26', brand: 'MSB', model: 'MS 12-26 ULTRA', ah: 26, v: 12, cca: 0, dim: '166 × 175 × 125 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_ms1226.webp' },
       { id: 'so_msb_12v25', brand: 'MSB', model: 'LDC12-25', ah: 25, v: 12, cca: 0, dim: '166 × 175 × 125 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_ldc1225.webp' },
       { id: 'so_msb_12v23', brand: 'MSB', model: '12V 23Ah', ah: 23, v: 12, cca: 0, dim: '', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
       { id: 'so_msb_12v20', brand: 'MSB', model: 'LPC12-20', ah: 20, v: 12, cca: 0, dim: '181 × 77 × 167 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_lpc1220.webp' },
       { id: 'so_msb_12v18', brand: 'MSB', model: '12V 18Ah', ah: 18, v: 12, cca: 0, dim: '181 × 76 × 167 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '' },
       { id: 'so_msb_12v15', brand: 'MSB', model: 'LDC12-15', ah: 15, v: 12, cca: 0, dim: '181 × 76 × 167 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_ldc1215.webp' },
       { id: 'so_msb_12v12', brand: 'MSB', model: 'LPC12-12', ah: 12, v: 12, cca: 0, dim: '151 × 98 × 95 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_lpc1212.webp' },
-      { id: 'so_msb_12v9', brand: 'MSB', model: '12V 9Ah', ah: 9, v: 12, cca: 0, dim: '151 × 65 × 94 mm', price: null, fits: 'Onduleur, alarme, backup', photo: '' },
+      { id: 'so_msb_ms1212', brand: 'MSB', model: 'MS 12-12', ah: 12, v: 12, cca: 0, dim: '151 × 98 × 95 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/msb_ms1212.webp' },
+      { id: 'so_msb_12v9', brand: 'MSB', model: 'MS 12-9', ah: 9, v: 12, cca: 0, dim: '151 × 65 × 94 mm', price: null, fits: 'Onduleur, alarme, backup', photo: '/batteries/msb_ms129.webp' },
       { id: 'so_msb_12v7', brand: 'MSB', model: 'MSL 12-7.2', ah: 7.2, v: 12, cca: 0, dim: '151 × 65 × 94 mm', price: null, fits: 'Onduleur, alarme, backup', photo: '/batteries/msb_msl1272.webp' },
       { id: 'so_msb_12v4', brand: 'MSB', model: '12V 4Ah', ah: 4, v: 12, cca: 0, dim: '90 × 70 × 101 mm', price: null, fits: 'Onduleur, alarme, backup', photo: '' },
+      { id: 'so_msb_ms1223', brand: 'MSB', model: 'MS 12-2.3', ah: 2.3, v: 12, cca: 0, dim: '', price: null, fits: 'Onduleur, alarme, backup', photo: '/batteries/msb_ms1223.webp' },
       { id: 'so_msb_6v12', brand: 'MSB', model: '6V 12Ah', ah: 12, v: 6, cca: 0, dim: '151 × 50 × 94 mm', price: null, fits: 'Onduleur, alarme, backup', photo: '' },
       { id: 'so_msb_6v7', brand: 'MSB', model: '6V 7Ah', ah: 7, v: 6, cca: 0, dim: '151 × 34 × 94 mm', price: null, fits: 'Onduleur, alarme, backup', photo: '' },
       { id: 'so_msb_6v4', brand: 'MSB', model: '6V 4Ah', ah: 4, v: 6, cca: 0, dim: '70 × 47 × 101 mm', price: null, fits: 'Onduleur, alarme, backup', photo: '' },
