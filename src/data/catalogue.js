@@ -388,6 +388,23 @@ export const vehicles = [
       { id: 'so_msb_12v7', brand: 'MSB', model: 'MSL 12-7.2', ah: 7.2, v: 12, cca: 0, dim: '151 × 65 × 94 mm', price: 180, fits: 'Onduleur, alarme, backup', photo: '/batteries/msb_msl1272.webp' },
       { id: 'so_msb_ms1223', brand: 'MSB', model: 'MS 12-2.3', ah: 2.3, v: 12, cca: 0, dim: '', price: 150, fits: 'Onduleur, alarme, backup', photo: '/batteries/msb_ms1223.webp' },
       { id: 'so_msb_6v4', brand: 'MSB', model: 'MS 6-4.5', ah: 4.5, v: 6, cca: 0, dim: '70 × 47 × 101 mm', price: 80, fits: 'Onduleur, alarme, backup', photo: '/batteries/msb_ms645.webp' },
+      // SP (Superation) — série SB, étanches AGM/GEL. Références relevées sur
+      // l'étiquette ; prix à définir. Dimensions au format standard SLA quand
+      // une référence de même capacité existe déjà au catalogue.
+      { id: 'so_sp_sb150', brand: 'SP', model: 'SB150-12(GEL)', ah: 150, v: 12, cca: 0, dim: '', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/sp_sb150_12.webp' },
+      { id: 'so_sp_sb100', brand: 'SP', model: 'SB100-12(GEL)', ah: 100, v: 12, cca: 0, dim: '', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/sp_sb100_12.webp' },
+      { id: 'so_sp_sb75', brand: 'SP', model: 'SB75-12(GEL)', ah: 75, v: 12, cca: 0, dim: '260 × 169 × 210 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/sp_sb75_12.webp' },
+      { id: 'so_sp_sb55', brand: 'SP', model: 'SB55-12(GEL)', ah: 55, v: 12, cca: 0, dim: '229 × 138 × 213 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/sp_sb55_12.webp' },
+      { id: 'so_sp_sb45', brand: 'SP', model: 'SB45-12(GEL)', ah: 45, v: 12, cca: 0, dim: '197 × 165 × 170 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/sp_sb45_12.webp' },
+      { id: 'so_sp_sb36', brand: 'SP', model: 'SB36-12(GEL)', ah: 36, v: 12, cca: 0, dim: '196 × 130 × 169 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/sp_sb36_12.webp' },
+      { id: 'so_sp_sb30', brand: 'SP', model: 'SB30-12(GEL)', ah: 30, v: 12, cca: 0, dim: '166 × 175 × 125 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/sp_sb30_12.webp' },
+      { id: 'so_sp_sb17', brand: 'SP', model: 'SB17-12', ah: 17, v: 12, cca: 0, dim: '181 × 76 × 167 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/sp_sb17_12.webp' },
+      { id: 'so_sp_sb12', brand: 'SP', model: 'SB12-12', ah: 12, v: 12, cca: 0, dim: '151 × 98 × 95 mm', price: null, fits: 'Kit solaire, onduleur (décharge lente)', photo: '/batteries/sp_sb12_12.webp' },
+      { id: 'so_sp_sb7', brand: 'SP', model: 'SB7-12', ah: 7, v: 12, cca: 0, dim: '151 × 65 × 94 mm', price: null, fits: 'Onduleur, alarme, backup', photo: '/batteries/sp_sb7_12.webp' },
+      { id: 'so_sp_sb4p5', brand: 'SP', model: 'SB4.5-12', ah: 4.5, v: 12, cca: 0, dim: '90 × 70 × 101 mm', price: null, fits: 'Onduleur, alarme, backup', photo: '/batteries/sp_sb4p5_12.webp' },
+      { id: 'so_sp_sb1p3', brand: 'SP', model: 'SB1.3-12', ah: 1.3, v: 12, cca: 0, dim: '', price: null, fits: 'Onduleur, alarme, backup', photo: '/batteries/sp_sb1p3_12.webp' },
+      { id: 'so_sp_sb7_6', brand: 'SP', model: 'SB7-6(GEL)', ah: 7, v: 6, cca: 0, dim: '151 × 34 × 94 mm', price: null, fits: 'Onduleur, alarme, backup', photo: '/batteries/sp_sb7_6v.webp' },
+      { id: 'so_sp_sb4_6', brand: 'SP', model: 'SB4-6(GEL)', ah: 4, v: 6, cca: 0, dim: '70 × 47 × 101 mm', price: null, fits: 'Onduleur, alarme, backup', photo: '/batteries/sp_sb4_6v.webp' },
     ],
   },
   {
@@ -448,6 +465,17 @@ export const vehicles = [
       // MSB — traction (boîtier vert). Prix à définir.
       { id: 'in_msb_evf38', brand: 'MSB', model: 'LDC12-38 (6-EVF-38)', ah: 38, v: 12, cca: 0, dim: '', price: null, fits: 'Traction — voiturette, nacelle, chariot électrique', photo: '/batteries/msb_evf38.webp' },
       { id: 'in_msb_ev45', brand: 'MSB', model: 'LDC12024 (6-EV-45)', ah: 54, v: 12, cca: 0, dim: '', price: null, fits: 'Traction — voiturette, nacelle, chariot électrique', photo: '/batteries/msb_ev45.webp' },
+      // SP (Superation) — traction : séries 6-DZF / 6-DZM (GEL deep cycle,
+      // vélo et scooter électriques) et EV (VRLA GEL motive power). Prix à définir.
+      { id: 'in_sp_ev220', brand: 'SP', model: 'EV220-6(GEL)', ah: 220, v: 6, cca: 0, dim: '', price: null, fits: 'Traction lourde — voiturette, nacelle, chariot (VRLA GEL)', photo: '/batteries/sp_ev220_6.webp' },
+      { id: 'in_sp_ev170', brand: 'SP', model: 'EV170-8(GEL)', ah: 170, v: 8, cca: 0, dim: '', price: null, fits: 'Traction lourde — voiturette, nacelle, chariot (VRLA GEL)', photo: '/batteries/sp_ev170_8.webp' },
+      { id: 'in_sp_dzm45', brand: 'SP', model: '6-DZM-45', ah: 45, v: 12, cca: 0, dim: '', price: null, fits: 'Traction — vélo, scooter, tricycle électrique (GEL deep cycle)', photo: '/batteries/sp_6dzm45.webp' },
+      { id: 'in_sp_dzf23', brand: 'SP', model: '6-DZF-23', ah: 23, v: 12, cca: 0, dim: '', price: null, fits: 'Traction — vélo, scooter, tricycle électrique (GEL deep cycle)', photo: '/batteries/sp_6dzf23.webp' },
+      { id: 'in_sp_dzf20', brand: 'SP', model: '6-DZF-20', ah: 22, v: 12, cca: 0, dim: '', price: null, fits: 'Traction — vélo, scooter, tricycle électrique (GEL deep cycle)', photo: '/batteries/sp_6dzf20.webp' },
+      { id: 'in_sp_dzm15', brand: 'SP', model: '6-DZM-15', ah: 15, v: 12, cca: 0, dim: '', price: null, fits: 'Traction — vélo, scooter, tricycle électrique (GEL deep cycle)', photo: '/batteries/sp_6dzm15.webp' },
+      { id: 'in_sp_dzf14', brand: 'SP', model: '6-DZF-14', ah: 14, v: 12, cca: 0, dim: '', price: null, fits: 'Traction — vélo, scooter, tricycle électrique (GEL deep cycle)', photo: '/batteries/sp_6dzf14.webp' },
+      { id: 'in_sp_dzm14', brand: 'SP', model: '6-DZM-14', ah: 14, v: 12, cca: 0, dim: '', price: null, fits: 'Traction — vélo, scooter, tricycle électrique (GEL deep cycle)', photo: '/batteries/sp_6dzm14.webp' },
+      { id: 'in_sp_dzm12', brand: 'SP', model: '6-DZM-12', ah: 13, v: 12, cca: 0, dim: '', price: null, fits: 'Traction — vélo, scooter, tricycle électrique (GEL deep cycle)', photo: '/batteries/sp_6dzm12.webp' },
     ],
   },
   {
