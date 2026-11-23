@@ -473,13 +473,9 @@ export const vehicles = [
       { id: 'in_msb_evf38', brand: 'MSB', model: 'LDC12-38 (6-EVF-38)', ah: 38, v: 12, cca: 0, dim: '', price: null, fits: 'Traction — voiturette, nacelle, chariot électrique', photo: '/batteries/msb_evf38.webp' },
       { id: 'in_msb_ev45', brand: 'MSB', model: 'LDC12024 (6-EV-45)', ah: 54, v: 12, cca: 0, dim: '', price: null, fits: 'Traction — voiturette, nacelle, chariot électrique', photo: '/batteries/msb_ev45.webp' },
       // SP (Superation) — traction lourde EV et série SB petite capacité.
-      { id: 'in_sp_ev220', brand: 'SP', model: 'EV220-6(GEL)', ah: 220, v: 6, cca: 0, dim: '', price: null, fits: 'Traction lourde — voiturette, nacelle, chariot (VRLA GEL)', photo: '/batteries/sp_ev220_6.webp' },
-      { id: 'in_sp_ev170', brand: 'SP', model: 'EV170-8(GEL)', ah: 170, v: 8, cca: 0, dim: '', price: null, fits: 'Traction lourde — voiturette, nacelle, chariot (VRLA GEL)', photo: '/batteries/sp_ev170_8.webp' },
       { id: 'in_sp_sb12', brand: 'SP', model: 'SB12-12', ah: 12, v: 12, cca: 0, dim: '151 × 98 × 95 mm', price: 280, fits: 'Onduleur industriel, levage, backup', photo: '/batteries/sp_sb12_12.webp' },
       { id: 'in_sp_sb9', brand: 'SP', model: 'SB9-12', ah: 9, v: 12, cca: 0, dim: '151 × 65 × 94 mm', price: 220, fits: 'Onduleur industriel, levage, backup', photo: '/batteries/sp_sb9_12.webp' },
       { id: 'in_sp_sb7', brand: 'SP', model: 'SB7-12', ah: 7, v: 12, cca: 0, dim: '151 × 65 × 94 mm', price: 200, fits: 'Onduleur industriel, levage, backup', photo: '/batteries/sp_sb7_12.webp' },
-      { id: 'in_sp_sb4p5', brand: 'SP', model: 'SB4.5-12', ah: 4.5, v: 12, cca: 0, dim: '90 × 70 × 101 mm', price: null, fits: 'Onduleur industriel, levage, backup', photo: '/batteries/sp_sb4p5_12.webp' },
-      { id: 'in_sp_sb1p3', brand: 'SP', model: 'SB1.3-12', ah: 1.3, v: 12, cca: 0, dim: '', price: null, fits: 'Onduleur industriel, levage, backup', photo: '/batteries/sp_sb1p3_12.webp' },
       { id: 'in_sp_sb12_6', brand: 'SP', model: 'SB12-6(GEL)', ah: 12, v: 6, cca: 0, dim: '151 × 50 × 94 mm', price: 170, fits: 'Onduleur industriel, levage, backup', photo: '/batteries/sp_sb12_6v.webp' },
       { id: 'in_sp_sb7_6', brand: 'SP', model: 'SB7-6(GEL)', ah: 7, v: 6, cca: 0, dim: '151 × 34 × 94 mm', price: 140, fits: 'Onduleur industriel, levage, backup', photo: '/batteries/sp_sb7_6v.webp' },
       { id: 'in_sp_sb4_6', brand: 'SP', model: 'SB4-6(GEL)', ah: 4, v: 6, cca: 0, dim: '70 × 47 × 101 mm', price: 80, fits: 'Onduleur industriel, levage, backup', photo: '/batteries/sp_sb4_6v.webp' },
